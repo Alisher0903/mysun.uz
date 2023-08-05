@@ -41,4 +41,8 @@ function AboutCompany() {
         </div>
     );
 }
+
+
+
+
 export default AboutCompany;
