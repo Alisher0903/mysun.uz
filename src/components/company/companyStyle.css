@@ -1,0 +1,299 @@
+.main {
+  padding-bottom: 15%;
+  font-family: tahoma;
+}
+.mainDiv{
+  padding-top: 0;
+  height: 250px;
+  margin-bottom: 6%;
+  background-image: url("https://solara.uz/assets/images/d0/d04bf9_about-bg.jpg");
+}
+.link1 {
+  color: #fefffe;
+  text-decoration: none;
+  transition: 0.5s;
+  display: inline-block;
+  margin-right: 8px;
+  font-size: 1.1rem;
+  text-align: center;
+  position: relative;
+  font-weight: 700;
+  margin-left: 43%;
+}
+.link1:hover {
+  color: #FFCD1E;
+}
+
+.p1 {
+  color: #273968;
+  display: inline-block;
+  font-size: 1.1rem;
+  text-align: center;
+  font-weight: 700;
+}
+#backToTopBtn {
+  display: none;
+  position: fixed;
+  bottom: 50px;
+  right: 40px;
+  background-color: #FFCD1E;
+  border-radius: 0;
+  padding: 0.3rem 0.5rem;
+  border: none;
+  cursor: pointer;
+  transition: all opacity 10s visibility 10s;
+  z-index: 8;
+}
+.h1-1 {
+  font-weight: 700;
+  color: #273968;
+  margin-left: 40%;
+  padding-top: 5%;
+  font-size: 500%;
+}
+#backToTopBtn.show {
+  display: block;
+  opacity: 1;
+  visibility: visible;
+}
+
+#backToTopBtn.hide {
+  opacity: 0;
+  visibility: hidden;
+}/*# sourceMappingURL=companyStyle.css.map */
+
+.img1 {
+  padding-top: 40%;
+  width: 100%;
+  float: right;
+  position: relative;
+}
+.img2 {
+  width: 30%;
+  position: absolute;
+  padding: 30% 13%;
+}
+.rotate-center {
+	-webkit-animation: rotate-center 15s linear infinite both;
+	        animation: rotate-center 15s linear infinite both;
+}
+@-webkit-keyframes rotate-center {
+  0% {
+    -webkit-transform: rotate(0);
+            transform: rotate(0);
+  }
+  100% {
+    -webkit-transform: rotate(360deg);
+            transform: rotate(360deg);
+  }
+}
+@keyframes rotate-center {
+  0% {
+    -webkit-transform: rotate(0);
+            transform: rotate(0);
+  }
+  100% {
+    -webkit-transform: rotate(360deg);
+            transform: rotate(360deg);
+  }
+}
+.bord {
+  width: 12%;
+  border-color: #FFCD1E !important;
+  display: inline-block;
+  margin: 0 1% 6px 0;
+  margin-right: 1%;
+}
+
+.h5-1 {
+  color: #FFCD1E;
+  font-weight: 700;
+  display: inline-block;
+}
+.h1-2 {
+  color: #273968;
+  font-weight: 700;
+  margin-top: 4%;
+  font-size: 2.8rem;
+}
+.longText {
+  margin-top: 5%;
+  font-size: 1rem;
+  line-height: 1.7;
+  opacity: 0.8;
+}
+.aboutList1 {
+  font-size: 1rem;
+  opacity: 0.8;
+}
+.aboutList2 {
+  font-size: 1rem;
+  opacity: 0.8;
+  padding-left: 5%;
+}
+
+/* button */
+.animated-btn {
+  width: 90%;
+  padding: .8rem 4%;
+  font-size: 1.05rem;
+  font-weight: 500;
+  background-color: #FFCD1E;
+  color: #fff;
+  border: none;
+  cursor: pointer;
+  z-index: 1;
+  transition: background-color 0.3s, box-shadow 0.3s, transform 0.3s;
+  overflow: hidden;
+}
+
+.animated-btn:before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: #273968;
+  transform: scaleX(0);
+  transform-origin: left;
+  transition: transform 0.5s;
+  z-index: -1;
+}
+
+.animated-btn:after {
+  content: "";
+  position: absolute;
+  top: 0;
+  right: 0;
+  width: 100%;
+  height: 100%;
+  background-color: #273968;
+  transform: scaleX(0);
+  transform-origin: right;
+  transition: transform 0.5s;
+  z-index: -1;
+}
+
+.animated-btn:hover:before {
+  transform: scaleX(1);
+}
+
+.animated-btn:hover:after {
+  transform: scaleX(1);
+}
+
+.animated-btn:hover {
+  background-color: #273968;
+  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.1);
+  transform: scale(1.05);
+}
+
+/* carusel */
+* {
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
+}
+.main-hisob {
+  position: relative;
+  margin-top: 10%;
+}
+.hisob {
+  background-image: url("https://solara.uz/resources/img/about-bg.jpg");
+  width: 100%;
+  height: 250px;
+  backdrop-filter: initial;
+}
+.hisob2 {
+  top: 10%;
+}
+.h1-3 {
+  text-align: center !important;
+  color: rgb(6, 95, 227);
+  font-weight: 700;
+  font-size: 3.5rem;
+  margin-top: 17%;
+}
+
+.p3 {
+  text-align: center;
+  font-size: 1rem;
+  font-weight: 600;
+  color: #FFCD1E;
+}
+.roww {
+  width: 100%;
+  gap: 15px;
+}
+.image {
+  width: 50%;
+  display: inline-block;
+}
+.youTube {
+  margin-left: 5%;
+  background-image: url("http://solara.uz/assets/images/74/74c12d_about-video1.jpg");
+  width: 95%;
+  height: 280px;
+  background-position: center;
+  background-size: cover;
+}
+.youTube:hover {
+  /* button */
+  .youTubeBtn:before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: #FFCD1E;
+    transform: scaleX(0);
+    transform-origin: center;
+    transition: transform 0.5s;
+    z-index: -1;
+  }
+
+  .youTubeBtn:after {
+    content: "";
+    position: absolute;
+    top: 0;
+    right: 0;
+    width: 100%;
+    height: 100%;
+    background-color: #FFCD1E;
+    transform: scaleX(0);
+    transform-origin: top;
+    transition: transform 0.5s;
+    z-index: -1;
+  }
+
+  .youTubeBtn:hover:before {
+    transform: scaleX(1);
+  }
+
+  .youTubeBtn:hover:after {
+    transform: scaleX(1);
+  }
+
+  .youTubeBtn:hover {
+    background-color: #FFCD1E;
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.1);
+    transform: scale(1.05);
+  }
+}
+
+.youTubeBtn {
+  width: 20%;
+  border-radius: 50px;
+  padding: .8rem 4%;
+  margin: 34% 0 0 40%;
+  font-size: 1.05rem;
+  font-weight: 500;
+  background-color: #32312d;
+  color: #fff;
+  border: none;
+  cursor: pointer;
+  z-index: 1;
+  transition: background-color 0.3s, box-shadow 0.3s, transform 0.3s;
+  overflow: hidden;
+}

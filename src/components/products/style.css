@@ -1,0 +1,124 @@
+#backToTopBtn {
+  display: none;
+  position: fixed;
+  bottom: 50px;
+  right: 40px;
+  background-color: #FFCD1E;
+  border-radius: 0;
+  padding: 0.3rem 0.5rem;
+  border: none;
+  cursor: pointer;
+  transition: all opacity 10s visibility 10s;
+  z-index: 8;
+}
+
+#backToTopBtn.show {
+  display: block;
+  opacity: 1;
+  visibility: visible;
+}
+
+#backToTopBtn.hide {
+  opacity: 0;
+  visibility: hidden;
+}
+
+.product__bg {
+  overflow: hidden;
+}
+
+.product__bg img {
+  position: relative;
+  margin-top: 11.8rem;
+  transform: scale(1.4);
+}
+
+.product-info {
+  position: absolute;
+  color: white;
+  top: 30vh;
+  transform: translateX(270%);
+}
+
+.product-info h4 {
+  font-size: 3rem;
+  font-weight: 700;
+  color: #273968;
+}
+
+.product-info a {
+  text-decoration: none;
+  color: white;
+  font-weight: 700;
+  margin-right: .5rem;
+  transition: all .5s;
+
+  &:hover {
+    color: #FFCD1E;
+  }
+}
+
+.product-info span {
+  font-weight: 700;
+  margin-left: .5rem;
+  color: #273968;
+}
+
+.product-btn button {
+  padding: .3rem .7rem;
+  border-radius: 0;
+  border: none;
+  margin-right: .7rem;
+  font-size: 1.04rem;
+  font-weight: 400;
+  color: black;
+  background-color: #E6E6E6;
+
+  &:hover {
+    background-color: #E6E6E6;
+    color: black;
+  }
+
+  &:active:focus {
+    background-color: #273968;
+    color: white;
+  }
+
+  &:focus {
+    background-color: #273968;
+    color: white;
+  }
+}
+
+.card-product {
+  border: none;
+  transition: all .5s;
+  padding: 2.5rem .7rem;
+  border-radius: 0;
+  overflow: hidden;
+
+  &:hover {
+    box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+    cursor: pointer;
+  }
+}
+
+.card-product img {
+  transition: all .5s;
+
+  &:hover {
+    transform: scale(1.1);
+  }
+}
+
+.card-title {
+  color: #273968;
+  font-weight: 700;
+  letter-spacing: .3px;
+}
+
+.card-sub-title {
+  color: #273968;
+  font-weight: 700;
+  font-size: .9rem;
+}

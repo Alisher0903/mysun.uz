@@ -1,0 +1,67 @@
+.box-empty {
+    width: 100%;
+    height: 9rem;
+}
+
+.search-img {
+    background-image: url("http://solara.uz/assets/images/4d/4d309d_product-bg.jpg");
+    background-repeat: no-repeat;
+    background-position: right;
+    width: 100%;
+    height: 35vh;
+    display: block;
+}
+
+.search-content {
+    text-align: center;
+    padding-top: 10vh;
+}
+
+.search-content h1 {
+    font-size: 3rem;
+    font-weight: 900;
+    color: #273968;
+    margin-bottom: 1rem;
+}
+
+.search-content p {
+    color: white;
+    font-weight: 700;
+    font-size: 1.05rem;
+    letter-spacing: .5px;
+    transition: all .4s;
+}
+
+.search-content p:hover {
+    color: #FFCD1E;
+}
+
+.search-span {
+    color: #273968;
+    font-weight: 600;
+    font-size: 1.05rem;
+    letter-spacing: .5px;
+}
+
+.search-input {
+    margin-left: 25%;
+    margin-top: 14vh;
+    box-sizing: border-box;
+}
+
+.search-input input {
+    background-color: #F2F8FF;
+    border: none;
+    height: 4rem;
+}
+
+.search-input button {
+    background-color: #273968;
+    transition: all .6s;
+    border: none;
+    box-sizing: border-box;
+}
+
+.search-input button:hover {
+    background-color: #FFCD1E;
+}

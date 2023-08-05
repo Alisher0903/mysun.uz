@@ -1,0 +1,13 @@
+.video-style__txt {
+    font-size: .8rem;
+    transform: translateX(93%);
+    margin-top: -8rem;
+}
+
+.text-style {
+    font-size: .8rem;
+    margin-top: 4rem;
+    transform: translateX(47%);
+    line-height: 1.8;
+    letter-spacing: .5px;
+}

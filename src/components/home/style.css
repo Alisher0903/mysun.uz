@@ -1,0 +1,445 @@
+/* scroll btn style */
+#backToTopBtn {
+    display: none;
+    position: fixed;
+    bottom: 50px;
+    right: 40px;
+    background-color: #FFCD1E;
+    border-radius: 0;
+    padding: .3rem .5rem;
+    border: none;
+    cursor: pointer;
+    transition: all opacity 10s visibility 10s;
+    z-index: 8;
+}
+
+#backToTopBtn.show {
+    display: block;
+    opacity: 1;
+    visibility: visible;
+}
+
+#backToTopBtn.hide {
+    opacity: 0;
+    visibility: hidden;
+}
+
+.box-empty {
+    width: 100%;
+    height: 9rem;
+}
+
+/* button */
+.animated-button {
+    padding: .8rem 2rem;
+    font-size: 1.05rem;
+    font-weight: 500;
+    background-color: #FFCD1E;
+    color: #fff;
+    border: none;
+    cursor: pointer;
+    z-index: 1;
+    transition: background-color 0.3s, box-shadow 0.3s, transform 0.3s;
+    overflow: hidden;
+}
+
+.animated-button:before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: #273968;
+    transform: scaleX(0);
+    transform-origin: left;
+    transition: transform 0.5s;
+    z-index: -1;
+}
+
+.animated-button:after {
+    content: "";
+    position: absolute;
+    top: 0;
+    right: 0;
+    width: 100%;
+    height: 100%;
+    background-color: #273968;
+    transform: scaleX(0);
+    transform-origin: right;
+    transition: transform 0.5s;
+    z-index: -1;
+}
+
+.animated-button:hover:before {
+    transform: scaleX(1);
+}
+
+.animated-button:hover:after {
+    transform: scaleX(1);
+}
+
+.animated-button:hover {
+    background-color: #273968;
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.1);
+    transform: scale(1.05);
+}
+/* *-*-*-*-*- */
+.animated-button__two {
+    padding: .8rem 2rem;
+    font-size: 1.05rem;
+    font-weight: 500;
+    background-color: #273968;
+    color: #fff;
+    border: none;
+    cursor: pointer;
+    z-index: 1;
+    transition: background-color 0.3s, box-shadow 0.3s, transform 0.3s;
+    overflow: hidden;
+}
+
+.animated-button__two:before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: #FFCD1E;
+    transform: scaleX(0);
+    transform-origin: left;
+    transition: transform 0.5s;
+    z-index: -1;
+}
+
+.animated-button__two:after {
+    content: "";
+    position: absolute;
+    top: 0;
+    right: 0;
+    width: 100%;
+    height: 100%;
+    background-color: #FFCD1E;
+    transform: scaleX(0);
+    transform-origin: right;
+    transition: transform 0.5s;
+    z-index: -1;
+}
+
+.animated-button__two:hover:before {
+    transform: scaleX(1);
+}
+
+.animated-button__two:hover:after {
+    transform: scaleX(1);
+}
+
+.animated-button__two:hover {
+    background-color: #FFCD1E;
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.1);
+    transform: scale(1.05);
+}
+/* end button */
+
+/* carousel style */
+.home-carousel img {
+    height: 600px;
+}
+
+.home-carousel h1 {
+    position: relative;
+    top: -14rem;
+    color: #273968;
+    font-size: 3.5rem;
+    font-weight: 900;
+}
+
+.home-carousel__btn button {
+    position: relative;
+    top: -11rem;
+}
+
+/* end carousel style */
+
+/* солнечные решения */
+.span-blur {
+    width: 70px;
+    height: 2px;
+    background-color: #FFCD1E;
+    display: inline-block;
+    vertical-align: middle;
+    margin-right: .6rem;
+}
+
+.span-text {
+    color: #FFCD1E;
+    font-weight: 700;
+    font-size: 1.1rem;
+    vertical-align: middle;
+}
+
+.we-offer {
+    font-size: 2.5rem;
+    font-weight: 700;
+    color: #273968;
+    margin-top: 1rem;
+}
+
+.guarantee {
+    color: rgb(103, 102, 102);
+    font-weight: 400;
+    margin-top: 1rem;
+    line-height: 1.9;
+    letter-spacing: .5px;
+}
+
+.home-business h3 {
+    color: #273968;
+    font-weight: 700;
+}
+
+.home-business p {
+    color: rgb(81, 81, 81);
+    line-height: 1.8;
+    font-size: 1rem;
+    letter-spacing: .02px;
+}
+/* end солнечные решения */
+
+/* statistic */
+.statistics {
+    background-image: url("https://solara.uz/resources/img/about-bg.jpg");
+    background-repeat: no-repeat;
+    background-position: center;
+    width: 100%;
+    margin-top: 7rem;
+}
+
+.statistic-box {
+    width: 100%;
+}
+
+.statistic-box h2 {
+    font-weight: 900;
+    font-size: 3.5rem;
+    color: white;
+}
+
+.statistic-box p {
+    font-weight: 500;
+    font-size: 1.15rem;
+    color: #FFCD1E;
+}
+/* end statistic */
+
+/* guarantee style */
+.guarantee-carousel {
+    height: 380px;
+    overflow: hidden;
+}
+
+.guarantee-carousel img {
+    margin-left: 3rem;
+    width: 90%;
+    height: 380px;
+    transform: scale(1.4);
+}
+
+.guarantee-carousels h3 {
+    color: #273968;
+    font-weight: 700;
+    margin-top: 1rem;
+    letter-spacing: 1px;
+}
+
+.guarantee-carousels p {
+    font-weight: 500;
+    letter-spacing: 1px;
+    color: rgb(86, 85, 85);
+}
+
+/* end guarantee style */
+
+/* company benefits style */
+.company-benefit {
+    background-image: url("https://solara.uz/assets/images/aa/aa1eea_Untitled-4-copy-copy.jpg");
+    background-repeat: no-repeat;
+    background-position: 0 12%;
+    width: 100%;
+    height: 590px;
+    margin-top: 5.5rem;
+    margin-bottom: 100px;
+}
+
+.company-benefits__box {
+    background-color: rgb(39 57 104 / 90%);
+    margin-top: 3.4rem;
+    margin-left: 7rem;
+    padding: 5rem;
+    width: 50%;
+}
+
+
+.company-benefits__box h2 {
+    color: white;
+    font-weight: 700;
+    font-size: 2.6rem;
+    letter-spacing: .5px;
+    margin-top: 1rem;
+    width: 80%;
+}
+
+/* end company benefits style */
+
+/* production style */
+.production-box {
+    overflow: hidden;
+    vertical-align: middle;
+}
+
+.production-box img {
+    transition: all .6s;
+    transform: scale(1.08);
+}
+
+.production-box img:hover {
+    transform: scale(1.25);
+}
+
+.production-box__span {
+    background-color: rgb(39 57 104 / 90%);
+    color: white;
+    display: block;
+    padding: .6rem .6rem;
+    font-weight: 700;
+    font-size: 1.2rem;
+    box-sizing: border-box;
+    letter-spacing: -.6px;
+}
+
+/* end production style */
+
+/* Our projects style and new events */
+.slider-item {
+    overflow: hidden;
+}
+
+.slider-item img {
+
+    transition: all .5s;
+    &:hover {
+        filter: brightness(.4);
+        transform: scale(1.1);
+    }
+}
+
+/* .read-more-icon {
+    position: absolute;
+    left: 5%;
+    top: 5%;
+    width: 80%;
+    height: 60%;
+    background-color: rgba(0, 0, 0, 0.8);
+}
+
+.read-more-icon a {
+    position: absolute;
+    top: 35%;
+    bottom: auto;
+    left: 40%;
+    right: auto;
+    color: white;
+    background-color: #FFCD1E;
+    padding: .6rem 1rem;
+} */
+
+.blog-content a {
+    text-decoration: none;
+    color: #273968;
+    font-size: 1.3rem;
+    font-weight: 700;
+    letter-spacing: -1px;
+    transition: .3s;
+}
+
+.blog-content a:hover {
+    color: #FFCD1E;
+}
+
+/* end Our projects style and new events */
+
+/* Our partners */
+.partner-item {
+    margin-top: 4rem;
+    margin-bottom: 4rem;
+    text-align: center;
+    filter: grayscale(100);
+    transition: all .7s;
+}
+
+.partner-item:hover {
+    filter: grayscale(0);
+}
+
+/* end Our partners */
+
+
+/* media style */
+@media only screen and (max-width: 991px) {
+    .company-benefit {
+        background-image: none;
+    }
+
+    .company-benefits__box {
+        width: 90%;
+        margin-left: 3rem;
+    }
+
+    .production-1 {
+        height: auto;
+    }
+}
+
+@media only screen and (max-width: 600px) {
+    .home-carousel h1 {
+        font-size: 2rem;
+    }
+
+    .home-business {
+        margin-top: 1rem;
+        border: 1px solid gray;
+        padding: 2rem 1rem;
+    }
+
+    .home-business button {
+        transform: translateX(-60%);
+    }
+
+    .statistics {
+        margin-top: 1rem;
+    }
+
+    .statistic-box h2 {
+        font-size: 2rem;
+    }
+
+    .statistic-box p {
+        font-size: .9rem;
+    }
+
+    .span-text {
+        font-size: 1rem;
+    }
+
+    .we-offer {
+        font-size: 2rem;
+    }
+
+    .company-benefits__box h2 {
+        font-size: 2rem;
+    }
+
+    .section-production {
+        margin-top: -7rem;
+    }
+}

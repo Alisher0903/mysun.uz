@@ -1,0 +1,185 @@
+.navbar-menu__brend {
+    margin-top: 3.5rem;
+    background-color: #021533;
+    z-index: 12;
+}
+
+.navbar-menu__brend a {
+    color: white;
+    margin-right: 1.2rem;
+    font-size: .9rem;
+    font-weight: 500;
+    transition: all .5s;
+}
+
+.navbar-menu__brend a:hover {
+    color: #FFCD1E;
+}
+
+.navbar-menu__brend a:active:focus {
+    color: red;
+}
+
+.nav-menu__search a {
+    cursor: pointer;
+    margin-right: 1.2rem;
+    color: white;
+}
+
+.navbar-menu__btn {
+    padding: .6rem 1.7rem;
+    font-size: 1.05rem;
+    font-weight: 500;
+    background-color: #FFCD1E;
+    color: #fff;
+    border: none;
+    cursor: pointer;
+    z-index: 1;
+    transition: background-color 0.3s, box-shadow 0.3s, transform 0.3s;
+    overflow: hidden;
+    border-radius: 0;
+}
+
+.navbar-menu__btn:before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: black;
+    transform: scaleX(0);
+    transform-origin: left;
+    transition: transform 0.5s;
+    z-index: -1;
+}
+
+.navbar-menu__btn:after {
+    content: "";
+    position: absolute;
+    top: 0;
+    right: 0;
+    width: 100%;
+    height: 100%;
+    background-color: black;
+    transform: scaleX(0);
+    transform-origin: right;
+    transition: transform 0.5s;
+    z-index: -1;
+}
+
+.navbar-menu__btn:hover:before {
+    transform: scaleX(1);
+}
+
+.navbar-menu__btn:hover:after {
+    transform: scaleX(1);
+}
+
+.navbar-menu__btn:hover {
+    background-color: green;
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.1);
+    transform: scale(1.05);
+}
+
+/* modal style */
+.modal-image {
+    height: 100%;
+}
+
+.span-blur__nav {
+    width: 55px;
+    height: 3px;
+    background-color: #FFCD1E;
+    display: inline-block;
+    vertical-align: middle;
+    margin-right: .6rem;
+}
+
+.span-text__nav {
+    color: #FFCD1E;
+    font-weight: 700;
+    font-size: 1.1rem;
+    vertical-align: middle;
+}
+
+.we-offer__nav {
+    font-size: 2.1rem;
+    font-weight: 700;
+    color: #273968;
+    margin-top: 1rem;
+}
+
+.we-offer__p {
+    margin-top: 1rem;
+    font-size: 1.1rem;
+    letter-spacing: -.2px;
+}
+
+.form-textarea {
+    font-size: 1.3rem;
+    border: 1px solid #ccc;
+
+    &:focus {
+        border-color: #ccc;
+        outline: none;
+        box-shadow: 0 0 7px #289bff;
+        border-radius: 0;
+    }
+}
+
+.modal-btn {
+    padding: .6rem 1.7rem;
+    font-size: 1.05rem;
+    font-weight: 500;
+    background-color: #273968;
+    color: #fff;
+    border: none;
+    cursor: pointer;
+    z-index: 1;
+    transition: background-color 0.3s, box-shadow 0.3s, transform 0.3s;
+    overflow: hidden;
+    border-radius: 0;
+}
+
+.modal-btn:before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: #FFCD1E;
+    transform: scaleX(0);
+    transform-origin: left;
+    transition: transform 0.5s;
+    z-index: -1;
+}
+
+.modal-btn:after {
+    content: "";
+    position: absolute;
+    top: 0;
+    right: 0;
+    width: 100%;
+    height: 100%;
+    background-color: #FFCD1E;
+    transform: scaleX(0);
+    transform-origin: right;
+    transition: transform 0.5s;
+    z-index: -1;
+}
+
+.modal-btn:hover:before {
+    transform: scaleX(1);
+}
+
+.modal-btn:hover:after {
+    transform: scaleX(1);
+}
+
+.modal-btn:hover {
+    background-color: #FFCD1E;
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.1);
+    transform: scale(1.05);
+}

@@ -1,0 +1,167 @@
+body {
+  background-color: #fff;
+}
+.main {
+  padding-top: 10%;
+  background-image: url("https://cdn.wallpapersafari.com/32/97/bZrevY.jpg");
+  font-size: 10px;
+  background-size: cover;
+}
+.link1 {
+  color: #737573;
+  text-decoration: none;
+  transition: 0.5s;
+  display: inline-block;
+  margin-right: 8px;
+  font-size: 1.1rem;
+}
+.link1:hover {
+  color: #FFCD1E;
+}
+
+.p1 {
+  color: #737573;
+  display: inline-block;
+  font-size: 1.1rem;
+}
+.h2-1 {
+  color: #273968;
+  font-weight: 700;
+  font-family: Tahoma;
+  font-size: 1.8rem;
+}
+.konsultat {
+  font-size: 1rem;
+  margin-top: 4%;
+  opacity: .8;
+}
+
+.textarea1 {
+  font-size: 1rem;
+  height: 150px;
+}
+.textarea1::after {
+  border-color: #FFCD1E;
+}
+.input1:hover {
+  border: 1px solid;
+  border-color: #FFCD1E;
+}
+.form-control:focus {
+    border-color: #FFCD1E!important;
+    box-shadow: none !important;
+}
+
+
+/* button */
+.animated-btn {
+  padding: .8rem 2rem;
+  font-size: 1.05rem;
+  font-weight: 500;
+  background-color: #FFCD1E;
+  color: #fff;
+  border: none;
+  cursor: pointer;
+  z-index: 1;
+  transition: background-color 0.3s, box-shadow 0.3s, transform 0.3s;
+  overflow: hidden;
+}
+
+.animated-btn:before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: #273968;
+  transform: scaleX(0);
+  transform-origin: left;
+  transition: transform 0.5s;
+  z-index: -1;
+}
+
+.animated-btn:after {
+  content: "";
+  position: absolute;
+  top: 0;
+  right: 0;
+  width: 100%;
+  height: 100%;
+  background-color: #273968;
+  transform: scaleX(0);
+  transform-origin: right;
+  transition: transform 0.5s;
+  z-index: -1;
+}
+
+.animated-btn:hover:before {
+  transform: scaleX(1);
+}
+
+.animated-btn:hover:after {
+  transform: scaleX(1);
+}
+
+.animated-btn:hover {
+  background-color: #273968;
+  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.1);
+  transform: scale(1.05);
+}
+.img2 {
+  display: inline-block;
+  width: 35px;
+}
+.main-box2 {
+  margin-top: 20%;
+}
+.p2 {
+  font-size: 1rem;
+  width: 57%;
+  padding-left: 13%;
+}
+
+.malumot {
+  font-size: 0.9rem;
+  padding: 3% 17% 3% 13%;
+}
+
+.boxs {
+  margin-top: 8%;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 40px;
+}
+.malumo {
+  font-size: 0.9rem;
+  padding-bottom: 10%;
+}
+.map {
+  width: 100%;
+  height: 100%;
+  background-color: #FFCD1E;
+}
+#backToTopBtn {
+  display: none;
+  position: fixed;
+  bottom: 50px;
+  right: 40px;
+  background-color: #FFCD1E;
+  border-radius: 0;
+  padding: 0.3rem 0.5rem;
+  border: none;
+  cursor: pointer;
+  transition: all opacity 10s visibility 10s;
+  z-index: 8;
+}
+
+#backToTopBtn.show {
+  display: block;
+  opacity: 1;
+  visibility: visible;
+}
+
+#backToTopBtn.hide {
+  opacity: 0;
+  visibility: hidden;
+}/*# sourceMappingURL=contactStyle.css.map */

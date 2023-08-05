@@ -1,0 +1,108 @@
+[
+    {
+        "id": 1,
+        "img": "https://solara.uz/assets/images/62/62cf2e_Productivity.jpg",
+        "title": "Солнечные станция",
+        "delPrice": "135000000 СУМ",
+        "price": "110000000 СУМ",
+        "category": 1
+    },
+    {
+        "id": 2,
+        "img": "https://solara.uz/assets/images/f7/f78ecd_628667-01.jpg",
+        "title": "Солнечные батарея LS450HC",
+        "price": "3100000 СУМ",
+        "category": 1
+    },
+    {
+        "id": 3,
+        "img": "https://solara.uz/assets/images/38/386e9a_Inverter-Solis-1P4K-4G.jpg",
+        "title": "Инвертор Солис 1П4К-4Г",
+        "price": "11593800 СУМ",
+        "category": 2
+    },
+    {
+        "id": 4,
+        "img": "https://solara.uz/assets/images/9e/9e6972_Inverter-Solis-1P5K-4G.jpg",
+        "title": "Инвертор Солис 1П5К-4Г",
+        "price": "11390400 СУМ",
+        "category": 2
+    },
+    {
+        "id": 5,
+        "img": "https://solara.uz/assets/images/8d/8d9a12_Inverter-Solis-1P6K-4G.jpg",
+        "title": "Инвертор Солис 1П6К-4Г",
+        "price": "12000600 СУМ",
+        "category": 2
+    },
+    {
+        "id": 6,
+        "img": "https://solara.uz/assets/images/4d/4d1f9d_Inverter-Solis-3P8K-4G.jpg",
+        "title": "Инвертор Солис 3П8К-4Г",
+        "price": "18041580 СУМ",
+        "category": 2
+    },
+    {
+        "id": 7,
+        "img": "https://solara.uz/assets/images/f2/f2546c_Inverter-Solis-3P12K-4G-1.jpg",
+        "title": "Инвертор Солис 3П12К-4Г",
+        "price": "20340000 СУМ",
+        "category": 2
+    },
+    {
+        "id": 8,
+        "img": "https://solara.uz/assets/images/46/4608af_Inverter-Solis-3P20K-4G.jpg",
+        "title": "Инвертор Солис 3П20К-4Г",
+        "price": "22374000 СУМ",
+        "category": 2
+    },
+    {
+        "id": 9,
+        "img": "https://solara.uz/assets/images/f1/f14b9b_Inverter-Solis-3P30K-5G.jpg",
+        "title": "Инвертор Солис 3П30К-5Г",
+        "price": "32340600 СУМ",
+        "category": 2
+    },
+    {
+        "id": 10,
+        "img": "https://solara.uz/assets/images/53/531bfb_Inverter-Solis-3P33K-5G.jpg",
+        "title": "Инвертор Солис 3П33К-5Г",
+        "price": "35595000 СУМ",
+        "category": 2
+    },
+    {
+        "id": 11,
+        "img": "https://solara.uz/assets/images/78/78c1a9_Inverter-Solis-3P36K-5G.jpg",
+        "title": "Инвертор Солис 3П36К-5Г",
+        "price": "38646000 СУМ",
+        "category": 2
+    },
+    {
+        "id": 12,
+        "img": "https://solara.uz/assets/images/7f/7f1b7c_Inverter-Solis-3P40K-5G.jpg",
+        "title": "Инвертор Солис 3П40К-5Г",
+        "price": "40883400 СУМ",
+        "category": 2
+    },
+    {
+        "id": 13,
+        "img": "https://solara.uz/assets/images/b4/b40b85_Inverter-Solis-3P50K-5G.jpg",
+        "title": "Инвертор Солис 3П50К-5Г",
+        "price": "4779900 СУМ",
+        "category": 2
+    },
+    {
+        "id": 14,
+        "img": "https://solara.uz/assets/images/30/303d9b_Inverter-Solis-3P60K-4G.jpg",
+        "title": "Инвертор Солис 3П60К-4Г",
+        "price": "56860300 СУМ",
+        "category": 2
+    },
+    {
+        "id": 15,
+        "img": "https://solara.uz/assets/images/e0/e00e6b_Inverter-Solis-80K-5G.jpg",
+        "title": "Инвертор Солис 80К-5Г",
+        "price": "63200000 СУМ",
+        "category": 2
+    }
+]

@@ -1,0 +1,17 @@
+.navbar-brend {
+    z-index: 13;
+}
+
+.navbar-brend a {
+    color: white;
+    margin-right: 1.5rem;
+}
+
+.navbar-brend a:hover {
+    cursor: pointer;
+    color: #ffcd1e;
+}
+
+.phone-number {
+    letter-spacing: -.7px;
+}
