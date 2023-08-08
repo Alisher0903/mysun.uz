@@ -1,24 +1,13 @@
 .autonomous {
-    margin-top: 7rem;
+    margin-top: 6rem;
 }
 
-.autonomous img {
+.autonomous video {
     width: 100%;
-    border-bottom: 1.5px solid black;
-    padding-bottom: 3rem;
-    padding-left: 4rem;
-    padding-right: 4rem;
-    box-sizing: border-box;
 }
 
-@media only screen and (max-width: 991px) {
+/* @media only screen and (max-width: 991px) {
     .autonomous {
         margin-top: 3rem;
     }
-
-    .autonomous img {
-        width: 100%;
-        padding: 1rem;
-        box-sizing: border-box;
-    }
-}
+} */

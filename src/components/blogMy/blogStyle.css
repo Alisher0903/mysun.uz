@@ -21,12 +21,14 @@
 #backToTopBtn.hide {
   opacity: 0;
   visibility: hidden;
-}/*# sourceMappingURL=blogStyle.css.map */
-body{
+}
+
+body {
   font-size: 10px;
   margin: 0;
   padding: 0;
 }
+
 .blogMain {
   margin-top: 9%;
   width: 100%;
@@ -36,8 +38,9 @@ body{
   background-size: cover;
   background-position: right;
 }
+
 .link2 {
-  color: #2f312f;
+  color: #273968;
   text-decoration: none;
   transition: 0.5s;
   display: inline-block;
@@ -45,17 +48,19 @@ body{
   font-size: 1.1rem;
   position: relative;
   font-weight: 700;
-  margin-left: 43%;
 }
+
 .link2:hover {
   color: #FFCD1E;
 }
+
 .p1-1 {
-  color: #737573;
+  color: #ffffff;
   display: inline-block;
   font-size: 1.1rem;
   font-weight: 700;
 }
+
 .h12 {
   text-align: center;
   padding-top: 4%;
@@ -68,6 +73,7 @@ body{
   text-align: center;
   margin-bottom: 5%;
 }
+
 .bord2 {
   position: static;
   width: 4%;
@@ -83,20 +89,23 @@ body{
   display: inline-block;
   font-size: 1rem;
 }
+
 .h13 {
   color: #273968;
   font-weight: 700;
   margin-top: 1%;
   font-size: 3rem;
 }
+
 .long-text {
   margin-top: 1%;
   font-size: 1rem;
   line-height: 1.7;
   opacity: 0.8;
 }
+
 .blog-page-3 {
-  margin-bottom: 50%;
+  margin-bottom: 10%;
   display: flex;
   gap: 25px;
 }
@@ -109,14 +118,18 @@ body{
   border: 1px solid #fffefe;
   background: #ffffff;
 }
+
 .ribbon {
   position: absolute;
-  right: 8px; top: -5px;
+  right: 8px;
+  top: -5px;
   z-index: 1;
   overflow: hidden;
-  width: 75px; height: 75px;
+  width: 75px;
+  height: 75px;
   text-align: right;
 }
+
 .ribbon span {
   font-size: 10px;
   font-weight: bold;
@@ -132,20 +145,27 @@ body{
   background: linear-gradient(#F79E05 0%, #FFCD1E 100%);
   box-shadow: 0 3px 10px -5px rgba(0, 0, 0, 1);
   position: absolute;
-  top: 19px; right: -21px;
+  top: 19px;
+  right: -21px;
 }
+
 .ribbon span::before {
   content: "";
-  position: absolute; left: 0px; top: 100%;
+  position: absolute;
+  left: 0px;
+  top: 100%;
   z-index: -1;
   border-left: 3px solid #8F5408;
   border-right: 3px solid transparent;
   border-bottom: 3px solid transparent;
   border-top: 3px solid #8F5408;
 }
+
 .ribbon span::after {
   content: "";
-  position: absolute; right: 0px; top: 100%;
+  position: absolute;
+  right: 0px;
+  top: 100%;
   z-index: -1;
   border-left: 3px solid transparent;
   border-right: 3px solid #8F5408;
@@ -157,16 +177,67 @@ body{
   padding: 0;
   width: 100%;
 }
+
 .blog-h5 {
   color: #273968;
   font-weight: 800;
   transition: 0.5s;
-  &:hover{
+
+  &:hover {
     color: #F79E05;
   }
 }
+
 .blog-p {
   font-size: 1rem;
   color: #2f312f;
   opacity: 90%;
+}
+
+@media only screen and (max-width: 1400px) {
+  .box {
+    width: 40%;
+    margin-left: 7%;
+  }
+}
+
+@media only screen and (max-width: 1010px) {
+  .h12 {
+    padding-top: 10% !important;
+  }
+}
+
+@media only screen and (max-width: 768px) {
+  .blog-h5 {
+    font-size: 1rem;
+  }
+
+  .blog-p {
+    font-size: 0.7rem;
+  }
+
+  .h12 {
+    padding-top: 14% !important;
+  }
+}
+
+@media only screen and (max-width: 540px) {
+  .box {
+    width: 100%;
+    margin-left: 2%;
+  }
+
+  .mains {
+    margin-top: 22% !important;
+  }
+}
+
+@media only screen and (max-width: 347px) {
+  .mains {
+    margin-top: 36% !important;
+  }
+
+  .h13 {
+    font-size: 1.5rem;
+  }
 }

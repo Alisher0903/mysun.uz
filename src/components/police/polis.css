@@ -1,0 +1,23 @@
+@media only screen and (max-width: 540px) {
+  .mmm {
+    margin-left: 0 !important;
+    text-align: left !important;
+  }
+
+  .sss {
+    font-size: 2rem !important;
+    margin-left: -38% !important;
+  }
+
+  .blogMain {
+    width: 100%;
+    margin-top: 25%;
+    padding-left: 10%;
+  }
+}
+
+@media only screen and (max-width: 364px) {
+  .blogMain {
+    margin-top: 39%;
+  }
+}

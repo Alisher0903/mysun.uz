@@ -1,8 +1,7 @@
-/* scroll btn */
-
 body {
   overflow-x: hidden;
 }
+
 #backToTopBtn {
   display: none;
   position: fixed;
@@ -14,7 +13,7 @@ body {
   border: none;
   cursor: pointer;
   transition: all opacity 10s visibility 10s;
-  z-index: 8;
+  z-index: 50;
 }
 
 #backToTopBtn.show {
@@ -28,12 +27,11 @@ body {
   visibility: hidden;
 }
 
-/* nav style */
 .nav-business {
   position: sticky;
   top: 240px;
   margin-left: 3rem;
-  z-index: 10;
+  /* z-index: 10; */
 }
 
 .nav-business ul {
@@ -66,96 +64,68 @@ body {
 }
 
 /* intro style */
-.section-intro {
+.business-intro {
+  background-image: url("https://solara.uz/assets/images/28/281d04_bg-buisness.jpg");
+  background-repeat: no-repeat;
+  background-position: center;
   width: 100%;
-  margin-top: -300px;
+  margin-top: -260px;
 }
 
-.section-intro__img {
-  width: 100%;
-  min-height: 950px;
-  position: relative;
-}
-
-.section-intro__info {
-  position: absolute;
-  top: 30vh;
+.business-intro__info {
   color: white;
-  padding-left: 12rem;
-  padding-right: 12rem;
-  box-sizing: border-box;
-  z-index: 3;
+  padding-top: 12rem;
+  padding-bottom: 12rem;
 }
 
-.section-intro__info h1 {
-  font-size: 3.2rem;
+.business-intro__info h1 {
+  font-size: 3rem;
+  margin-left: 5rem;
+  margin-right: 5rem;
 }
 
-.section-intro__info p {
-  margin-top: 1.4rem;
+.business-intro__info p {
+  margin-top: 1.3rem;
   font-weight: 500;
   font-size: 1.2rem;
+  margin-left: 5rem;
+  margin-right: 5rem;
+  margin-top: 3rem;
 }
 
-.section-intro__info span {
+.business-intro__info span {
   font-weight: 700;
   font-size: 1.1rem;
 }
 
-.section-intro__info a {
+.business-intro__info a {
   text-decoration: none;
   color: white;
   font-weight: 700;
   font-size: 1.1rem;
   transition: all 0.4s;
-}
 
-.section-intro__info a:hover {
-  color: #FFCD1E;
+  &:hover {
+    color: #FFCD1E;
+  }
 }
-
-/* .section-intro__icons {
-  width: 40px;
-  position: absolute;
-  bottom: 0.5rem;
-  left: 44%;
-  transform: translateX(-50%);
-} */
 
 /* reasons style */
-.section-reasons {
+.business-reasons {
   margin-top: 7rem;
 }
 
-.section-reasons div {
-  width: 68px;
-  height: 2.4px;
-  margin-right: 0.6rem;
-  background-color: #FFCD1E;
-  border: none;
-  display: inline-block;
-}
-
-.section-reasons span {
-  color: #FFCD1E;
-  letter-spacing: 0.4px;
-  vertical-align: middle;
-  font-size: 1.1rem;
-  font-weight: 700;
-}
-
-.section-reasons h2 {
+.business-reasons h2 {
   color: #273968;
   line-height: 1.1;
   margin-top: 1.5rem;
-  margin-bottom: 4rem;
-  padding-left: 5rem;
+  margin-bottom: 3.5rem;
   padding-right: 5rem;
   font-size: 2.5rem;
   font-weight: 700;
 }
 
-.section-reasons p {
+.business-reasons p {
   width: 90%;
   text-align: left;
   line-height: 2;
@@ -163,107 +133,100 @@ body {
   font-size: 1.04rem;
 }
 
-/* option style */
-.section-options {
+/* options style */
+.business-options {
   margin-top: 7rem;
-  background-color: white !important;
 }
 
-.section-options h3 {
+.business-options h3 {
   font-weight: 700;
   font-size: 1.6rem;
-  color: #273968 !important;
+  color: #273968;
   letter-spacing: 1px;
   margin-bottom: 2rem;
-  margin-left: 1.5rem;
 }
 
-.section-options a {
+.business-options a img {
+  margin-right: 0.5rem;
+}
+
+.business-options a {
   text-decoration: none;
   color: gray;
   margin-left: 2.2rem;
   transition: all 0.3s;
   font-weight: 500;
+  font-size: 1rem;
+
+  &:hover {
+    border-bottom: 2px solid #FFCD1E;
+    padding-bottom: 1rem;
+    color: rgb(70, 68, 68);
+  }
+
+  &:focus {
+    border-bottom: 2px solid #FFCD1E;
+    padding-bottom: 1rem;
+    color: rgb(70, 68, 68);
+  }
 }
 
-.section-options a img {
-  margin-right: 0.5rem;
-}
-
-.section-options a:hover {
-  border-bottom: 2px solid #FFCD1E;
-  padding-bottom: 1rem;
-  color: rgb(70, 68, 68);
-}
-
-.section-options a:focus {
-  border-bottom: 2px solid #FFCD1E;
-  padding-bottom: 1rem;
-  color: rgb(70, 68, 68);
-}
-
-/* types style */
-.section-types {
+/* types section */
+.business-types {
+  margin-top: 0;
   padding-top: 6rem;
   padding-bottom: 6rem;
+  background-color: #F4F3F4;
 }
 
-.section-types h3 {
+.business-types h3 {
   color: #FFCD1E;
   font-weight: 700;
   font-size: 2rem;
-  margin-bottom: 4rem;
+  margin-bottom: 3rem;
 }
 
-.section-types a {
+.business-types a {
   text-decoration: none;
   margin-right: 1rem;
   margin-left: 1rem;
+  font-size: 1rem;
   color: grey;
   font-weight: 500;
   transition: all 0.3s;
-}
 
-.section-types a:hover {
-  border-bottom: 2.5px solid #FFCD1E;
-  padding-bottom: 0.5rem;
-  color: rgb(70, 68, 68);
-}
+  &:hover {
+    border: 2.5px solid #FFCD1E;
+    padding: 0.3rem;
+    color: rgb(70, 68, 68);
+  }
 
-.section-types a:focus {
-  border-bottom: 2.5px solid #FFCD1E;
-  padding-bottom: 0.5rem;
-  color: rgb(70, 68, 68);
+  &:focus {
+    border: 2.5px solid #FFCD1E;
+    padding: 0.3rem;
+    color: rgb(70, 68, 68);
+  }
 }
 
 /* stages style */
-.section-stages {
+.business-stages {
   padding-top: 5rem;
-  background-color: #F4F3F4;
-  overflow: hidden;
 }
 
-.section-stages h3 {
+.business-stages h3 {
   color: #273968;
   text-align: center;
   font-weight: 700;
-  font-size: 2.1rem;
+  font-size: 2.2rem;
 }
 
-.section-stages__par {
+.business-stages__par {
   margin-top: 2rem;
   line-height: 2;
   text-align: center;
-  padding-left: 12rem;
-  padding-right: 12rem;
-}
-
-.section-stage p {
-  margin-top: 7px;
-  padding: 0;
-  text-align: left;
-  line-height: 1.4;
-  font-size: 0.75rem;
+  font-size: 1.1rem;
+  font-weight: 500;
+  color: rgb(90, 89, 89);
 }
 
 .stage-num {
@@ -273,30 +236,42 @@ body {
 
 .stage-text {
   vertical-align: middle;
-  font-size: 0.8rem;
+  font-size: 0.7rem;
+  font-weight: 400;
+  color: gray;
 }
 
-/* deedback style */
-.section-feedback {
+.business-stage p {
+  margin-top: .4rem;
+  text-align: left;
+  color: rgb(52, 52, 52);
+  line-height: 1.5;
+  font-size: 0.7rem;
+}
+
+/* fedback style */
+.business-feedback {
   margin-top: 8rem;
   padding-bottom: 6rem;
 }
 
-.section-feedback .feedback-img {
+.business-feedback .feedback-img {
   overflow: hidden;
 }
 
-.section-feedback img {
+.business-feedback img {
   transform: scale(1.6);
 }
 
-.section-feedback__head {
+.business-feedback__head {
   color: #273968;
+  font-size: 2rem;
   font-weight: 700;
 }
 
-.section-feedback__par {
+.business-feedback__par {
   color: grey;
+  font-size: 1rem;
 }
 
 .check {
@@ -304,6 +279,7 @@ body {
   font-size: 1rem;
   color: rgb(63, 63, 63);
   font-weight: 500;
+  display: inline-block;
 }
 
 .check a {
@@ -373,33 +349,150 @@ body {
 }
 
 /* media */
-/* @media only screen and (max-width: 1200px) {} */
+@media only screen and (max-width: 1199px) {
+  .business-intro__info {
+    margin-top: 10rem;
+  }
+
+  .business-intro__info h1 {
+    font-size: 2.5rem;
+    margin-left: 0;
+    margin-right: 0;
+  }
+
+  .business-intro__info p {
+    font-size: 1.15rem;
+    margin-left: 0;
+    margin-right: 0;
+  }
+}
 
 @media only screen and (max-width: 991px) {
+  .container {
+    max-width: 100%;
+    width: 100%;
+    margin: 0 auto;
+  }
 
-  .section-reasons h2 {
+  .business-intro__info h1 {
+    font-size: 2rem;
+  }
+
+  .business-reasons {
+    margin-top: 6rem;
+  }
+
+  .business-reasons h2 {
     padding: 0;
     font-size: 2rem;
   }
 
-  .section-reasons p {
+  .business-reasons p {
     width: 100%;
-    text-align: left;
-    line-height: 2;
-    margin-top: 1rem;
+    padding: 0;
     font-size: 1rem;
   }
 
-  .section-options {
-    margin-top: 0;
+  .business-options {
+    margin-top: 4rem;
   }
 
-  .section-stages h3 {
-    font-size: 1.8rem;
+  .business-options h3 {
+    font-size: 1.5rem;
+    text-align: center;
+    width: 100%;
   }
 
-  .section-stages__par {
-    padding-left: 0;
-    padding-right: 0;
+  .business-types {
+    padding-top: 4rem;
+    padding-bottom: 4rem;
+  }
+
+  .business-types h3 {
+    margin-bottom: 2rem;
+  }
+
+  .business-stages {
+    padding-top: 3.5rem;
+  }
+
+  .business-stages h3 {
+    font-size: 2rem;
+  }
+
+  .business-stages__par {
+    font-size: 1rem;
+  }
+}
+
+@media only screen and (max-width: 400px) {
+  .business-intro__info h1 {
+    font-size: 1.7rem;
+  }
+
+  .business-intro__info p {
+    font-size: .9rem;
+  }
+
+  .business-intro__info a {
+    font-size: .8rem;
+  }
+
+  .business-intro__info span {
+    font-size: .8rem;
+  }
+
+  .business-reasons {
+    margin-top: 4rem;
+  }
+
+  .business-reasons h2 {
+    font-size: 1.6rem;
+  }
+
+  .business-reasons p {
+    font-size: .95rem;
+  }
+
+  .business-options {
+    margin-top: 3rem;
+  }
+
+  .business-options h3 {
+    font-size: 1.2rem;
+  }
+
+  .business-options a {
+    font-size: .8rem;
+    margin-left: .8rem;
+  }
+
+  .business-types h3 {
+    font-size: 1.7rem;
+  }
+
+  .business-types a {
+    font-size: .8rem;
+  }
+
+  .business-stages h3 {
+    font-size: 1.6rem;
+  }
+
+  .business-stages__par {
+    font-size: .9rem;
+  }
+
+  .business-feedback {
+    margin-top: 4rem;
+    padding-bottom: 4rem;
+  }
+
+  .business-feedback__head {
+    font-size: 1.7rem;
+  }
+
+  .business-feedback__par {
+    font-size: .9rem;
   }
 }

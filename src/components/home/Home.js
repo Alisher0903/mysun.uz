@@ -66,18 +66,6 @@ function Home() {
         window.scrollTo({ top: 0, behavior: 'smooth' });
     }
 
-    // function boxBlock(id) {
-    //     console.log("kelli", id);
-    //     document.getElementById(id).className = "read-more-icon d-block";
-
-    // }
-
-    // function boxNone(id) {
-    //     // console.log("ketti");
-    //     let div = document.getElementById(id);
-    //     div.className = div.className + " d-none";
-    // }
-
     // aliceCarousel
     const items = [
         <div key={1} className="slider-item ms-4">
@@ -125,7 +113,7 @@ function Home() {
             <a href="https://solara.uz/ru/blog/sdelay-shag-k-solncu">
                 <img className="img-fluid" src="https://solara.uz/assets/images/61/612356_Solar-Systems.jpg" alt="img1" />
             </a>
-            <div className="blog-content ms-4">
+            <div className="blog-content">
                 <h3>
                     <a href="https://solara.uz/ru/blog/sdelay-shag-k-solncu">
                         Сделай шаг к солнцу. Солнечные электростанции под ключ
@@ -138,7 +126,7 @@ function Home() {
             <a href="https://solara.uz/ru/blog/kabmin-pereshol-na-solnechnuyu-energiyu">
                 <img className="img-fluid" src="https://solara.uz/assets/images/84/84fca7_Solar-Panels-in-the-Building-of-the-Cabinet-of-Ministers-Uzbekistan.jpg" alt="img2" />
             </a>
-            <div className="blog-content ms-4">
+            <div className="blog-content">
                 <h3>
                     <a href="https://solara.uz/ru/blog/kabmin-pereshol-na-solnechnuyu-energiyu">
                         Кабмин перешёл на солнечную энергию
@@ -152,7 +140,7 @@ function Home() {
             <a href="https://solara.uz/ru/blog/vozobnovlyayemyye-istochniki-energii-v-tashkente">
                 <img className="img-fluid" src="https://solara.uz/assets/images/ea/eaa6a0_-1-billion-for-the-introduction-of-renewable-energy.jpg" alt="img3" />
             </a>
-            <div className="blog-content ms-4">
+            <div className="blog-content">
                 <h3>
                     <a href="https://solara.uz/ru/blog/vozobnovlyayemyye-istochniki-energii-v-tashkente">
                         1 млрд долларов направят на внедрение возобновляемых источников энергии в Ташкенте
@@ -165,7 +153,7 @@ function Home() {
             <a href="https://solara.uz/ru/blog/ustanovku-solnechnykh-paneley-v-gos-organizatsiyakh-tashkenta">
                 <img className="img-fluid" src="https://solara.uz/assets/images/af/af98dd_Solar-Panels.jpg" alt="img4" />
             </a>
-            <div className="blog-content ms-4">
+            <div className="blog-content">
                 <h3>
                     <a href="https://solara.uz/ru/blog/ustanovku-solnechnykh-paneley-v-gos-organizatsiyakh-tashkenta">
                         Более 400 млрд сумов направят на установку солнечных панелей в госорганизациях Ташкента
@@ -178,7 +166,7 @@ function Home() {
             <a href="https://solara.uz/ru/blog/namangan-oborudovan-solnechnymi-panelyami">
                 <img className="img-fluid" src="https://solara.uz/assets/images/31/319b3d_Solar-Panels.jpg" alt="img5" />
             </a>
-            <div className="blog-content ms-4">
+            <div className="blog-content">
                 <h3>
                     <a href="https://solara.uz/ru/blog/namangan-oborudovan-solnechnymi-panelyami">
                         Четыре жилых дома в Намангане оснащены солнечными панелями
@@ -191,7 +179,7 @@ function Home() {
             <a href="https://solara.uz/ru/blog/zdaniya-v-uzbekistane-budut-zanyaty-solnechnymi-panelyami">
                 <img className="img-fluid" src="https://solara.uz/assets/images/b1/b1d885_Solar-Panels.jpg" alt="img6" />
             </a>
-            <div className="blog-content ms-4">
+            <div className="blog-content">
                 <h3>
                     <a href="https://solara.uz/ru/blog/zdaniya-v-uzbekistane-budut-zanyaty-solnechnymi-panelyami">
                         Минимум 50% крыш новых многоэтажек в Узбекистане займут солнечные панели
@@ -204,7 +192,7 @@ function Home() {
             <a href="https://solara.uz/ru/blog/RENWEX+2021+%D0%9C%D0%B5%D0%B6%D0%B4%D1%83%D0%BD%D0%B0%D1%80%D0%BE%D0%B4%D0%BD%D0%B0%D1%8F+%D0%B2%D1%8B%D1%81%D1%82%D0%B0%D0%B2%D0%BA%D0%B0+%D0%B8+%D1%84%D0%BE%D1%80%D1%83%D0%BC">
                 <img className="img-fluid" src="https://solara.uz/assets/images/21/21beb3_Renwex-Solara.jpg" alt="img7" />
             </a>
-            <div className="blog-content ms-4">
+            <div className="blog-content">
                 <h3>
                     <a href="https://solara.uz/ru/blog/RENWEX+2021+%D0%9C%D0%B5%D0%B6%D0%B4%D1%83%D0%BD%D0%B0%D1%80%D0%BE%D0%B4%D0%BD%D0%B0%D1%8F+%D0%B2%D1%8B%D1%81%D1%82%D0%B0%D0%B2%D0%BA%D0%B0+%D0%B8+%D1%84%D0%BE%D1%80%D1%83%D0%BC">
                         RENWEX 2021 Международная выставка и форум
@@ -217,7 +205,7 @@ function Home() {
             <a href="https://solara.uz/ru/blog/solnechnaya-energia-dlya-doma-i-biznesa">
                 <img className="img-fluid" src="https://solara.uz/assets/images/08/080fcd_Solar-Panels.jpg" alt="img8" />
             </a>
-            <div className="blog-content ms-4">
+            <div className="blog-content">
                 <h3>
                     <a href="https://solara.uz/ru/blog/solnechnaya-energia-dlya-doma-i-biznesa">
                         Солнечная энергия для вашего дома и бизнеса
@@ -447,13 +435,13 @@ function Home() {
                 </div>
                 <Row className="mt-5 w-100">
                     <Col className="col-12 col-lg-4">
-                        <div className="home-business ms-5 mt-5 ps-5">
+                        <div className="home-business ms-4 ms-lg-5 mt-5 ps-lg-5">
                             <img src="https://solara.uz/assets/images/d1/d1324f_home-icon1.png" alt="img-icon" />
                             <h3 className="mt-3">Для бизнеса</h3>
                             <p className="mt-3">
                                 Комплексные решения в области солнечной энергетики для бизнеса станут отличным способом, позволяющим экономить на электроэнергии
                             </p>
-                            <Button className="rounded-0 mt-5 me-5 float-end animated-button" onClick={business}>
+                            <Button className="rounded-0 mt-5 me-0 me-lg-5 float-end animated-button" onClick={business}>
                                 Для бизнеса
                                 <svg xmlns="http://www.w3.org/2000/svg" width="20" fill="currentColor" class="bi bi-arrow-right-short ms-2" viewBox="0 0 16 16">
                                     <path fill-rule="evenodd" d="M4 8a.5.5 0 0 1 .5-.5h5.793L8.146 5.354a.5.5 0 1 1 .708-.708l3 3a.5.5 0 0 1 0 .708l-3 3a.5.5 0 0 1-.708-.708L10.293 8.5H4.5A.5.5 0 0 1 4 8z" />
@@ -465,13 +453,13 @@ function Home() {
                         <img src="https://solara.uz/resources/img/home-business.png" alt="business.png" className="img-fluid" />
                     </Col>
                     <Col className="col-12 col-lg-4">
-                        <div className="home-business ms-5 mt-5 me-5">
+                        <div className="home-business ms-4 ms-lg-5 mt-5 me-0 me-lg-5">
                             <img src="https://solara.uz/assets/images/7b/7be249_home-icon2.png" alt="img-icon2" />
                             <h3 className="mt-3">Частным Лицам</h3>
                             <p className="mt-3">
                                 Переход на альтернативную энергетику, гарантирует стабильное питание вашего дома и существенно снижает затраты на электроэнергию
                             </p>
-                            <Button className="rounded-0 mt-5 ms-5 ms-lg-0 me-lg-5 float-end animated-button" onClick={individuals}>
+                            <Button className="rounded-0 mt-5 me-0 me-lg-5 float-end animated-button" onClick={individuals}>
                                 Частным Лицам
                                 <svg xmlns="http://www.w3.org/2000/svg" width="20" fill="currentColor" class="bi bi-arrow-right-short ms-2" viewBox="0 0 16 16">
                                     <path fill-rule="evenodd" d="M4 8a.5.5 0 0 1 .5-.5h5.793L8.146 5.354a.5.5 0 1 1 .708-.708l3 3a.5.5 0 0 1 0 .708l-3 3a.5.5 0 0 1-.708-.708L10.293 8.5H4.5A.5.5 0 0 1 4 8z" />
@@ -484,21 +472,21 @@ function Home() {
 
             {/* statistica */}
             <div className="statistics">
-                <div className="container statistic-box">
+                <div className="container statistic-box py-4">
                     <Row className="text-center w-100">
-                        <Col className="col-sm-6 col-md-6 col-lg-3">
+                        <Col className="col-6 col-md-6 col-lg-3">
                             <h2>765+</h2>
                             <p>УСТАНОВКИ</p>
                         </Col>
-                        <Col className="col-sm-6 col-md-6 col-lg-3">
+                        <Col className="col-6 col-md-6 col-lg-3">
                             <h2>94Вт/ч</h2>
                             <p>ВЫРАБОТКА ЭЛЕКТРОЭНЕРГИИ</p>
                         </Col>
-                        <Col className="col-sm-6 col-md-6 col-lg-3">
+                        <Col className="col-6 col-md-6 col-lg-3">
                             <h2>72млн</h2>
                             <p>ЭКОНОМИЯ</p>
                         </Col>
-                        <Col className="col-sm-6 col-md-6 col-lg-3">
+                        <Col className="col-6 col-md-6 col-lg-3">
                             <h2>523</h2>
                             <p>КЛИЕНТОВ</p>
                         </Col>
@@ -511,10 +499,12 @@ function Home() {
                 <Row className="w-100">
                     <Col className="col-12 col-lg-4">
                         <div className="ms-2">
-                            <div className="span-blur"></div>
-                            <span className="span-text">Наше Прпреимущества</span>
-                            <h1 className="we-offer mt-4">Гарантия</h1>
-                            <p style={{ marginTop: "2.45rem" }}>
+                            <div className="guarantee__head">
+                                <div className="span-blur"></div>
+                                <span className="span-text">Наше Прпреимущества</span>
+                                <h1 className="we-offer mt-4">Гарантия</h1>
+                            </div>
+                            <p className="guarantee">
                                 Солнечные решения от компании СОЛАРА - это гарантия качества и эффективности на долгий срок.
                                 Мы предоставляем гарантию 25 лет на солнечные панели, 10 лет на солнечные инверторы,
                                 10 лет на аккумуляторы, 5 лет на солнечные водонагреватели
@@ -660,7 +650,7 @@ function Home() {
                         <div className="span-blur"></div>
                         <span className="span-text">Последние Проекты</span>
                         <h1 className="we-offer mt-3 fw-bold">Наши Проекты</h1>
-                        <p>
+                        <p style={{ fontSize: "1rem" }}>
                             Компания SOLARA реализовала свыше 700 проектов общей мощностью 1 ГВт по всем регионам Узбекистана.
                             Мы используем самые современные солнечные батареи, которые обладают исключительной эффективностью и
                             позволяют экономить деньги.
@@ -682,7 +672,7 @@ function Home() {
                         <div className="span-blur"></div>
                         <span className="span-text">Свежие новости</span>
                         <h1 className="we-offer mt-3 fw-bold">Новости и события</h1>
-                        <p>
+                        <p style={{ fontSize: "1rem" }}>
                             Следите за нашими новостями и будьте в курсе наших специальных предложений и последних тенденций использования солнечных энергии в Ташкент и в других регионах страны.
                         </p>
                         <Button className="animated-button rounded-0 mt-3" onClick={blog}>

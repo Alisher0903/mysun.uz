@@ -56,12 +56,12 @@ function Projects() {
                 </svg>
             </button>
 
-            <div className="project__bg">
-                <img className="img-fluid" src="http://solara.uz/assets/images/49/4914c5_blog-bg.jpg" alt="img" />
-                <div className="project-info text-center">
-                    <h4 className="mb-3">Проекты</h4>
-                    <Link to="/">Главная</Link>/<span>Проекты</span>
-                </div>
+            {/* <div className="box-empty"></div> */}
+
+            <div className="project__bg text-center">
+                <h1>Проекты</h1>
+                <Link to="/">Главная</Link>
+                <span>/ Проекты</span>
             </div>
 
             <Container>

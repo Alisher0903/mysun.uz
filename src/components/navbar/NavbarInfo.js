@@ -17,6 +17,11 @@ function NavbarInfo() {
 
     const toggle = () => setIsOpen(!isOpen);
 
+    // function toggleSelect() {
+    //     const language = document.getElementById('buttonBox');
+    //     language.classList.toggle('show');
+    // }
+
     return (
         <div>
             <Navbar expand="md" fixed='top' color='dark' className='navbar-brend fs-6'>
@@ -28,7 +33,7 @@ function NavbarInfo() {
                         <span className='fs-6 ms-1 phone-number'>+998 99 877 14 12</span>
                     </NavLink>
                 </NavbarBrand>
-                <NavbarToggler onClick={toggle} className='bg-warning'/>
+                <NavbarToggler onClick={toggle} className='bg-warning' />
                 <Collapse navbar isOpen={isOpen}>
                     <Nav className="me-auto" navbar>
                         <NavItem>
@@ -69,6 +74,11 @@ function NavbarInfo() {
                         </svg>
                     </NavbarText>
                 </Collapse>
+                {/* <div id='buttonBox'>
+                    <Button color='dark' outline className='text-light'>uz</Button>
+                    <Button color='dark' outline className='text-light'>ru</Button>
+                    <Button color='dark' outline className='text-light'>eng</Button>
+                </div> */}
             </Navbar>
         </div>
     );

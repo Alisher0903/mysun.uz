@@ -57,13 +57,13 @@ function Products() {
                 </svg>
             </button>
 
-            <div className="product__bg">
-                <img className="img-fluid" src="http://solara.uz/assets/images/7d/7df8e0_All-Solar-Products.jpg" alt="img" />
-                <div className="product-info text-center">
-                    <h4>Продукты</h4>
-                    <Link to="/">Главная</Link>/<span>Продукты</span>
+            <div className="proMain projek">
+                    <h1 className='h12'>Продукты</h1>
+                    <div className='pt-3 text-center'>
+                        <Link className='link2 mms' to="/">Главная</Link>
+                        <span className='p1-1'>/ Продукты</span>
+                    </div>
                 </div>
-            </div>
 
             <Container>
                 <div className="product-btn mt-5">
@@ -77,7 +77,7 @@ function Products() {
                 <div className="mt-5">
                     <Row className="mb-5">
                         {products && products.map((item, i) =>
-                            <Col className="col-4 mt-2 mb-2" key={i}>
+                            <Col className="col-12 col-md-6 col-lg-4 product-card mt-2 mb-2" key={i}>
                                 <Card className="card-product">
                                     <img className="img-fluid" alt="Sample" src={item.img} />
                                     <CardBody className="text-center mt-4">

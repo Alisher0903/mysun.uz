@@ -10,7 +10,7 @@
     border: none;
     cursor: pointer;
     transition: all opacity 10s visibility 10s;
-    z-index: 8;
+    z-index: 50;
 }
 
 #backToTopBtn.show {
@@ -161,7 +161,7 @@
 
 /* end carousel style */
 
-/* солнечные решения */
+/* business and individuals style */
 .span-blur {
     width: 70px;
     height: 2px;
@@ -187,8 +187,9 @@
 
 .guarantee {
     color: rgb(103, 102, 102);
+    font-size: 1rem;
     font-weight: 400;
-    margin-top: 1rem;
+    margin-top: 2rem;
     line-height: 1.9;
     letter-spacing: .5px;
 }
@@ -204,7 +205,7 @@
     font-size: 1rem;
     letter-spacing: .02px;
 }
-/* end солнечные решения */
+/* end business and individuals */
 
 /* statistic */
 .statistics {
@@ -254,10 +255,10 @@
 
 .guarantee-carousels p {
     font-weight: 500;
+    font-size: 1rem;
     letter-spacing: 1px;
     color: rgb(86, 85, 85);
 }
-
 /* end guarantee style */
 
 /* company benefits style */
@@ -279,7 +280,6 @@
     width: 50%;
 }
 
-
 .company-benefits__box h2 {
     color: white;
     font-weight: 700;
@@ -288,7 +288,6 @@
     margin-top: 1rem;
     width: 80%;
 }
-
 /* end company benefits style */
 
 /* production style */
@@ -333,25 +332,10 @@
     }
 }
 
-/* .read-more-icon {
-    position: absolute;
-    left: 5%;
-    top: 5%;
-    width: 80%;
-    height: 60%;
-    background-color: rgba(0, 0, 0, 0.8);
+.blog-content h3 {
+    line-height: .8;
+    margin-top: 1rem;
 }
-
-.read-more-icon a {
-    position: absolute;
-    top: 35%;
-    bottom: auto;
-    left: 40%;
-    right: auto;
-    color: white;
-    background-color: #FFCD1E;
-    padding: .6rem 1rem;
-} */
 
 .blog-content a {
     text-decoration: none;
@@ -360,12 +344,15 @@
     font-weight: 700;
     letter-spacing: -1px;
     transition: .3s;
+
+    &:hover {
+        color: #FFCD1E;
+    }
 }
 
-.blog-content a:hover {
-    color: #FFCD1E;
+.blog-content p {
+    font-size: 1rem;
 }
-
 /* end Our projects style and new events */
 
 /* Our partners */
@@ -380,7 +367,6 @@
 .partner-item:hover {
     filter: grayscale(0);
 }
-
 /* end Our partners */
 
 
@@ -400,19 +386,47 @@
     }
 }
 
-@media only screen and (max-width: 600px) {
+@media only screen and (max-width: 767px) {
+    .home-carousel img {
+        height: 500px;
+    }
+    
     .home-carousel h1 {
-        font-size: 2rem;
+        font-size: 1.6rem;
+        top: -10rem;
+    }
+
+    .home-carousel__btn button {
+        top: -8rem;
+    }
+
+    .statistic-box h2 {
+        font-size: 2.2rem;
+    }
+
+    .statistic-box p {
+        font-size: 1rem;
+    }
+}
+
+@media only screen and (max-width: 576px) {
+    .home-carousel img {
+        height: 370px;
+    }
+    
+    .home-carousel__btn button {
+        top: -3rem;
+    }
+
+    .home-carousel h1 {
+        font-size: 1.6rem;
+        top: -5rem;
     }
 
     .home-business {
         margin-top: 1rem;
         border: 1px solid gray;
         padding: 2rem 1rem;
-    }
-
-    .home-business button {
-        transform: translateX(-60%);
     }
 
     .statistics {
@@ -427,12 +441,22 @@
         font-size: .9rem;
     }
 
+    .guarantee__head {
+        text-align: center;
+    }
+
     .span-text {
         font-size: 1rem;
     }
 
     .we-offer {
         font-size: 2rem;
+    }
+
+    .company-benefits__box {
+        width: 100%;
+        margin-left: .8rem;
+        margin-right: 1rem;
     }
 
     .company-benefits__box h2 {
