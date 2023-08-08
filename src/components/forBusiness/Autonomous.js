@@ -2,8 +2,10 @@ import "./autonomous.css";
 
 function Autonomous() {
     return (
-        <div className="autonomous w-100">
-            <img className="img-fluid" src="https://sunhightech.uz/wp-content/themes/sunhightech/img/bussines/types/2-uzb.gif" alt="img" />
+        <div className="autonomous">
+            <video autoPlay muted loop>
+                <source src="https://solara.uz/resources/img/videos/forbusiness-video2.mp4" />
+            </video>
         </div>
     );
 }

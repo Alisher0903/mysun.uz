@@ -63,7 +63,7 @@ function ForBusiness() {
     };
 
     return (
-        <div className="main">
+        <div>
             <NavbarInfo />
             <NavbarMenu />
 
@@ -75,6 +75,8 @@ function ForBusiness() {
                     </g>
                 </svg>
             </button>
+
+            <div className="box-empty"></div>
 
             {/* navbar */}
             <nav className="nav-business d-none d-xl-inline">
@@ -90,25 +92,15 @@ function ForBusiness() {
 
             {/* intro section */}
             <section id="intro">
-                <div className="section-intro">
-                    <img className="img-fluid section-intro__img" src="https://solara.uz/assets/images/28/281d04_bg-buisness.jpg" alt="img" />
+                <div className="business-intro">
                     <Container className="text-center">
-                        <div className="section-intro__info">
+                        <div className="business-intro__info">
                             <h1>Комплексные решения для бизнеса в сфере солнечной энергетики</h1>
                             <p>Солнечная электростанция – надежная альтернатива традиционным источникам энергоснабжения, позволяющая экономить на электроэнергии.</p>
                             <Link to="/">Главная</Link>
                             <span className="ms-3 me-3">/</span>
                             <span>Для бизнеса</span>
                         </div>
-                        {/* <div className="section-intro__icons d-none d-lg-inline">
-                            <img src="https://solara.uz/images/2472_i9FkXWszVFjJhlMTmmjlz1LHbAWkawVm.svg" alt="img1" />
-                            <img src="https://solara.uz/images/2473_fcAoKI8ap9D1EpDnrXizYJK_2uO-LIUv.svg" alt="img2" />
-                            <img src="https://solara.uz/images/2474_MV94wBlmXJqQczUbaor-_PnnHWm-yvZx.svg" alt="img3" />
-                            <img src="https://solara.uz/images/2475_7SKYiqApAN74e5lKZNzCtxahxm7_DqjV.svg" alt="img4" />
-                            <img src="https://solara.uz/images/2476_iCjaJmK-UoNNzfs_Nv_LtDn9hP133eot.svg" alt="img5" />
-                            <img src="https://solara.uz/images/2477_0xy3wGJ8GGQHDdGlakniUbQBPPoS2Dgw.svg" alt="img6" />
-                            <img src="https://solara.uz/images/2478_Qc_sQE2XZ2HsahCYRg6qwgfLgfX7QzjR.svg" alt="img7" />
-                        </div> */}
                     </Container>
                 </div>
             </section>
@@ -118,10 +110,10 @@ function ForBusiness() {
                 <Row className="w-100">
                     <Col className="col-2 d-none d-lg-inline"></Col>
                     <Col className="col-12 col-lg-10">
-                        <Container className="ps-5 pe-5">
-                            <div className="section-reasons text-center">
-                                <div></div>
-                                <span>Для бизнеса</span>
+                        <Container>
+                            <div className="business-reasons text-center">
+                                <div className="span-blur"></div>
+                                <span className="span-text">Для бизнеса</span>
                                 <h2>Причины использовать солнечную электростанцию</h2>
                                 <p>Реалии таковы, что цены на электроэнергию постоянно поднимаются. Предприниматели вынуждены
                                     искать пути оптимизации расходов, чтобы не прогореть в условиях сильной конкурентной среды.
@@ -140,7 +132,7 @@ function ForBusiness() {
 
             {/* options section */}
             <section id="options">
-                <Container className="section-options">
+                <Container className="business-options">
                     <Row className="w-100">
                         <Col className="col-2 d-none d-lg-inline"></Col>
                         <Col className="col-12 col-lg-10">
@@ -162,7 +154,7 @@ function ForBusiness() {
             </section>
 
             {/* types section */}
-            <section id="types" className="section-types">
+            <section id="types" className="business-types">
                 <Container className="text-center">
                     <h3>Виды подключений</h3>
                     <Link onClick={() => { setNetwork(true) }}>АВТОНОМНЫЕ</Link>
@@ -173,15 +165,15 @@ function ForBusiness() {
             </section>
 
             {/* stages section */}
-            <section id="stages" className="section-stages">
+            <section id="stages" className="business-stages">
                 <Container className="px-3">
-                    <h3>Этапы реализации</h3>
-                    <p className="section-stages__par">Долгосрочный договор поставки электроэнергии для промышленных предприятий.
-                        Отсутствие инвестиций со стороны заказчика на этапе строительства солнечной генерации.</p>
                     <Row className="w-100 pb-5">
                         <Col className="col-2 d-none d-lg-inline"></Col>
                         <Col className="col-12 col-lg-10">
-                            <Row className="w-100 mt-5 section-stage">
+                            <h3>Этапы реализации</h3>
+                            <p className="business-stages__par">Долгосрочный договор поставки электроэнергии для промышленных предприятий.
+                                Отсутствие инвестиций со стороны заказчика на этапе строительства солнечной генерации.</p>
+                            <Row className="w-100 mt-5 business-stage">
                                 <Col className="col-12 col-sm-6 col-lg-3">
                                     <span className="stage-num">1</span><span className="stage-text ms-1">СТРОИТЕЛЬСТВО СЭС</span>
                                     <p>Поставщик строит солнечную электростанцию и синхронизирует работу с дизельной электростанцией</p>
@@ -206,7 +198,7 @@ function ForBusiness() {
             </section>
 
             {/* feedback section */}
-            <section id="feedback" className="section-feedback">
+            <section id="feedback" className="business-feedback">
                 <Row className="w-100">
                     <Col className="col-2 d-none d-lg-inline"></Col>
                     <Col className="col-12 col-lg-10">
@@ -216,34 +208,34 @@ function ForBusiness() {
                                     <img className="img-fluid" src="https://solara.uz/resources/img/forbusiness-contact.jpg" alt="img" />
                                 </Col>
                                 <Col className="col-12 col-lg-6 ms-3">
-                                    <h3 className="section-feedback__head">Хотите начать экономить?</h3>
-                                    <p className="section-feedback__par">Отправьте свои данные и наши специалисты свяжутся с вами для подтверждения и уточнения заявки</p>
+                                    <h3 className="business-feedback__head">Хотите начать экономить?</h3>
+                                    <p className="business-feedback__par">Отправьте свои данные и наши специалисты свяжутся с вами для подтверждения и уточнения заявки</p>
                                     <Form onSubmit={handleSubmit}>
                                         <Input className='rounded-0 mt-4 w-75' size="lg" type="text" value={inputValue} onChange={handleInputChange} placeholder='Полное имя' />
-                                        {showText && <p className='text-danger'>
+                                        {showText && <p className='text-danger fs-6'>
                                             Необходимо заполнить «Полное имя».
                                             <svg xmlns="http://www.w3.org/2000/svg" width="13" viewBox="0 0 24 24">
                                                 <path fill="red" d="M12.884 2.532c-.346-.654-1.422-.654-1.768 0l-9 17A.999.999 0 0 0 3 21h18a.998.998 0 0 0 .883-1.467L12.884 2.532zM13 18h-2v-2h2v2zm-2-4V9h2l.001 5H11z" />
                                             </svg></p>}
                                         <Input className='rounded-0 mt-4 w-75' size="lg" type="email" value={inputValueEmail} onChange={handleInputChangeEmail} placeholder="Эл. адрес" />
-                                        {showText && <p className='text-danger'>
+                                        {showText && <p className='text-danger fs-6'>
                                             Необходимо заполнить «Эл. адрес».
                                             <svg xmlns="http://www.w3.org/2000/svg" width="13" viewBox="0 0 24 24">
                                                 <path fill="red" d="M12.884 2.532c-.346-.654-1.422-.654-1.768 0l-9 17A.999.999 0 0 0 3 21h18a.998.998 0 0 0 .883-1.467L12.884 2.532zM13 18h-2v-2h2v2zm-2-4V9h2l.001 5H11z" />
                                             </svg></p>}
                                         <Input className='rounded-0 mt-4 w-75' type='number' size="lg" value={inputValueNum} onChange={handleInputChangeNum} placeholder='телефон' />
-                                        {showText && <p className='text-danger'>
+                                        {showText && <p className='text-danger fs-6'>
                                             Необходимо заполнить «Номер телефона».
                                             <svg xmlns="http://www.w3.org/2000/svg" width="13" viewBox="0 0 24 24">
                                                 <path fill="red" d="M12.884 2.532c-.346-.654-1.422-.654-1.768 0l-9 17A.999.999 0 0 0 3 21h18a.998.998 0 0 0 .883-1.467L12.884 2.532zM13 18h-2v-2h2v2zm-2-4V9h2l.001 5H11z" />
                                             </svg></p>}
                                         <Input className='rounded-0 mt-4 w-75' size="lg" value={inputValueKomp} onChange={handleInputChangeKomp} placeholder="Компания" />
-                                        {showText && <p className='text-danger'>
+                                        {showText && <p className='text-danger fs-6'>
                                             Необходимо заполнить «Компания».
                                             <svg xmlns="http://www.w3.org/2000/svg" width="13" viewBox="0 0 24 24">
                                                 <path fill="red" d="M12.884 2.532c-.346-.654-1.422-.654-1.768 0l-9 17A.999.999 0 0 0 3 21h18a.998.998 0 0 0 .883-1.467L12.884 2.532zM13 18h-2v-2h2v2zm-2-4V9h2l.001 5H11z" />
                                             </svg></p>}
-                                        <Input type="checkbox" id="check" className="mt-4" />
+                                        <Input type="checkbox" id="check" className="mt-4 d-inline-block p-2" />
                                         <Label className="check ms-2" for="check">Согласен с <Link to="https://solara.uz/ru/site/privacy-policy">ПОЛИТИКОЙ КОНФИДЕНЦИАЛЬНОСТИ</Link></Label>
                                         <Button type="submit" className='animated-button__two d-block rounded-0 mt-3'>
                                             Оставить Заявку

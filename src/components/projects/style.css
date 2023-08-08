@@ -24,33 +24,26 @@
 }
 
 .project__bg {
-  overflow: hidden;
+  background-image: url("http://solara.uz/assets/images/49/4914c5_blog-bg.jpg");
+  background-repeat: no-repeat;
+  background-position: right;
+  padding-top: 5rem;
+  padding-bottom: 5rem;
+  margin-top: 8rem;
 }
 
-.project__bg img {
-  position: relative;
-  margin-top: 11.8rem;
-  transform: scale(1.5);
-}
-
-.project-info {
-  position: absolute;
-  color: grey;
-  top: 30vh;
-  transform: translateX(300%);
-}
-
-.project-info h4 {
-  font-size: 3rem;
-  font-weight: 700;
+.project__bg h1 {
+  font-size: 2.7rem;
   color: #273968;
+  font-weight: 700;
+  margin-bottom: 1rem;
 }
 
-.project-info a {
+.project__bg a {
   text-decoration: none;
-  color: grey;
+  font-size: 1.2rem;
   font-weight: 700;
-  margin-right: .5rem;
+  color: white;
   transition: all .5s;
 
   &:hover {
@@ -58,10 +51,11 @@
   }
 }
 
-.project-info span {
-  font-weight: 700;
-  margin-left: .5rem;
+.project__bg span {
   color: #273968;
+  font-weight: 700;
+  font-size: 1.2rem;
+  margin-left: 1rem;
 }
 
 .project-btn button {
@@ -69,6 +63,7 @@
   border-radius: 0;
   border: none;
   margin-right: .7rem;
+  margin-bottom: 2%;
   font-size: 1.04rem;
   font-weight: 400;
   color: black;
@@ -127,4 +122,4 @@
   color: rgb(89, 88, 88);
   font-weight: 700;
   font-size: .9rem;
-}
+} 

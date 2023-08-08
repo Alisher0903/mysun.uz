@@ -11,3 +11,15 @@
     width: 100%;
     height: 900px;
 }
+
+@media only screen and (max-width: 991px) {
+    .ground-bg {
+        height: 800px;
+    }
+}
+
+@media only screen and (max-width: 450px) {
+    .ground-bg {
+        height: 700px;
+    }
+}

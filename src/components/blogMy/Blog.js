@@ -41,9 +41,9 @@ function Blog() {
             <div className="mains w-100">
                 <div className="blogMain">
                     <h1 className='h12'>Блог</h1>
-                    <div className='pt-3'>
+                    <div className='pt-3 text-center'>
                         <Link className='link2' to="/">Главная</Link>
-                        <p className='p1-1'>/ Контакты</p>
+                        <p className='p1-1'>/ Блог</p>
                     </div>
                 </div>
                 <div className="blog-page-2">
@@ -54,7 +54,7 @@ function Blog() {
                 </div>
                 <Container>
                     <div className="blog-page-3 row w-100">
-                        <div class="box col-lg-4">
+                        <div class="box col-4">
                             <div class="ribbon"><span>19 / 03</span></div>
                             <div className="box-div w-100">
                                 <img className='blog-img' src="https://solara.uz/assets/images/6b/6bbe7a_Solar-Panels.jpg" alt="." />
@@ -62,7 +62,7 @@ function Blog() {
                                 <p className='blog-p'>В Ташкенте на установку солнечных панелей в 1063 организациях, финансируемых из бюджетов города и районов (детские сады, школы, больницы, бюджетные организации), планируется направить 390 млрд сумов. Это предусмотрено решением столичного кенгаша народных депутатов от 20 февраля</p>
                             </div>
                         </div>
-                        <div class="box col-lg-4">
+                        <div class="box col-4">
                             <div class="ribbon"><span>19 / 03</span></div>
                             <div className="box-div w-100">
                                 <img className='blog-img' src="https://solara.uz/assets/images/4f/4f0a2d_-1-billion-for-the-introduction-of-renewable-energy.jpg" alt="." />
@@ -70,7 +70,7 @@ function Blog() {
                                 <p className='blog-p'>На внедрение возобновляемых источников энергии в столице Узбекистана планируется направить 1 млрд долларов, заявил президент. На зданиях и других объектах будут установлены солнечные панели. Государство будет гарантированно покупать излишки энергии у населения и бизнеса.</p>
                             </div>
                         </div>
-                        <div class="box col-lg-4">
+                        <div class="box col-4">
                             <div class="ribbon"><span>19 / 03</span></div>
                             <div className="box-div w-100">
                                 <img className='blog-img' src="https://solara.uz/assets/images/ad/adb8cd_Solar-Panels-in-the-Building-of-the-Cabinet-of-Ministers-Uzbekistan.jpg" alt="." />
@@ -78,7 +78,7 @@ function Blog() {
                                 <p className='blog-p'>На территории Кабинета Министров Узбекистана в Ташкенте запущена солнечная фотоэлектрическая станция мощностью 630 кВт. Он способен вырабатывать более 1,1 млн кВтч электроэнергии в год, сообщила пресс-служба Минэнерго.</p>
                             </div>
                         </div>
-                        <div class="box col-lg-4">
+                        <div class="box col-4">
                             <div class="ribbon"><span>19 / 03</span></div>
                             <div className="box-div w-100">
                                 <img className='blog-img' src="https://solara.uz/assets/images/da/da31c0_Solar-Panels.jpg" alt="." />
@@ -86,7 +86,7 @@ function Blog() {
                                 <p className='blog-p'>В Намангане солнечные панели общей мощностью 58 киловатт установлены на крышах четырех домов, где расположены 96 квартир, сообщила пресс-служба Министерства энергетики</p>
                             </div>
                         </div>
-                        <div class="box col-lg-4">
+                        <div class="box col-4">
                             <div class="ribbon"><span>19 / 03</span></div>
                             <div className="box-div w-100">
                                 <img className='blog-img' src="https://solara.uz/assets/images/16/166ab1_Solar-Panels.jpg" alt="." />
@@ -94,7 +94,7 @@ function Blog() {
                                 <p className='blog-p'>С 1 мая в Узбекистане вводится требование установки солнечных панелей на не менее 50% свободной части крыши сдаваемых в эксплуатацию многоэтажных домов</p>
                             </div>
                         </div>
-                        <div class="box col-lg-4">
+                        <div class="box col-4">
                             <div class="ribbon"><span>19 / 03</span></div>
                             <div className="box-div w-100">
                                 <img className='blog-img' src="https://solara.uz/assets/images/76/763d90_Solar-Systems.jpg" alt="." />
@@ -102,7 +102,7 @@ function Blog() {
                                 <p className='blog-p'>Топ 5 альтернатив солнечной энергии!</p>
                             </div>
                         </div>
-                        <div class="box col-lg-4">
+                        <div class="box col-4">
                             <div class="ribbon"><span>19 / 03</span></div>
                             <div className="box-div w-100">
                                 <img className='blog-img' src="https://solara.uz/assets/images/49/4982e9_Solar-Panels.jpg" alt="." />
@@ -110,7 +110,7 @@ function Blog() {
                                 <p className='blog-p'>Солнечная энергия считается самой популярной среди альтернативных источников энергии. Установка солнечных панелей, в первую очередь, позволяет добиться бесперебойной работы электроснабжения, исключить перебои или аварии на линиях электропередач, а также снизить затраты на электроэнергию.</p>
                             </div>
                         </div>
-                        <div class="box col-lg-4">
+                        <div class="box col-4">
                             <div class="ribbon"><span>19 / 03</span></div>
                             <div className="box-div w-100">
                                 <img className='blog-img' src="https://solara.uz/assets/images/47/47bd5b_Renwex-Solara.jpg" alt="." />
@@ -126,4 +126,5 @@ function Blog() {
         </div>
     );
 }
+
 export default Blog;

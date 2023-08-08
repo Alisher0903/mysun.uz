@@ -8,7 +8,8 @@ import { useState } from "react";
 import OnRoof from "./OnRoof";
 import OnGround from "./OnGround";
 import Autonomous from "./Autonomous";
-import Network from "./Network";
+import Network from "./Networks";
+import iconImg from "./img/img.jpg";
 import { toast } from "react-toastify";
 
 function PrivateIndividual() {
@@ -90,10 +91,9 @@ function PrivateIndividual() {
 
             {/* intro section */}
             <section id="intro">
-                <div className="section-intro">
-                    <img className="img-fluid" src="https://solara.uz/assets/images/10/10f22d_Solar-Panels-for-Individuals.jpg" alt="img" />
+                <div className="individual-intro">
                     <Container className="text-center">
-                        <div className="section-intro__info">
+                        <div className="individual-intro__info">
                             <h1>Надежный источник энергии для вашего дома</h1>
                             <p>Солнечная энергия – это альтернативный источник энергоснабжения,
                                 гарантирующий стабильное питание вашего дома и существенное снижение затрат на электроэнергию.</p>
@@ -111,18 +111,18 @@ function PrivateIndividual() {
                     <Col className="col-2 d-none d-lg-inline"></Col>
                     <Col className="col-12 col-lg-10">
                         <Container className="ps-5 pe-5">
-                            <div className="section-reasons__one">
-                                <div></div>
-                                <span>Для частных лиц</span>
+                            <div className="individual-reasons__one text-center">
+                                <div className="span-blur"></div>
+                                <span className="span-text">Для частных лиц</span>
                                 <h2>Причины использовать солнечную электростанцию</h2>
                                 <p>Солнечная станция является экологически чистым, экономичным и надежным источником электроснабжения вашего жилья. Компания СОЛАРА предлагает готовую продукцию для частного дома, что позволяет значительно сократить время на выбор техники.</p>
                                 <p>В линейке готовых решения от SOLARA представлены разнообразные варианты автономного, автономного гибридного и сетевого электрооборудования. Доверьтесь подбору оптимального комплекта для вас высококвалифицированными инженерами SOLARA.</p>
                             </div>
-                            <div className="section-reasons__two">
+                            <div className="individual-reasons__two text-center">
                                 <h3>Электростанция поможет</h3>
-                                {/* <img src="/img/img.jpg" alt="img" /> */}
+                                <img className="img-fluid" src={iconImg} alt="img" />
                             </div>
-                            <div className="section-reasons__tree">
+                            <div className="individual-reasons__tree">
                                 <h4>МЕТОДЫ ПОЛУЧЕНИЯ ДОХОДА ОТ СОЛНЕЧНОЙ ЭНЕРГИИ</h4>
                                 <p>Обычно энергия, которую генерирует солнечная станция в дневном режиме, предназначена для собственного потребления дома в приоритетном порядке. В случае отсутствия потребления дома или избыточного энергопотребления все неиспользованные солнечные электроэнергии можно отдать в центральную сеть по той же тарифной стоимости, по которой вы покупаете солнечную энергию у энергоснабжающей компании.
                                     Если этот объем превысит этот объем, то продажа электрической энергии будет производиться по оптовым тарифам.</p>
@@ -136,41 +136,44 @@ function PrivateIndividual() {
             </section>
 
             {/* options section */}
-            <section id="options" className="mt-5 section-options">
-                <Row className="w-100">
-                    <Col className="col-2 d-none d-lg-inline"></Col>
-                    <Col className="col-12 col-lg-10">
-                        <h3>Что входит в комплект</h3>
-                        <Row className="w-100">
-                            <Col className="col-4">
-                                <ul>
-                                    <li><p>Солнечные модули</p></li>
-                                    <li><p>АКБ <p>(для автономных комплектов)</p></p></li>
-                                    <li><p>Контроллер</p></li>
-                                </ul>
-                            </Col>
-                            <Col className="col-4">
-                                <ul>
-                                    <li><p>Электрический щит</p></li>
-                                    <li><p>Солнечный кабель</p></li>
-                                    <li><p>Опорные конструкции <p>(опционально)</p></p></li>
-                                </ul>
-                            </Col>
-                            <Col className="col-4">
-                                <ul>
-                                    <li><p>MC4 коннекторы</p></li>
-                                    <li><p>Инвертор</p></li>
-                                </ul>
-                            </Col>
-                        </Row>
-                        <img className="img-fluid mt-4 mb-5 pb-5" src="https://solara.uz/resources/img/forindividual-img2.jpg" alt="img" />
-                    </Col>
-                </Row>
+            <section id="options">
+                <div className="individual-options">
+                    <Row className="w-100">
+                        <Col className="col-2 d-none d-lg-inline"></Col>
+                        <Col className="col-12 col-lg-10">
+                            <h3>Что входит в комплект</h3>
+                            <Row className="w-100">
+                                <Col className="col-12 col-sm-6 col-md-4">
+                                    <ul>
+                                        <li><p>Солнечные модули</p></li>
+                                        <li><p>АКБ <p>(для автономных комплектов)</p></p></li>
+                                        <li><p>Контроллер</p></li>
+                                    </ul>
+                                </Col>
+                                <Col className="col-12 col-sm-6 col-md-4">
+                                    <ul>
+                                        <li><p>Электрический щит</p></li>
+                                        <li><p>Солнечный кабель</p></li>
+                                        <li><p>Опорные конструкции <p>(опционально)</p></p></li>
+                                    </ul>
+                                </Col>
+                                <Col className="col-12 col-sm-6 col-md-4">
+                                    <ul>
+                                        <li><p>MC4 коннекторы</p></li>
+                                        <li><p>Инвертор</p></li>
+                                    </ul>
+                                </Col>
+                            </Row>
+                            <img className="img-fluid mt-4 mb-5 pb-5 d-none d-lg-inline" src="https://solara.uz/resources/img/forindividual-img2.jpg" alt="img" />
+                            <img className="img-fluid mt-4 mb-5 pb-5 d-inline d-lg-none" src="https://solara.uz/resources/img/b2c_complect_mob.png" alt="lgImg" />
+                        </Col>
+                    </Row>
+                </div>
             </section>
 
             {/* types section */}
-            <section id="types" className="section-types">
-                <div className="text-center">
+            <section id="types">
+                <div className="individual-types text-center">
                     <h3>Варианты размещения</h3>
                     <Link className="d-inline me-4" onClick={() => { setIsOpen(true) }}>
                         <img src="https://solara.uz/images/2479_9tDV8Lg4FC5Iq7kahaD3eE2BV-upjD95.svg" alt="img" />
@@ -185,8 +188,8 @@ function PrivateIndividual() {
             </section>
 
             {/* stages section */}
-            <section id="stages" className="stages">
-                <div className="text-center w-100">
+            <section id="stages">
+                <div className="text-center individual-stages">
                     <h3>Виды подключений</h3>
                     <Link className="d-inline me-4" onClick={() => { setIsOpenAuto(true) }}>АВТОНОМНЫЕ</Link>
                     <Link className="d-inline ms-4" onClick={() => { setIsOpenAuto(false) }}>СЕТЕВЫЕ</Link>
@@ -195,44 +198,44 @@ function PrivateIndividual() {
             </section>
 
             {/* feedback section */}
-            <section id="feedback" className="section-feedback">
+            <section id="feedback" className="business-feedback">
                 <Row className="w-100">
-                    <Col className="col-2"></Col>
-                    <Col className="col-10">
+                    <Col className="col-2 d-none d-lg-inline"></Col>
+                    <Col className="col-12 col-lg-10">
                         <Container>
                             <Row className="w-100 ms-3">
-                                <Col className="col-5 feedback-img">
+                                <Col className="col-5 d-none d-lg-inline feedback-img">
                                     <img className="img-fluid" src="https://solara.uz/resources/img/forbusiness-contact.jpg" alt="img" />
                                 </Col>
-                                <Col className="col-6 ms-3">
-                                    <h3>Хотите начать экономить?</h3>
-                                    <p>Отправьте свои данные и наши специалисты свяжутся с вами для подтверждения и уточнения заявки</p>
+                                <Col className="col-12 col-lg-6 ms-3">
+                                    <h3 className="business-feedback__head">Хотите начать экономить?</h3>
+                                    <p className="business-feedback__par">Отправьте свои данные и наши специалисты свяжутся с вами для подтверждения и уточнения заявки</p>
                                     <Form onSubmit={handleSubmit}>
                                         <Input className='rounded-0 mt-4 w-75' size="lg" type="text" value={inputValue} onChange={handleInputChange} placeholder='Полное имя' />
-                                        {showText && <p className='text-danger'>
+                                        {showText && <p className='text-danger fs-6'>
                                             Необходимо заполнить «Полное имя».
                                             <svg xmlns="http://www.w3.org/2000/svg" width="13" viewBox="0 0 24 24">
                                                 <path fill="red" d="M12.884 2.532c-.346-.654-1.422-.654-1.768 0l-9 17A.999.999 0 0 0 3 21h18a.998.998 0 0 0 .883-1.467L12.884 2.532zM13 18h-2v-2h2v2zm-2-4V9h2l.001 5H11z" />
                                             </svg></p>}
                                         <Input className='rounded-0 mt-4 w-75' size="lg" type="email" value={inputValueEmail} onChange={handleInputChangeEmail} placeholder="Эл. адрес" />
-                                        {showText && <p className='text-danger'>
+                                        {showText && <p className='text-danger fs-6'>
                                             Необходимо заполнить «Эл. адрес».
                                             <svg xmlns="http://www.w3.org/2000/svg" width="13" viewBox="0 0 24 24">
                                                 <path fill="red" d="M12.884 2.532c-.346-.654-1.422-.654-1.768 0l-9 17A.999.999 0 0 0 3 21h18a.998.998 0 0 0 .883-1.467L12.884 2.532zM13 18h-2v-2h2v2zm-2-4V9h2l.001 5H11z" />
                                             </svg></p>}
                                         <Input className='rounded-0 mt-4 w-75' type='number' size="lg" value={inputValueNum} onChange={handleInputChangeNum} placeholder='телефон' />
-                                        {showText && <p className='text-danger'>
+                                        {showText && <p className='text-danger fs-6'>
                                             Необходимо заполнить «Номер телефона».
                                             <svg xmlns="http://www.w3.org/2000/svg" width="13" viewBox="0 0 24 24">
                                                 <path fill="red" d="M12.884 2.532c-.346-.654-1.422-.654-1.768 0l-9 17A.999.999 0 0 0 3 21h18a.998.998 0 0 0 .883-1.467L12.884 2.532zM13 18h-2v-2h2v2zm-2-4V9h2l.001 5H11z" />
                                             </svg></p>}
                                         <Input className='rounded-0 mt-4 w-75' size="lg" value={inputValueKomp} onChange={handleInputChangeKomp} placeholder="Компания" />
-                                        {showText && <p className='text-danger'>
+                                        {showText && <p className='text-danger fs-6'>
                                             Необходимо заполнить «Компания».
                                             <svg xmlns="http://www.w3.org/2000/svg" width="13" viewBox="0 0 24 24">
                                                 <path fill="red" d="M12.884 2.532c-.346-.654-1.422-.654-1.768 0l-9 17A.999.999 0 0 0 3 21h18a.998.998 0 0 0 .883-1.467L12.884 2.532zM13 18h-2v-2h2v2zm-2-4V9h2l.001 5H11z" />
                                             </svg></p>}
-                                        <Input type="checkbox" id="check" className="mt-4" />
+                                        <Input type="checkbox" id="check" className="mt-4 d-inline-block p-2" />
                                         <Label className="check ms-2" for="check">Согласен с <Link to="https://solara.uz/ru/site/privacy-policy">ПОЛИТИКОЙ КОНФИДЕНЦИАЛЬНОСТИ</Link></Label>
                                         <Button type="submit" className='animated-button__two d-block rounded-0 mt-3'>
                                             Оставить Заявку

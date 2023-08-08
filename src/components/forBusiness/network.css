@@ -1,9 +1,13 @@
 .network {
-    margin-top: 6rem;
+    margin-top: 4rem;
 }
 
-@media only screen and (max-width: 991px) {
+.network video {
+    width: 100%;
+}
+
+/* @media only screen and (max-width: 991px) {
     .network {
         margin-top: 3rem;
     }
-}
+} */

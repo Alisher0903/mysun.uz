@@ -43,7 +43,7 @@ function AboutCompany() {
     ]
     const responsive = {
         0: { items: 1 },
-        600: { items: 2 },
+        600: { items: 3 },
         992: { items: 4 }
     };
     const youTube = [
@@ -102,23 +102,23 @@ function AboutCompany() {
                     </g>
                 </svg>
             </button>
-            <div className="main" style={{marginTop: "-8px"}}>
+            <div className="main o-main" style={{marginTop: "-8px"}}>
                 <div className="mainDiv">
-                    {/* <img className='mainImg' src="https://solara.uz/assets/images/d0/d04bf9_about-bg.jpg" alt="." /> */}
-                    <h1 className='h1-1'>О компании</h1>
-                    <Link className='link1' to="/">Главная</Link>
-                    <p className='p1'>/ Контакты</p>
+                    
+                    <h1 className='h1-1 o-companiya mm'>О компании</h1>
+                    <Link className='link1 mm' style={{color: "#fff"}}  to="/">Главная</Link>
+                    <p className='p1' style={{color: "#273968"}}>/ О компании</p>
                 </div>
                 <Container>
-                    <div className="secondDiv row mb-4">
+                    <div className="secondDiv row mb-4 w-100">
                         <div className="col-6 twoImg">
                             <img className='img1' src='https://solara.uz/assets/images/e4/e42408_about-img1.png' alt='.'></img>
                             <div className='img2' >
-                                <img className='rotate-center' src="https://solara.uz/resources/img/about-us/about-gif.png" alt="." />
+                            <img className='rotate-center' src="https://solara.uz/resources/img/about-us/about-gif.png" alt="." />
                             </div>
                         </div>
-                        <div className="col-6">
-                            <div className='ms-4'>
+                        <div className="col-6 company-text">
+                            <div className='ms-4 company-text'>
                                 <div className="border bord"></div>
                                 <h5 className='h5-1'>БУДУЩЕЕ - ЭТО СЕЙЧАС!</h5>
                                 <h1 className='h1-2'>О компании</h1>
@@ -149,11 +149,11 @@ function AboutCompany() {
                             </div>
                         </div>
                     </div>
-                    <div className='row mt-5'>
-                        <div className='col-4'>
+                    <div className='row mt-5 w-100'>
+                        <div className='col-4 sertifikate0'>
                             <div className="border bord"></div>
                             <h6 className='h5-1'>Solara с тобой</h6>
-                            <h1 className='h1-2'>Сертификация</h1>
+                            <h1 className='h1-2 sertifik'>Сертификация</h1>
                             <h6 className='aboutlist1 mt-4'>about_certificate_text</h6>
                             <button className='col-3 mt-3 animated-btn'>
                                 Скачать сертификат в формате PDF
@@ -162,7 +162,7 @@ function AboutCompany() {
                                 </svg>
                             </button>
                         </div>
-                        <div className='col-8' style={{ cursor: "pointer", marginLeft: "0", backgroundImage: "url('https://cdn.wallpapersafari.com/32/97/bZrevY.jpg')" }}>
+                        <div className='col-8 sertifikate' style={{ cursor: "pointer", marginLeft: "0", backgroundImage: "url('https://cdn.wallpapersafari.com/32/97/bZrevY.jpg')" }}>
                             <AliceCarousel
                                 mouseTracking
                                 items={sertifikat}
@@ -180,19 +180,19 @@ function AboutCompany() {
                     <div className="main-hisob">
                         <div className='hisob'>
                             <div className="row hisob2 w-100">
-                                <div class="col-lg-3">
-                                    <h1 className='h1-3'>765+</h1>
+                                <div class="col-3">
+                                    <h1 className='h1-3'>765+</h1>  
                                     <p className='p3'>УСТАНОВКИ</p>
                                 </div>
-                                <div class="col-lg-3">
+                                <div class="col-3">
                                     <h1 className='h1-3'>94Вт.ч</h1>
                                     <p className='p3'>ВЫРАБОТКА ЭЛЕКТРОЭНЕРГИИ</p>
                                 </div>
-                                <div class="col-lg-3">
+                                <div class="col-3">
                                     <h1 className='h1-3'>72$млн</h1>
                                     <p className='p3'>ЭКОНОМИЯ</p>
                                 </div>
-                                <div class="col-lg-2">
+                                <div class="col-2">
                                     <h1 className='h1-3' style={{ marginTop: "25%" }}>523</h1>
                                     <p className='p3'>КЛИЕНТОВ</p>
                                 </div>
@@ -200,13 +200,13 @@ function AboutCompany() {
                         </div>
                     </div>
                 </section>
-                <div className='mt-5 row' style={{ marginBottom: "10%" }}>
-                    <div className="col-6 ps-5 pt-5" >
+                <div className='mt-5 row w-100' style={{ marginBottom: "10%", width: "100%" }}>
+                    <div className="col-6 ps-5 pt-5 about-box" >
                         <div className="border bord d-block mt-5"></div>
                         <h1 className='h5-1' style={{ color: "#273968" }}>Наша миссия и преимущества</h1>
-                        <p className='p1 mt-3'>Предоставляя лучшие и самые инновационные решения для солнечной энергетики, мы стремимся вносить свой вклад, продвигать и расти в глобальном секторе возобновляемых источников энергии.</p>
+                        <p className='p1 predostavliya mt-3'>Предоставляя лучшие и самые инновационные решения для солнечной энергетики, мы стремимся вносить свой вклад, продвигать и расти в глобальном секторе возобновляемых источников энергии.</p>
                     </div>
-                    <div className="col-6">
+                    <div className="col-6 about-boxs2">
                         <div className="row w-100">
                             <img className='image col-3' src="https://solara.uz/assets/images/87/87aae8_about-img2.jpg" alt="" />
                             <img className='image col-3' src="https://solara.uz/assets/images/96/96dae5_about-img3.jpg" alt="" />
@@ -214,13 +214,13 @@ function AboutCompany() {
                     </div>
                 </div>
                 <div className="row w-100 mt-5">
-                    <div className="col-4 ps-5">
+                    <div className="col-4 ps-5 youTubeCol">
                         <div className="border bord"></div>
                         <h6 className='h5-1'>Solara с тобой</h6>
                         <h1 className="h5-1 d-block" style={{ color: "#273968" }}>Видео</h1>
-                        <p className='p1 mt-3 float-start'>Компания СОЛАРА предлагает широкий спектр услуг - от проектирования до монтажа и эксплуатации солнечных станций. Также компания предоставляет огромный выбор дополнительного оборудования, относящегося к солнечным панелям премиум-класса.</p>
+                        <p className='p1 mt-3 float-start karusel-text'>Компания СОЛАРА предлагает широкий спектр услуг - от проектирования до монтажа и эксплуатации солнечных станций. Также компания предоставляет огромный выбор дополнительного оборудования, относящегося к солнечным панелям премиум-класса.</p>
                     </div>
-                    <div className="col-8">
+                    <div className="col-8 youTubeCol">
                         <div style={{ cursor: "pointer" }}>
                             <AliceCarousel
                                 mouseTracking

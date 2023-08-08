@@ -1,0 +1,22 @@
+.roof-individual p {
+    font-size: 1rem;
+    text-align: left;
+    width: 90%;
+    opacity: 80%;
+}
+
+.roof-individual__img {
+    overflow: hidden;
+}
+
+.roof-individual__img img {
+    margin-top: 3rem;
+    transform: scale(1.2);
+}
+
+@media only screen and (max-width: 991px) {
+    .roof-individual p {
+        width: 100%;
+        padding-left: 1rem;
+    }
+}

@@ -1,12 +1,14 @@
 body {
   background-color: #fff;
 }
+
 .main {
-  padding-top: 10%;
+  padding-top: 13%;
   background-image: url("https://cdn.wallpapersafari.com/32/97/bZrevY.jpg");
   font-size: 10px;
   background-size: cover;
 }
+
 .link1 {
   color: #737573;
   text-decoration: none;
@@ -15,6 +17,7 @@ body {
   margin-right: 8px;
   font-size: 1.1rem;
 }
+
 .link1:hover {
   color: #FFCD1E;
 }
@@ -24,12 +27,14 @@ body {
   display: inline-block;
   font-size: 1.1rem;
 }
+
 .h2-1 {
   color: #273968;
   font-weight: 700;
   font-family: Tahoma;
   font-size: 1.8rem;
 }
+
 .konsultat {
   font-size: 1rem;
   margin-top: 4%;
@@ -40,16 +45,19 @@ body {
   font-size: 1rem;
   height: 150px;
 }
+
 .textarea1::after {
   border-color: #FFCD1E;
 }
+
 .input1:hover {
   border: 1px solid;
   border-color: #FFCD1E;
 }
+
 .form-control:focus {
-    border-color: #FFCD1E!important;
-    box-shadow: none !important;
+  border-color: #FFCD1E !important;
+  box-shadow: none !important;
 }
 
 
@@ -108,13 +116,16 @@ body {
   box-shadow: 0 6px 12px rgba(0, 0, 0, 0.1);
   transform: scale(1.05);
 }
+
 .img2 {
   display: inline-block;
   width: 35px;
 }
+
 .main-box2 {
   margin-top: 20%;
 }
+
 .p2 {
   font-size: 1rem;
   width: 57%;
@@ -132,15 +143,23 @@ body {
   flex-wrap: wrap;
   gap: 40px;
 }
+
+.boxes {
+  width: 27%;
+}
+
 .malumo {
+
   font-size: 0.9rem;
   padding-bottom: 10%;
 }
+
 .map {
   width: 100%;
   height: 100%;
   background-color: #FFCD1E;
 }
+
 #backToTopBtn {
   display: none;
   position: fixed;
@@ -164,4 +183,102 @@ body {
 #backToTopBtn.hide {
   opacity: 0;
   visibility: hidden;
-}/*# sourceMappingURL=contactStyle.css.map */
+}
+
+@media only screen and (max-width: 1111px) {
+  .boxes {
+    width: 40%;
+  }
+
+  .contact-malumot {
+    margin-left: 7%;
+  }
+}
+
+@media only screen and (max-width: 940px) {
+  .main {
+    padding-top: 17%;
+  }
+}
+
+@media only screen and (max-width: 818px) {
+  .box1 {
+    width: 100%;
+  }
+
+  .p2 {
+    width: 100%;
+    margin-bottom: 5%;
+  }
+
+  .malumot {
+    padding: 0 0 0 5%;
+  }
+
+  .malumot>p {
+    width: 26%;
+    margin-right: 24%;
+    text-align: center;
+  }
+
+  .box2 {
+    width: 100%;
+  }
+
+  .messenger {
+    width: 100%;
+  }
+
+}
+
+@media only screen and (max-width: 601px) {
+  .main {
+    padding-top: 30%;
+  }
+
+  .boxes {
+    width: 100%;
+  }
+
+  .contact-malumot {
+    margin-left: 10%;
+  }
+
+  .kontakt-malumot {
+    margin-left: 10% !important;
+  }
+}
+
+@media only screen and (max-width: 411px) {
+  .main {
+    padding-top: 35%;
+  }
+
+  .malumot>p {
+    width: 100%;
+  }
+}
+
+@media only screen and (max-width: 353px) {
+  .main {
+    padding-top: 50%;
+  }
+
+  .link1 {
+    margin-left: 0;
+  }
+
+  .kontact-malumot {
+    margin-left: 5% !important;
+    width: 90%;
+  }
+
+  .ofic {
+    width: 100%;
+    font-size: 0.7rem;
+  }
+
+  .box1-p {
+    font-size: 0.9rem;
+  }
+}

@@ -4,14 +4,13 @@ import Search from "../search/Search";
 import ForBusiness from "../forBusiness/ForBusiness";
 import PrivateIndividual from "../privateIndividuals/PrivateIndividual";
 import Products from "../products/Products";
-import Warranty from "../warranty/Warranty";
+// import Warranty from "../warranty/Warranty";
 import AboutCompany from "../company/AboutCompany";
 import Projects from "../projects/Projects";
-import Blog from "../blogMy/Blog";
 import Contact from "../contac/Contact";
+import Polise from "../police/Polise";
+import Blog from "../blogMy/Blog";
 
-
-// yaxshi zur buladi
 
 function App() {
   return (
@@ -19,13 +18,14 @@ function App() {
       <Routes>
         <Route path="/" element={<Home />} />
         <Route path="/search" element={<Search />} />
+        {/* <Route path="/warranty" element={<Warranty />} /> */}
+        <Route path="/polise" element={<Polise />} /> 
         <Route path="/business" element={<ForBusiness />} />
         <Route path="/private/individuals" element={<PrivateIndividual />} />
         <Route path="/products" element={<Products />} />
-        <Route path="/warranty" element={<Warranty />} />
-        <Route path="/about/company" element={<AboutCompany />} />
         <Route path="/projects" element={<Projects />} />
         <Route path="/blog" element={<Blog />} />
+        <Route path="/about/company" element={<AboutCompany />} />
         <Route path="/contacts" element={<Contact />} />
       </Routes>
     </>
