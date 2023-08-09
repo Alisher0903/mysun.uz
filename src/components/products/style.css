@@ -25,14 +25,21 @@
 
 .proMain {
   width: 100%;
-  padding-top: 7rem;
-  padding-bottom: 5rem;
+  padding-top: 12rem;
+  padding-bottom: 10rem;
   background-image: url("http://solara.uz/assets/images/7d/7df8e0_All-Solar-Products.jpg");
   background-position: center;
   background-repeat: no-repeat;
 }
 
-.link2 {
+.proMain h1 {
+  text-align: center;
+  color: #273968;
+  font-weight: 700;
+  font-size: 3rem;
+}
+
+.proMain a {
   color: #ffffff;
   text-decoration: none;
   transition: 0.5s;
@@ -44,18 +51,10 @@
   }
 }
 
-.p1-1 {
+.proMain span {
   color: #273968;
   font-size: 1.1rem;
   font-weight: 700;
-}
-
-.h12 {
-  text-align: center;
-  padding-top: 4%;
-  color: #273968;
-  font-weight: 700;
-  font-size: 3.5rem;
 }
 
 .product-btn button {
@@ -63,7 +62,6 @@
   border-radius: 0;
   border: none;
   margin-right: .7rem;
-  margin-top: 3%;
   font-size: 1.04rem;
   font-weight: 400;
   color: black;

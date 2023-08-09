@@ -30,7 +30,7 @@ body {
 }
 
 .blogMain {
-  margin-top: 9%;
+  margin-top: 140px;
   width: 100%;
   height: 250px;
   margin-bottom: 7%;
@@ -211,6 +211,9 @@ body {
   .blog-h5 {
     font-size: 1rem;
   }
+  .blogMain {
+    background-position: center;
+  }
 
   .blog-p {
     font-size: 0.7rem;
@@ -232,10 +235,11 @@ body {
   }
 }
 
-@media only screen and (max-width: 347px) {
+@media (max-width: 347px) {
   .mains {
     margin-top: 36% !important;
   }
+  .sertifikat0
 
   .h13 {
     font-size: 1.5rem;

@@ -35,15 +35,16 @@ function Polise() {
         </svg>
       </button>
 
+      <div className='box-empty'></div>
 
-      <div className="blogMain">
-        <h1 className='h12 sss'>Privacy-policy</h1>
-        <div className='pt-3'>
-          <Link className='link2 mmm' to="/">Главная</Link>
-          <p className='p1-1 mmm'>/ privacy-policy</p>
+      <div className="police">
+        <div className='police-info text-center'>
+          <h3>Privacy-policy</h3>
+          <Link to="/">Главная</Link>
+          <span className='ms-2'>/ privacy-policy</span>
         </div>
+        <h1>Privacy-policy</h1>
       </div>
-      <h1 className='h13'>Privacy-policy</h1>
 
       <Footer />
     </div>

@@ -456,14 +456,27 @@
     .company-benefits__box {
         width: 100%;
         margin-left: .8rem;
-        margin-right: 1rem;
+        text-align: center;
     }
 
     .company-benefits__box h2 {
-        font-size: 2rem;
+        font-size: 1.5rem;
+        width: 100%;
     }
 
     .section-production {
-        margin-top: -7rem;
+        margin-top: -13rem;
+    }
+
+    .project-home__info {
+        text-align: center;
+    }
+
+    .project-home__button {
+        width: 100%;
+    }
+
+    .home-partner__info h1 {
+        font-size: 2rem;
     }
 }

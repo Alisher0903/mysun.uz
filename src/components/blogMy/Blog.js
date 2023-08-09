@@ -39,11 +39,11 @@ function Blog() {
                 </svg>
             </button>
             <div className="mains w-100">
-                <div className="blogMain">
+            <div className="blogMain ">
                     <h1 className='h12'>Блог</h1>
                     <div className='pt-3 text-center'>
-                        <Link className='link2' to="/">Главная</Link>
-                        <p className='p1-1'>/ Блог</p>
+                        <Link className='link2 mms' to="/">Главная</Link>
+                        <span className='p1-1'>/ Блог</span>
                     </div>
                 </div>
                 <div className="blog-page-2">

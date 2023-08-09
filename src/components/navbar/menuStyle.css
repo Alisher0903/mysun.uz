@@ -82,6 +82,63 @@
     transform: scale(1.05);
 }
 
+.anim-button {
+    padding: .8rem 2rem;
+    font-size: 1.05rem;
+    font-weight: 500;
+    background-color: #FFCD1E;
+    color: #fff;
+    border: none;
+    cursor: pointer;
+    z-index: 1;
+    transition: background-color 0.3s, box-shadow 0.3s, transform 0.3s;
+    overflow: hidden;
+    position: relative;
+  }
+  
+  .anim-button::before,
+  .anim-button::after {
+    content: "";
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background-color: #273968;
+    transition: transform 0.5s;
+    z-index: -1;
+  }
+  
+  .anim-button::before {
+    top: 0;
+    left: 0;
+    transform: scaleX(0);
+    transform-origin: left;
+  }
+  
+  .anim-button::after {
+    top: 0;
+    right: 0;
+    transform: scaleX(0);
+    transform-origin: right;
+  }
+  
+  .anim-button:hover::before,
+  .anim-button:focus::before,
+  .anim-button:active::before {
+    transform: scaleX(1);
+  }
+  
+  .anim-button:hover::after,
+  .anim-button:focus::after,
+  .anim-button:active::after {
+    transform: scaleX(1);
+  }
+  
+  .anim-button:hover {
+    background-color: #273968;
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.1);
+    transform: scale(1.05);
+  }
+
 /* modal style */
 .modal-image {
     height: 100%;

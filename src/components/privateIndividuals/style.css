@@ -193,8 +193,18 @@
 }
 
 @media only screen and (max-width: 991px) {
+  .container {
+    max-width: 100%;
+    width: 100%;
+    margin: 0 auto;
+  }
+
   .individual-intro__info h1 {
     font-size: 2.2rem;
+  }
+
+  .individual-intro__info p {
+    padding: 0;
   }
 
   .individual-reasons__one h2 {
@@ -219,6 +229,12 @@
   .individual-reasons__tree p {
     width: 100%;
     font-size: 1rem;
+  }
+}
+
+@media screen and (max-width: 576px) {
+  .individual-intro__info {
+    padding-bottom: 6rem;
   }
 }
 

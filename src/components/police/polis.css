@@ -1,23 +1,55 @@
-@media only screen and (max-width: 540px) {
-  .mmm {
-    margin-left: 0 !important;
-    text-align: left !important;
-  }
+.police-info {
+  background-image: url("http://solara.uz/assets/images/50/50a748_blog-bg.jpg");
+  background-repeat: no-repeat;
+  background-position: right;
+  width: 100%;
+  padding-top: 4rem;
+  padding-bottom: 6rem;
+}
 
-  .sss {
-    font-size: 2rem !important;
-    margin-left: -38% !important;
-  }
+.police-info h3 {
+  font-size: 2.5rem;
+  color: #273968;
+  font-weight: 900;
+}
 
-  .blogMain {
-    width: 100%;
-    margin-top: 25%;
-    padding-left: 10%;
+.police-info a {
+  text-decoration: none;
+  font-size: 1rem;
+  font-weight: 500;
+  color: white;
+  transition: all .5s;
+
+  &:hover {
+    color: #FFCD1E;
   }
 }
 
-@media only screen and (max-width: 364px) {
-  .blogMain {
-    margin-top: 39%;
+.police-info span {
+  font-size: 1rem;
+  font-weight: 500;
+  color: #273968;
+}
+
+.police h1 {
+  margin: 5rem auto 5rem 5rem;
+  font-size: 3rem;
+  color: #273968;
+  font-weight: 700;
+}
+
+ @media only screen and (max-width: 767px) {
+  .police-info {
+    background-position: center;
+  }
+}
+
+@media only screen and (max-width: 576px) {
+  .police h1 {
+    font-size: 2rem;
+  }
+
+  .police-info h3 {
+    font-size: 1.8rem;
   }
 }

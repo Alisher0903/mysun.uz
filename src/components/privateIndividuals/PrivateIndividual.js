@@ -110,7 +110,7 @@ function PrivateIndividual() {
                 <Row className="w-100">
                     <Col className="col-2 d-none d-lg-inline"></Col>
                     <Col className="col-12 col-lg-10">
-                        <Container className="ps-5 pe-5">
+                        <Container className="ps-3 ps-lg-5 pe-3 pe-lg-5">
                             <div className="individual-reasons__one text-center">
                                 <div className="span-blur"></div>
                                 <span className="span-text">Для частных лиц</span>

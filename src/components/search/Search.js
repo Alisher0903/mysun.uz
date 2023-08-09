@@ -1,6 +1,7 @@
 import { Link } from "react-router-dom";
 import NavbarInfo from "../navbar/NavbarInfo";
 import NavbarMenu from "../navbar/NavbarMenu";
+import Footer from "../footer/Footer";
 import "./styleSearch.css";
 import { Button, Col, Input, InputGroup } from "reactstrap";
 
@@ -36,8 +37,8 @@ function Search() {
                         </Button>
                     </InputGroup>
                 </Col>
-
             </div>
+            <Footer />
         </div>
     );
 }
