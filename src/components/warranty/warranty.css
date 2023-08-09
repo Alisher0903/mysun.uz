@@ -1,0 +1,57 @@
+.warranty-1-page {
+  width: 100%;
+  height: 250px;
+  margin-bottom: 7%;
+  background-image: url("https://solara.uz/assets/images/a7/a7748a_garantee-bg.jpg");
+  background-size: cover;
+  background-position: right;
+}
+
+.warranty-1-page > h1 {
+  text-align: center;
+  padding-top: 4%;
+  color: #273968;
+  font-weight: 700;
+  font-size: 3.5rem;
+}
+
+.warranty-1-page > div > p {
+  color: #ffffff;
+  display: inline-block;
+  font-size: 1.1rem;
+  font-weight: 700;
+}
+
+.warranty-link {
+  color: #273968;
+  text-decoration: none;
+  transition: 0.5s;
+  display: inline-block;
+  margin-right: 8px;
+  font-size: 1.1rem;
+  position: relative;
+  font-weight: 700;
+}
+
+.link2:hover {
+  color: #FFCD1E;
+}
+
+.warranty-card {
+  background-color: #273968;
+  height: 40px;
+  width: 25%;
+  margin-left: 1rem;
+}
+
+.warranty-box {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+
+
+
+/* https://solara.uz/assets/images/78/78039d_garantee-icon1.png quyosh */
+/* https://solara.uz/assets/images/66/66c288_garantee-icon2.png 2 */
+/* https://solara.uz/assets/images/69/69213b_garantee-icon3.png velik */

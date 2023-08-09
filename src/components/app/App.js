@@ -4,7 +4,7 @@ import Search from "../search/Search";
 import ForBusiness from "../forBusiness/ForBusiness";
 import PrivateIndividual from "../privateIndividuals/PrivateIndividual";
 import Products from "../products/Products";
-// import Warranty from "../warranty/Warranty";
+import Warranty from "../warranty/Warranty";
 import AboutCompany from "../company/AboutCompany";
 import Projects from "../projects/Projects";
 import Contact from "../contac/Contact";
@@ -18,7 +18,7 @@ function App() {
       <Routes>
         <Route path="/" element={<Home />} />
         <Route path="/search" element={<Search />} />
-        {/* <Route path="/warranty" element={<Warranty />} /> */}
+        <Route path="/warranty" element={<Warranty />} />
         <Route path="/polise" element={<Polise />} /> 
         <Route path="/business" element={<ForBusiness />} />
         <Route path="/private/individuals" element={<PrivateIndividual />} />

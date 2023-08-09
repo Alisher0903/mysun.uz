@@ -57,22 +57,22 @@ function Products() {
                 </svg>
             </button>
 
-            <div className="proMain projek">
-                    <h1 className='h12'>Продукты</h1>
-                    <div className='pt-3 text-center'>
-                        <Link className='link2 mms' to="/">Главная</Link>
-                        <span className='p1-1'>/ Продукты</span>
-                    </div>
+            <div className="proMain">
+                <h1>Продукты</h1>
+                <div className='pt-2 text-center'>
+                    <Link to="/">Главная</Link>
+                    <span className="ms-2">/ Продукты</span>
                 </div>
+            </div>
 
             <Container>
-                <div className="product-btn mt-5">
-                    <Button onClick={getProduct}>Все продукты</Button>
-                    <Button onClick={() => { filtirProduct(1) }}>Солнечные панели</Button>
-                    <Button onClick={() => { filtirProduct(2) }}>Инверторы</Button>
-                    <Button onClick={() => { filtirProduct(3) }}>Аккумуляторы</Button>
-                    <Button onClick={() => { filtirProduct(4) }}>Водоногреватели</Button>
-                    <Button onClick={() => { filtirProduct(5) }}>Электромобили</Button>
+                <div className="product-btn">
+                    <Button className="mt-2" onClick={getProduct}>Все продукты</Button>
+                    <Button className="mt-2" onClick={() => { filtirProduct(1) }}>Солнечные панели</Button>
+                    <Button className="mt-2" onClick={() => { filtirProduct(2) }}>Инверторы</Button>
+                    <Button className="mt-2" onClick={() => { filtirProduct(3) }}>Аккумуляторы</Button>
+                    <Button className="mt-2" onClick={() => { filtirProduct(4) }}>Водоногреватели</Button>
+                    <Button className="mt-2" onClick={() => { filtirProduct(5) }}>Электромобили</Button>
                 </div>
                 <div className="mt-5">
                     <Row className="mb-5">

@@ -1,4 +1,4 @@
-import { Button, Col, Form, Input, Modal, ModalBody, Row } from "reactstrap";
+import { Button, Col, Form, Input, Modal, ModalBody, ModalFooter, Row } from "reactstrap";
 import NavbarInfo from "../navbar/NavbarInfo";
 import NavbarMenu from "../navbar/NavbarMenu";
 import "./style.css"
@@ -262,10 +262,10 @@ function Home() {
     const linkId = () => document.getElementById("home__linkId").click();
     const business = () => document.getElementById("business").click();
     const individuals = () => document.getElementById("individuals").click();
-    const warranty = () => document.getElementById("warranty").click();
     const aboutCompany = () => document.getElementById("about_company").click();
     const ourProjects = () => document.getElementById("projects").click();
     const blog = () => document.getElementById("blog").click();
+    const warranty = () => document.getElementById("warranty").click();
 
     return (
         <div>
@@ -284,7 +284,7 @@ function Home() {
             <Link to="/" id="home__linkId"></Link> {/* home link */}
             <Link to="/business" id="business"></Link> {/* business link */}
             <Link to="/private/individuals" id="individuals"></Link>  {/* individuals link */}
-            <Link to="/warranty" id="warranty"></Link>  {/* Warranty link */}
+            <Link to="/warranty" id="warranty"></Link>  {/*Warranty link*/}
             <Link to="/about/company" id="about_company"></Link>  {/* About the company link */}
             <Link to="/projects" id="projects"></Link>  {/* Projects link */}
             <Link to="/blog" id="blog"></Link>  {/* Blog link */}
@@ -646,16 +646,18 @@ function Home() {
                             responsive={responsive}
                         />
                     </Col>
-                    <Col className="col-12 col-lg-4 px-5 px-lg-2">
-                        <div className="span-blur"></div>
-                        <span className="span-text">Последние Проекты</span>
-                        <h1 className="we-offer mt-3 fw-bold">Наши Проекты</h1>
+                    <Col className="mt-4 mt-lg-0 col-12 col-lg-4 pe-4 pe-lg-0 ms-3 ms-lg-0 px-lg-2">
+                        <div className="project-home__info">
+                            <div className="span-blur"></div>
+                            <span className="span-text">Последние Проекты</span>
+                            <h1 className="we-offer mt-3 fw-bold">Наши Проекты</h1>
+                        </div>
                         <p style={{ fontSize: "1rem" }}>
                             Компания SOLARA реализовала свыше 700 проектов общей мощностью 1 ГВт по всем регионам Узбекистана.
                             Мы используем самые современные солнечные батареи, которые обладают исключительной эффективностью и
                             позволяют экономить деньги.
                         </p>
-                        <Button className="animated-button rounded-0 mt-3" onClick={ourProjects}>
+                        <Button className="animated-button project-home__button rounded-0 mt-3" onClick={ourProjects}>
                             Больше проектов
                             <svg xmlns="http://www.w3.org/2000/svg" width="18" fill="currentColor" class="bi bi-arrow-right-short ms-2" viewBox="0 0 16 16">
                                 <path fill-rule="evenodd" d="M4 8a.5.5 0 0 1 .5-.5h5.793L8.146 5.354a.5.5 0 1 1 .708-.708l3 3a.5.5 0 0 1 0 .708l-3 3a.5.5 0 0 1-.708-.708L10.293 8.5H4.5A.5.5 0 0 1 4 8z" />
@@ -669,13 +671,15 @@ function Home() {
             <div className="mt-5 pt-5">
                 <Row className="w-100">
                     <Col className="ms-3">
-                        <div className="span-blur"></div>
-                        <span className="span-text">Свежие новости</span>
-                        <h1 className="we-offer mt-3 fw-bold">Новости и события</h1>
+                        <div className="project-home__info">
+                            <div className="span-blur"></div>
+                            <span className="span-text">Свежие новости</span>
+                            <h1 className="we-offer mt-3 fw-bold">Новости и события</h1>
+                        </div>
                         <p style={{ fontSize: "1rem" }}>
                             Следите за нашими новостями и будьте в курсе наших специальных предложений и последних тенденций использования солнечных энергии в Ташкент и в других регионах страны.
                         </p>
-                        <Button className="animated-button rounded-0 mt-3" onClick={blog}>
+                        <Button className="animated-button project-home__button rounded-0 mt-3" onClick={blog}>
                             Посмотреть Все
                             <svg xmlns="http://www.w3.org/2000/svg" width="18" fill="currentColor" class="bi bi-arrow-right-short ms-2" viewBox="0 0 16 16">
                                 <path fill-rule="evenodd" d="M4 8a.5.5 0 0 1 .5-.5h5.793L8.146 5.354a.5.5 0 1 1 .708-.708l3 3a.5.5 0 0 1 0 .708l-3 3a.5.5 0 0 1-.708-.708L10.293 8.5H4.5A.5.5 0 0 1 4 8z" />
@@ -699,9 +703,11 @@ function Home() {
 
             {/* Our partners */}
             <div className="mt-5 pt-5 text-center container">
-                <div className="span-blur"></div>
-                <span className="span-text">Уверенность и стабильность</span>
-                <h1 className="we-offer mt-3 fw-bold">Наши Партнеры</h1>
+                <div className="home-partner__info">
+                    <div className="span-blur"></div>
+                    <span className="span-text">Уверенность и стабильность</span>
+                    <h1 className="we-offer mt-3 fw-bold">Наши Партнеры</h1>
+                </div>
                 <AliceCarousel
                     items={itemPartner}
                     mouseTracking
@@ -753,6 +759,9 @@ function Home() {
                         </Col>
                     </Row>
                 </ModalBody>
+                <ModalFooter>
+                    <Button className='anim-button rounded-0' onClick={openModal}>Назад</Button>
+                </ModalFooter>
             </Modal>
             <Footer />
         </div>

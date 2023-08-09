@@ -1,6 +1,6 @@
 import {
     Collapse, Navbar, NavbarBrand, Nav, NavItem, NavLink, NavbarText, Button, NavbarToggler, Modal, ModalBody,
-    Row, Col, Form, Input,
+    Row, Col, Form, Input, ModalFooter,
 } from 'reactstrap';
 import "./menuStyle.css";
 import { Link } from 'react-router-dom';
@@ -145,7 +145,7 @@ function NavbarMenu() {
                                     </svg>
                                 </p>}
                                 <textarea className='w-100 ps-3 pt-2 mt-4 form-textarea' rows="3" placeholder='Сообщение' />
-                                <Button type="submit" className='modal-btn mt-4'>
+                                <Button type="submit" className='modal-btn w-100 mt-4'>
                                     Получить бесплатную консультацию
                                     <svg xmlns="http://www.w3.org/2000/svg" width="22" fill="currentColor" class="bi bi-arrow-right-short ms-2 me-0" viewBox="0 0 16 16">
                                         <path fill-rule="evenodd" d="M4 8a.5.5 0 0 1 .5-.5h5.793L8.146 5.354a.5.5 0 1 1 .708-.708l3 3a.5.5 0 0 1 0 .708l-3 3a.5.5 0 0 1-.708-.708L10.293 8.5H4.5A.5.5 0 0 1 4 8z" />
@@ -155,6 +155,9 @@ function NavbarMenu() {
                         </Col>
                     </Row>
                 </ModalBody>
+                <ModalFooter>
+                    <Button className='anim-button rounded-0' onClick={openModal}>Назад</Button>
+                </ModalFooter>
             </Modal>
         </div>
     );
