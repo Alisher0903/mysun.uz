@@ -7,6 +7,7 @@
 .navbar-menu__brend a {
     color: white;
     margin-right: 1.2rem;
+    text-decoration: none;
     font-size: .9rem;
     font-weight: 500;
     transition: all .5s;

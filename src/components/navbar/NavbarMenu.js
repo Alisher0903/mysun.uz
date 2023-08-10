@@ -1,5 +1,5 @@
 import {
-    Collapse, Navbar, NavbarBrand, Nav, NavItem, NavLink, NavbarText, Button, NavbarToggler, Modal, ModalBody,
+    Collapse, Navbar, NavbarBrand, Nav, NavItem, NavbarText, Button, NavbarToggler, Modal, ModalBody,
     Row, Col, Form, Input, ModalFooter,
 } from 'reactstrap';
 import "./menuStyle.css";
@@ -51,47 +51,47 @@ function NavbarMenu() {
             <Link to="https://t.me/Sardor_Z877" id='telegram'></Link>
             <Navbar expand="xl" fixed='top' className='navbar-menu__brend fs-6'>
                 <NavbarBrand className='me-5'>
-                    <NavLink href="/">
+                    <Link to="/">
                         <img src={nav} alt="navBrend" width={125} />
-                    </NavLink>
+                    </Link>
                 </NavbarBrand>
                 <NavbarToggler onClick={toggle} className='bg-warning' />
                 <Collapse className='ms-4' navbar isOpen={isOpen}>
                     <Nav className="me-auto" navbar>
                         <NavItem>
-                            <NavLink href="/business">
+                            <Link to="/business">
                                 <span>Для бизнеса</span>
-                            </NavLink>
+                            </Link>
                         </NavItem>
                         <NavItem>
-                            <NavLink href='/private/individuals'>
+                            <Link to='/private/individuals'>
                                 <span>Частным лицам</span>
-                            </NavLink>
+                            </Link>
                         </NavItem>
                         <NavItem>
-                            <NavLink href="/products">
+                            <Link to="/products">
                                 <span>Продукты</span>
-                            </NavLink>
+                            </Link>
                         </NavItem>
                         <NavItem>
-                            <NavLink href="/projects">
+                            <Link to="/projects">
                                 <span>Проекты</span>
-                            </NavLink>
+                            </Link>
                         </NavItem>
                         <NavItem>
-                            <NavLink href="/blog">
+                            <Link to="/blog">
                                 <span>Блог</span>
-                            </NavLink>
+                            </Link>
                         </NavItem>
                         <NavItem>
-                            <NavLink href="/about/company">
+                            <Link to="/about/company">
                                 <span>О компании</span>
-                            </NavLink>
+                            </Link>
                         </NavItem>
                         <NavItem>
-                            <NavLink href="/contacts">
+                            <Link to="/contacts">
                                 <span>Контакты</span>
-                            </NavLink>
+                            </Link>
                         </NavItem>
                     </Nav>
                     <NavbarText className='nav-menu__search'>

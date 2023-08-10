@@ -10,14 +10,15 @@ function Blog() {
     // scroll btn
     window.addEventListener('scroll', () => {
         const backToTopBtn = document.getElementById('backToTopBtn');
-        if (window.scrollY > 150) {
+        if (window.scrollY > 150 && backToTopBtn) {
             backToTopBtn.classList.add('show');
             backToTopBtn.classList.remove('hide');
 
         } else {
-            backToTopBtn.classList.remove('show');
-            backToTopBtn.classList.add('hide');
-
+            if (backToTopBtn) {
+                backToTopBtn.classList.remove('show');
+                backToTopBtn.classList.add('hide');
+            }
         }
     });
 
@@ -39,7 +40,7 @@ function Blog() {
                 </svg>
             </button>
             <div className="mains w-100">
-            <div className="blogMain ">
+                <div className="blogMain ">
                     <h1 className='h12'>Блог</h1>
                     <div className='pt-3 text-center'>
                         <Link className='link2 mms' to="/">Главная</Link>

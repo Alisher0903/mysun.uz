@@ -1,46 +1,4 @@
-.main {
-  width: 100%;
-  padding-bottom: 15%;
-  font-family: tahoma;
-  overflow: hidden;
-}
-
-.o-main {
-  padding-top: 9% !important;
-}
-
-.mainDiv {
-  padding-top: 0;
-  height: 250px;
-  margin-bottom: 6%;
-  background-image: url("https://solara.uz/assets/images/d0/d04bf9_about-bg.jpg");
-}
-
-.link1 {
-  color: #fefffe;
-  text-decoration: none;
-  transition: 0.5s;
-  display: inline-block;
-  margin-right: 8px;
-  font-size: 1.1rem;
-  text-align: center;
-  position: relative;
-  font-weight: 700;
-  margin-left: 43%;
-}
-
-.link1:hover {
-  color: #FFCD1E;
-}
-
-.p1 {
-  color: #273968;
-  display: inline-block;
-  font-size: 1.1rem;
-  text-align: center;
-  font-weight: 700;
-}
-
+/* https://solara.uz/assets/images/d0/d04bf9_about-bg.jpg */
 #backToTopBtn {
   display: none;
   position: fixed;
@@ -55,14 +13,6 @@
   z-index: 8;
 }
 
-.h1-1 {
-  font-weight: 700;
-  color: #273968;
-  margin-left: 40%;
-  padding-top: 5%;
-  font-size: 500%;
-}
-
 #backToTopBtn.show {
   display: block;
   opacity: 1;
@@ -74,94 +24,152 @@
   visibility: hidden;
 }
 
-.img1 {
-  padding-top: 40%;
+.company__bg {
+  background-image: url("https://solara.uz/assets/images/d0/d04bf9_about-bg.jpg");
+  background-position: center;
+  background-repeat: no-repeat;
   width: 100%;
-  float: right;
+  padding-top: 5rem;
+  padding-bottom: 5rem;
+}
+
+.company__bg h3 {
+  font-size: 3rem;
+  color: #273968;
+  font-weight: 700;
+}
+
+.company__bg a {
+  text-decoration: none;
+  color: white;
+  font-size: 1rem;
+  font-weight: 700;
+  transition: all .5s;
+
+  &:hover {
+    color: #FFCD1E;
+  }
+}
+
+.company__bg span {
+  font-size: 1rem;
+  font-weight: 700;
+  color: #273968;
+}
+
+.company__image {
+  padding-top: 9rem;
+}
+
+.company-info h1 {
+  font-size: 2.5rem;
+  font-weight: 700;
+  color: #273968;
+  margin-top: 1rem;
+}
+
+.company-info p {
+  font-size: 1rem;
+  color: rgb(110, 110, 110);
+}
+
+.company-info li {
+  font-size: 1rem;
+  color: rgb(110, 110, 110);
+}
+
+.sertifikat-info h1 {
+  font-size: 2.5rem;
+  margin-top: 1rem;
+  font-weight: 700;
+  color: #273968;
+}
+
+.sertifikat-info h6 {
+  margin-top: 2rem;
+  font-size: 1rem;
+  font-weight: 500;
+  color: rgb(81, 81, 81);
+}
+
+.company-statistiks {
+  margin-top: 6rem;
+  background-image: url("https://solara.uz/assets/images/d0/d04bf9_about-bg.jpg");
+  background-position: center;
+  background-repeat: no-repeat;
+  width: 100%;
+  /* padding-top: 4rem; */
+  /* padding-bottom: 4rem; */
+}
+
+.company-statistik {
+  background-color: rgba(0, 0, 0, 0.7);
+  width: 100%;
+  padding-top: 4rem;
+  padding-bottom: 4rem;
+}
+
+.company-statistik h1 {
+  color: white;
+  font-weight: 700;
+  font-size: 2.5rem;
+}
+
+.company-statistik p {
+  color: #FFCD1E;
+  font-size: 1.1rem;
+  font-weight: 500;
+}
+
+.company-statistic__next {
+  padding-top: 5rem;
+}
+
+.company-statistic__next h1 {
+  color: #273968;
+  font-weight: 700;
+  font-size: 2.5rem;
+  margin-top: 1rem;
+}
+
+.company-statistic__next p {
+  font-size: 1.05rem;
+  color: rgb(92, 91, 91);
+  margin-top: 2rem;
+}
+
+.modal-video__info h1 {
+  color: #273968;
+  font-size: 2.5rem;
+  font-weight: 700;
+}
+
+.modal-video__info p {
+  font-size: 1rem;
+  color: rgb(86, 86, 86);
+  margin-top: 2rem;
+  line-height: 1.8;
+}
+
+.youTube {
+  margin-left: 1rem;
+  background-image: url("http://solara.uz/assets/images/74/74c12d_about-video1.jpg");
+  /* width: 95%; */
+  height: 280px;
+  background-position: center;
+  background-size: cover;
   position: relative;
 }
 
-.img2 {
-  width: 30%;
+.youTubeBtn {
   position: absolute;
-  padding: 30% 13%;
-}
-
-.rotate-center {
-  -webkit-animation: rotate-center 15s linear infinite both;
-  animation: rotate-center 15s linear infinite both;
-}
-
-@-webkit-keyframes rotate-center {
-  0% {
-    -webkit-transform: rotate(0);
-    transform: rotate(0);
-  }
-
-  100% {
-    -webkit-transform: rotate(360deg);
-    transform: rotate(360deg);
-  }
-}
-
-@keyframes rotate-center {
-  0% {
-    -webkit-transform: rotate(0);
-    transform: rotate(0);
-  }
-
-  100% {
-    -webkit-transform: rotate(360deg);
-    transform: rotate(360deg);
-  }
-}
-
-.bord {
-  width: 12%;
-  border-color: #FFCD1E !important;
-  display: inline-block;
-  margin: 0 1% 6px 0;
-  margin-right: 1%;
-}
-
-.h5-1 {
-  color: #FFCD1E;
-  font-weight: 700;
-  display: inline-block;
-}
-
-.h1-2 {
-  color: #273968;
-  font-weight: 700;
-  margin-top: 4%;
-  font-size: 2.8rem;
-}
-
-.longText {
-  margin-top: 5%;
-  font-size: 1rem;
-  line-height: 1.7;
-  opacity: 0.8;
-}
-
-.aboutList1 {
-  font-size: 1rem;
-  opacity: 0.8;
-}
-
-.aboutList2 {
-  font-size: 1rem;
-  opacity: 0.8;
-  padding-left: 5%;
-}
-
-/* button */
-.animated-btn {
-  width: 90%;
-  padding: .8rem 4%;
+  top: 38%;
+  left: 38%;
+  border-radius: 50%;
+  padding: .8rem 1rem;
   font-size: 1.05rem;
   font-weight: 500;
-  background-color: #FFCD1E;
+  background-color: #32312d;
   color: #fff;
   border: none;
   cursor: pointer;
@@ -170,107 +178,7 @@
   overflow: hidden;
 }
 
-.animated-btn:before {
-  content: "";
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  background-color: #273968;
-  transform: scaleX(0);
-  transform-origin: left;
-  transition: transform 0.5s;
-  z-index: -1;
-}
-
-.animated-btn:after {
-  content: "";
-  position: absolute;
-  top: 0;
-  right: 0;
-  width: 100%;
-  height: 100%;
-  background-color: #273968;
-  transform: scaleX(0);
-  transform-origin: right;
-  transition: transform 0.5s;
-  z-index: -1;
-}
-
-.animated-btn:hover:before {
-  transform: scaleX(1);
-}
-
-.animated-btn:hover:after {
-  transform: scaleX(1);
-}
-
-.animated-btn:hover {
-  background-color: #273968;
-  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.1);
-  transform: scale(1.05);
-}
-
-/* carusel */
-* {
-  -webkit-box-sizing: border-box;
-  box-sizing: border-box;
-}
-
-.main-hisob {
-  position: relative;
-  margin-top: 10%;
-}
-
-.hisob {
-  background-image: url("https://solara.uz/resources/img/about-bg.jpg");
-  width: 100%;
-  height: 250px;
-  backdrop-filter: initial;
-}
-
-.hisob2 {
-  top: 10%;
-}
-
-.h1-3 {
-  text-align: center !important;
-  color: rgb(6, 95, 227);
-  font-weight: 700;
-  font-size: 3.5rem;
-  margin-top: 17%;
-}
-
-.p3 {
-  text-align: center;
-  font-size: 1rem;
-  font-weight: 600;
-  color: #FFCD1E;
-}
-
-.roww {
-  width: 100%;
-  gap: 15px;
-}
-
-.image {
-  width: 50%;
-  display: inline-block;
-}
-
-.youTube {
-  margin-left: 5%;
-  background-image: url("http://solara.uz/assets/images/74/74c12d_about-video1.jpg");
-  width: 95%;
-  height: 280px;
-  background-position: center;
-  background-size: cover;
-}
-
 .youTube:hover {
-
-  /* button */
   .youTubeBtn:before {
     content: "";
     position: absolute;
@@ -314,193 +222,28 @@
   }
 }
 
-.youTubeBtn {
-  width: 20%;
-  border-radius: 50px;
-  padding: .8rem 4%;
-  margin: 34% 0 0 40%;
-  font-size: 1.05rem;
-  font-weight: 500;
-  background-color: #32312d;
-  color: #fff;
-  border: none;
-  cursor: pointer;
-  z-index: 1;
-  transition: background-color 0.3s, box-shadow 0.3s, transform 0.3s;
-  overflow: hidden;
-}
 
-
-@media only screen and (max-width: 1210px) {
-  .o-main {
-    font-size: 7px !important;
-    padding-top: 12% !important;
-
-  }
-
-  .o-companiya {
-    padding-top: 5%;
-  }
-
-  .about-box {
-    padding-top: 0 !important;
-  }
-
-  .karusel-text {
-    font-size: 0.9rem !important;
-    line-height: 0, 5px !important;
-  }
-
-  .youTubeBtn {
-    width: 35%;
-    margin-top: 50%;
-    margin-left: 33%;
-  }
-}
-
-@media only screen and (max-width: 885px) {
-  .o-main {
-    padding-top: 16% !important;
-  }
-
-  .o-companiya {
-    padding-top: 10% !important;
-  }
-}
-
-@media only screen and (max-width: 993px) {
-  .twoImg {
-    width: 70%;
-    padding-top: 0 !important;
-    margin-top: 0 !important;
-  }
-
-  .img1 {
+/* media */
+@media only screen and (max-width: 991px) {
+  .company__image {
     padding-top: 0;
+    padding-bottom: 5rem;
   }
 
-  .img2 {
-    padding-top: 20%;
-  }
-
-  .company-text {
-    width: 95%;
-  }
-
-  .sertifikate {
-    margin-top: 3%;
-    width: 100%;
-  }
-
-  .sertifikate0 {
-    margin-left: 10%;
-    width: 50%;
-  }
-
-  .animated-btn {
-    width: 80%;
-  }
-
-  .company-text {
-    margin-top: 5%;
-  }
-
-  .h1-3 {
-    font-size: 2.3rem;
-  }
-
-  .youTubeCol {
-    width: 100%;
-  }
-
-  .youTubeBtn {
-    margin-top: 40%;
-  }
-
-  .youTubeCol>h1 {
-    text-align: center;
-  }
-
-  .predostavliya {
-    font-size: 0.7rem !important;
-  }
-
-  .about-box>h1 {
-    font-size: 1.5rem;
+  .company-statistik {
+    padding-top: 2rem;
+    padding-bottom: 2rem;
   }
 }
 
-@media only screen and (max-width: 500px) {
-  .o-main {
-    padding-top: 30% !important;
-  }
-
-  .o-companiya {
-    padding-top: 17%;
-
-  }
-
-  .mainDiv {
-    width: 100%;
-    padding-right: 20%;
-  }
-
-  .twoImg {
-    width: 100%;
-  }
-
-  .h1-2 {
-    font-size: 2rem;
-  }
-
-  .animated-btn {
-    font-size: 0.5rem;
-    width: 100% !important;
-  }
-
-  .sertifikate {
-    padding-left: 30%;
-  }
-
-  .hisob2>div {
-    width: 50%;
-  }
-
-  .h1-3 {
-    margin-top: 0;
-    color: aqua;
-    font-size: 1.7rem;
-  }
-
-  .about-box {
-    width: 100%;
-  }
-
-  .about-box2 {
-    width: 100%;
-  }
-
-  .image {
-    width: 100%;
-    margin-left: 60%;
-    padding-bottom: 10%;
-  }
-}
-
-@media only screen and (max-width: 469px) {
-  .mm {
-    margin-left: 10% !important;
+@media only screen and (max-width: 595px) {
+  .company-statistik {
+    padding-top: 1rem;
+    padding-bottom: 1rem;
   }
 
   .youTubeBtn {
-    margin-top: 35%;
-  }
-
-  .sertifik {
-    font-size: 1.5rem !important;
-  }
-
-  .rotate-center {
-    width: 90%;
+    top: 38.5%;
+    left: 42.5%;
   }
 }

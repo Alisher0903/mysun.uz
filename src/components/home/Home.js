@@ -51,14 +51,15 @@ function Home() {
     // scroll btn
     window.addEventListener('scroll', () => {
         const backToTopBtn = document.getElementById('backToTopBtn');
-        if (window.scrollY > 150) {
+        if (window.scrollY > 150 && backToTopBtn) {
             backToTopBtn.classList.add('show');
             backToTopBtn.classList.remove('hide');
 
         } else {
-            backToTopBtn.classList.remove('show');
-            backToTopBtn.classList.add('hide');
-
+            if (backToTopBtn) {
+                backToTopBtn.classList.remove('show');
+                backToTopBtn.classList.add('hide');
+            }
         }
     });
 
