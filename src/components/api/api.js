@@ -1,0 +1,1 @@
+export const urlMy = "https://mysunapi.pythonanywhere.com/";

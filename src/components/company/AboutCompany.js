@@ -3,11 +3,12 @@ import NavbarMenu from "../navbar/NavbarMenu";
 import Footer from "../footer/Footer";
 import { Link } from 'react-router-dom';
 import "./companyStyle.css";
-import { Container, List } from 'reactstrap';
+import { Button, Col, Container, Row } from 'reactstrap';
 import AliceCarousel from 'react-alice-carousel';
 import React, { useState } from 'react';
 import ModalVideo from 'react-modal-video';
 import "./aboutCompany.scss";
+import mysunImg from "./img/mysunImg.jpg";
 
 function AboutCompany() {
 
@@ -17,14 +18,15 @@ function AboutCompany() {
     // scroll btn
     window.addEventListener('scroll', () => {
         const backToTopBtn = document.getElementById('backToTopBtn');
-        if (window.scrollY > 150) {
+        if (window.scrollY > 150 && backToTopBtn) {
             backToTopBtn.classList.add('show');
             backToTopBtn.classList.remove('hide');
 
         } else {
-            backToTopBtn.classList.remove('show');
-            backToTopBtn.classList.add('hide');
-
+            if (backToTopBtn) {
+                backToTopBtn.classList.remove('show');
+                backToTopBtn.classList.add('hide');
+            }
         }
     });
 
@@ -33,62 +35,67 @@ function AboutCompany() {
     }
 
     const sertifikat = [
-        <img key={1} src="https://solara.uz/assets/images/b5/b5bda6_about-cert.jpg" alt="." />,
-        <img key={2} src="https://solara.uz/assets/images/b5/b5bda6_about-cert.jpg" alt="." />,
-        <img key={3} src="https://solara.uz/assets/images/b5/b5bda6_about-cert.jpg" alt="." />,
-        <img key={4} src="https://solara.uz/assets/images/b5/b5bda6_about-cert.jpg" alt="." />,
-        <img key={5} src="https://solara.uz/assets/images/b5/b5bda6_about-cert.jpg" alt="." />,
-        <img key={6} src="https://solara.uz/assets/images/b5/b5bda6_about-cert.jpg" alt="." />,
-        <img key={7} src="https://solara.uz/assets/images/b5/b5bda6_about-cert.jpg" alt="." />
-    ]
+        <img key={1} className="img-fluid ps-1" src="https://solara.uz/assets/images/b5/b5bda6_about-cert.jpg" alt="certifikat-carousel" />,
+        <img key={2} className="img-fluid ps-1" src="https://solara.uz/assets/images/b5/b5bda6_about-cert.jpg" alt="certifikat-carousel" />,
+        <img key={3} className="img-fluid ps-1" src="https://solara.uz/assets/images/b5/b5bda6_about-cert.jpg" alt="certifikat-carousel" />,
+        <img key={4} className="img-fluid ps-1" src="https://solara.uz/assets/images/b5/b5bda6_about-cert.jpg" alt="certifikat-carousel" />,
+        <img key={5} className="img-fluid ps-1" src="https://solara.uz/assets/images/b5/b5bda6_about-cert.jpg" alt="certifikat-carousel" />,
+        <img key={6} className="img-fluid ps-1" src="https://solara.uz/assets/images/b5/b5bda6_about-cert.jpg" alt="certifikat-carousel" />,
+        <img key={7} className="img-fluid ps-1" src="https://solara.uz/assets/images/b5/b5bda6_about-cert.jpg" alt="certifikat-carousel" />
+    ];
+
     const responsive = {
         0: { items: 1 },
-        600: { items: 3 },
-        992: { items: 4 }
+        576: { items: 2 },
+        767: { items: 3 },
+        991: { items: 4 }
     };
+
     const youTube = [
         <React.Fragment>
             <div key={1} className="youTube">
-                <button className='youTubeBtn' onClick={() => setOpen(true)}>
+                <Button className='youTubeBtn' onClick={() => setOpen(true)}>
                     <svg xmlns="http://www.w3.org/2000/svg" width="40" height="40" fill="currentColor" class="bi bi-play-fill" viewBox="0 0 16 16">
                         <path d="m11.596 8.697-6.363 3.692c-.54.313-1.233-.066-1.233-.697V4.308c0-.63.692-1.01 1.233-.696l6.363 3.692a.802.802 0 0 1 0 1.393z" />
                     </svg>
-                </button>
+                </Button>
             </div>
         </React.Fragment>,
         <React.Fragment>
             <div key={2} className="youTube">
-                <button className='youTubeBtn' onClick={() => setOpen(true)}>
+                <Button className='youTubeBtn' onClick={() => setOpen(true)}>
                     <svg xmlns="http://www.w3.org/2000/svg" width="40" height="40" fill="currentColor" class="bi bi-play-fill" viewBox="0 0 16 16">
                         <path d="m11.596 8.697-6.363 3.692c-.54.313-1.233-.066-1.233-.697V4.308c0-.63.692-1.01 1.233-.696l6.363 3.692a.802.802 0 0 1 0 1.393z" />
                     </svg>
-                </button>
+                </Button>
             </div>
         </React.Fragment>,
         <React.Fragment>
             <div key={3} className="youTube">
-                <button className='youTubeBtn' onClick={() => setOpen(true)}>
+                <Button className='youTubeBtn' onClick={() => setOpen(true)}>
                     <svg xmlns="http://www.w3.org/2000/svg" width="40" height="40" fill="currentColor" class="bi bi-play-fill" viewBox="0 0 16 16">
                         <path d="m11.596 8.697-6.363 3.692c-.54.313-1.233-.066-1.233-.697V4.308c0-.63.692-1.01 1.233-.696l6.363 3.692a.802.802 0 0 1 0 1.393z" />
                     </svg>
-                </button>
+                </Button>
             </div>
         </React.Fragment>,
         <React.Fragment>
             <div key={4} className="youTube">
-                <button className='youTubeBtn' onClick={() => setOpen(true)}>
+                <Button className='youTubeBtn' onClick={() => setOpen(true)}>
                     <svg xmlns="http://www.w3.org/2000/svg" width="40" height="40" fill="currentColor" class="bi bi-play-fill" viewBox="0 0 16 16">
                         <path d="m11.596 8.697-6.363 3.692c-.54.313-1.233-.066-1.233-.697V4.308c0-.63.692-1.01 1.233-.696l6.363 3.692a.802.802 0 0 1 0 1.393z" />
                     </svg>
-                </button>
+                </Button>
             </div>
         </React.Fragment>
-    ]
-    const responsiv = {
+    ];
+
+    const responsiveYouTube = {
         0: { items: 1 },
         600: { items: 3 },
         992: { items: 3 }
     };
+
     return (
         <div>
             <NavbarInfo />
@@ -102,67 +109,64 @@ function AboutCompany() {
                     </g>
                 </svg>
             </button>
-            <div className="main o-main" style={{marginTop: "-8px"}}>
-                <div className="mainDiv">
-                    
-                    <h1 className='h1-1 o-companiya mm'>О компании</h1>
-                    <Link className='link1 mm' style={{color: "#fff"}}  to="/">Главная</Link>
-                    <p className='p1' style={{color: "#273968"}}>/ О компании</p>
+
+            <div className="box-empty"></div>
+
+            <div>
+                <div className="company__bg text-center">
+                    <h3>О компании</h3>
+                    <Link to="/">Главная</Link>
+                    <span className="ms-2">/ О компании</span>
                 </div>
-                <Container>
-                    <div className="secondDiv row mb-4 w-100">
-                        <div className="col-6 twoImg">
-                            <img className='img1' src='https://solara.uz/assets/images/e4/e42408_about-img1.png' alt='.'></img>
-                            <div className='img2' >
-                            <img className='rotate-center' src="https://solara.uz/resources/img/about-us/about-gif.png" alt="." />
-                            </div>
-                        </div>
-                        <div className="col-6 company-text">
-                            <div className='ms-4 company-text'>
-                                <div className="border bord"></div>
-                                <h5 className='h5-1'>БУДУЩЕЕ - ЭТО СЕЙЧАС!</h5>
-                                <h1 className='h1-2'>О компании</h1>
-                                <p className='longText'>SOLARA - одна из самых опытных армянских компаний, работающих в области солнечной энергетики, основана в 2019 году и является официальным представителем «LA Solar Group» в Армении. Наша компания предоставляет широкий спектр услуг, от проектирования, монтажа и эксплуатации солнечных станций. Так же он предлагает широкий спектр другого оборудования, связанного с солнечными панелями премиум-класса.
-                                    <br />
-                                    <b>Мы оправдываем ожидания как резидента, так и предпринимателя.</b>
-                                    <br />
-                                    Мы индивидуально подходим к каждому клиенту, предлагая бесплатную консультацию у наших высококвалифицированных специалистов в данной области. Как он обеспечивает финансирование специальных услуг, чтобы помочь бизнесу процветать.
-                                    <br />
-                                    <br />
-                                    <b>Каждый проект с нами успешен.</b>
-                                    <br />
-                                    У нас лучшие продукты, доступные на рынке. Мы можем предложить широкий выбор вариантов для проектов любого размера, обеспечивая выгодную цену и сочетание высокого качества. Компания СОЛАРА сертифицирована по системам ISO9001: 2015, ISO45.001: 2016, ISO14.001: 2015, соответствующим международным стандартам, а продукция сертифицирована по системе сертификации CE и UL.
-                                    <br />
-                                    <br />
-                                    <b>Наш надежный партнер - это солнечная революция.</b>
-                                    <br />
-                                    Мы установили прочные партнерские отношения с ЛА Солар Груп (LA Solar Group), одной из крупнейших американских компаний, производящих солнечные панели в Армении.</p>
-                                <List className="aboutList1">
-                                    <li>Качество и мощность производимых на предприятии фотоэлектрических модулей подтверждены международными сертификатами.</li>
-                                    <li>На всю продукцию действует гарантия 25 лет. Условная мощность солнечных панелей составляет не менее 90% за 12 лет и менее 80% за 25 лет.</li>
-                                    <li>Работая с робототехникой последнего поколения, мы стремимся предоставлять продукцию высокого качества.</li>
-                                    <li>Благодаря доверию к качеству продукции, ЛА Солар Груп  получила лицензию правительства Республики Армения на деятельность в свободной экономической зоне Альянс (Ереван, Раффи 111).</li>
-                                </List>
-                                <List type='unstyled' className="aboutList2">
-                                    <li>Вместе с ЛА Солар Груп мы сосредоточены на разработке новейших технологий для предоставления нашей продукции высочайшего качества. СОЛАРА имеет лицензии на строительство и проектирование.</li>
-                                </List>
-                            </div>
-                        </div>
-                    </div>
+                <Container className="mt-5 pt-5">
+                    <Row className="w-100">
+                        <Col className="col-12 col-lg-6 company__image">
+                            <img className='img-fluid' src={mysunImg} alt='img' />
+                        </Col>
+                        <Col className="col-12 col-lg-6 company-info">
+                            <div className="span-blur"></div>
+                            <span className="span-text">БУДУЩЕЕ - ЭТО СЕЙЧАС!</span>
+                            <h1>О компании</h1>
+                            <p>
+                                SOLARA - одна из самых опытных армянских компаний, работающих в области солнечной энергетики, основана в 2019 году и является официальным представителем «LA Solar Group» в Армении. Наша компания предоставляет широкий спектр услуг, от проектирования, монтажа и эксплуатации солнечных станций. Так же он предлагает широкий спектр другого оборудования, связанного с солнечными панелями премиум-класса. <br />
+                                <b><i>Мы оправдываем ожидания как резидента, так и предпринимателя.</i></b><br />
+                                Мы индивидуально подходим к каждому клиенту, предлагая бесплатную консультацию у наших высококвалифицированных специалистов в данной области. Как он обеспечивает финансирование специальных услуг, чтобы помочь бизнесу процветать.
+                            </p>
+                            <p>
+                                <b><i>Каждый проект с нами успешен.</i></b><br />
+                                У нас лучшие продукты, доступные на рынке. Мы можем предложить широкий выбор вариантов для проектов любого размера, обеспечивая выгодную цену и сочетание высокого качества. Компания СОЛАРА сертифицирована по системам ISO9001: 2015, ISO45.001: 2016, ISO14.001: 2015, соответствующим международным стандартам, а продукция сертифицирована по системе сертификации CE и UL.
+                            </p>
+                            <p>
+                                <b><i>Наш надежный партнер - это солнечная революция.</i></b><br />
+                                Мы установили прочные партнерские отношения с ЛА Солар Груп (LA Solar Group), одной из крупнейших американских компаний, производящих солнечные панели в Армении.
+                            </p>
+                            <ul>
+                                <li>Качество и мощность производимых на предприятии фотоэлектрических модулей подтверждены международными сертификатами.</li>
+                                <li>На всю продукцию действует гарантия 25 лет. Условная мощность солнечных панелей составляет не менее 90% за 12 лет и менее 80% за 25 лет.</li>
+                                <li>Работая с робототехникой последнего поколения, мы стремимся предоставлять продукцию высокого качества.</li>
+                                <li>Благодаря доверию к качеству продукции, ЛА Солар Груп  получила лицензию правительства Республики Армения на деятельность в свободной экономической зоне Альянс (Ереван, Раффи 111).</li>
+                            </ul>
+                            <p>
+                                Вместе с <i>ЛА Солар Груп</i> мы сосредоточены на разработке новейших технологий для предоставления нашей продукции высочайшего качества. СОЛАРА имеет лицензии на строительство и проектирование.
+                            </p>
+                        </Col>
+                    </Row>
+
+                    {/* certifikat carousel */}
                     <div className='row mt-5 w-100'>
-                        <div className='col-4 sertifikate0'>
-                            <div className="border bord"></div>
-                            <h6 className='h5-1'>Solara с тобой</h6>
-                            <h1 className='h1-2 sertifik'>Сертификация</h1>
-                            <h6 className='aboutlist1 mt-4'>about_certificate_text</h6>
-                            <button className='col-3 mt-3 animated-btn'>
+                        <Col className="col-12 col-lg-5 sertifikat-info">
+                            <div className="span-blur"></div>
+                            <span className='span-text'>Сертификаты</span>
+                            <h1>Сертификация</h1>
+                            <h6>about_certificate_text</h6>
+                            <Button className='animated-button rounded-0'>
                                 Скачать сертификат в формате PDF
-                                <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-filetype-pdf ms-2" viewBox="0 0 16 16">
+                                <svg xmlns="http://www.w3.org/2000/svg" width="12" fill="currentColor" class="bi bi-filetype-pdf ms-2" viewBox="0 0 16 16">
                                     <path fill-rule="evenodd" d="M14 4.5V14a2 2 0 0 1-2 2h-1v-1h1a1 1 0 0 0 1-1V4.5h-2A1.5 1.5 0 0 1 9.5 3V1H4a1 1 0 0 0-1 1v9H2V2a2 2 0 0 1 2-2h5.5L14 4.5ZM1.6 11.85H0v3.999h.791v-1.342h.803c.287 0 .531-.057.732-.173.203-.117.358-.275.463-.474a1.42 1.42 0 0 0 .161-.677c0-.25-.053-.476-.158-.677a1.176 1.176 0 0 0-.46-.477c-.2-.12-.443-.179-.732-.179Zm.545 1.333a.795.795 0 0 1-.085.38.574.574 0 0 1-.238.241.794.794 0 0 1-.375.082H.788V12.48h.66c.218 0 .389.06.512.181.123.122.185.296.185.522Zm1.217-1.333v3.999h1.46c.401 0 .734-.08.998-.237a1.45 1.45 0 0 0 .595-.689c.13-.3.196-.662.196-1.084 0-.42-.065-.778-.196-1.075a1.426 1.426 0 0 0-.589-.68c-.264-.156-.599-.234-1.005-.234H3.362Zm.791.645h.563c.248 0 .45.05.609.152a.89.89 0 0 1 .354.454c.079.201.118.452.118.753a2.3 2.3 0 0 1-.068.592 1.14 1.14 0 0 1-.196.422.8.8 0 0 1-.334.252 1.298 1.298 0 0 1-.483.082h-.563v-2.707Zm3.743 1.763v1.591h-.79V11.85h2.548v.653H7.896v1.117h1.606v.638H7.896Z" />
                                 </svg>
-                            </button>
-                        </div>
-                        <div className='col-8 sertifikate' style={{ cursor: "pointer", marginLeft: "0", backgroundImage: "url('https://cdn.wallpapersafari.com/32/97/bZrevY.jpg')" }}>
+                            </Button>
+                        </Col>
+                        <Col className="col-12 col-lg-7 mt-5 mt-lg-0 text-center">
                             <AliceCarousel
                                 mouseTracking
                                 items={sertifikat}
@@ -171,71 +175,78 @@ function AboutCompany() {
                                 disableButtonsControls
                                 disableDotsControls
                                 infinite
-                                responsive={responsive}
-                            />
-                        </div>
+                                responsive={responsive} />
+                        </Col>
                     </div>
                 </Container>
-                <section className='' style={{ marginBottom: "10%" }}>
-                    <div className="main-hisob">
-                        <div className='hisob'>
-                            <div className="row hisob2 w-100">
-                                <div class="col-3">
-                                    <h1 className='h1-3'>765+</h1>  
-                                    <p className='p3'>УСТАНОВКИ</p>
-                                </div>
-                                <div class="col-3">
-                                    <h1 className='h1-3'>94Вт.ч</h1>
-                                    <p className='p3'>ВЫРАБОТКА ЭЛЕКТРОЭНЕРГИИ</p>
-                                </div>
-                                <div class="col-3">
-                                    <h1 className='h1-3'>72$млн</h1>
-                                    <p className='p3'>ЭКОНОМИЯ</p>
-                                </div>
-                                <div class="col-2">
-                                    <h1 className='h1-3' style={{ marginTop: "25%" }}>523</h1>
-                                    <p className='p3'>КЛИЕНТОВ</p>
-                                </div>
-                            </div>
-                        </div>
+
+                {/* statistika */}
+                <section className='company-statistiks'>
+                    <div className="company-statistik">
+                        <Container className="text-center">
+                            <Row className="w-100">
+                                <Col className="col-6 col-lg-3">
+                                    <h1>765+</h1>
+                                    <p>УСТАНОВКИ</p>
+                                </Col>
+                                <Col className="col-6 col-lg-3">
+                                    <h1>94Вт.ч</h1>
+                                    <p>ВЫРАБОТКА ЭЛЕКТРОЭНЕРГИИ</p>
+                                </Col>
+                                <Col className="col-6 col-lg-3">
+                                    <h1>72$млн</h1>
+                                    <p>ЭКОНОМИЯ</p>
+                                </Col>
+                                <Col className="col-6 col-lg-3">
+                                    <h1>523</h1>
+                                    <p>КЛИЕНТОВ</p>
+                                </Col>
+                            </Row>
+                        </Container>
                     </div>
                 </section>
-                <div className='mt-5 row w-100' style={{ marginBottom: "10%", width: "100%" }}>
-                    <div className="col-6 ps-5 pt-5 about-box" >
-                        <div className="border bord d-block mt-5"></div>
-                        <h1 className='h5-1' style={{ color: "#273968" }}>Наша миссия и преимущества</h1>
-                        <p className='p1 predostavliya mt-3'>Предоставляя лучшие и самые инновационные решения для солнечной энергетики, мы стремимся вносить свой вклад, продвигать и расти в глобальном секторе возобновляемых источников энергии.</p>
-                    </div>
-                    <div className="col-6 about-boxs2">
-                        <div className="row w-100">
-                            <img className='image col-3' src="https://solara.uz/assets/images/87/87aae8_about-img2.jpg" alt="" />
-                            <img className='image col-3' src="https://solara.uz/assets/images/96/96dae5_about-img3.jpg" alt="" />
-                        </div>
-                    </div>
-                </div>
-                <div className="row w-100 mt-5">
-                    <div className="col-4 ps-5 youTubeCol">
-                        <div className="border bord"></div>
-                        <h6 className='h5-1'>Solara с тобой</h6>
-                        <h1 className="h5-1 d-block" style={{ color: "#273968" }}>Видео</h1>
-                        <p className='p1 mt-3 float-start karusel-text'>Компания СОЛАРА предлагает широкий спектр услуг - от проектирования до монтажа и эксплуатации солнечных станций. Также компания предоставляет огромный выбор дополнительного оборудования, относящегося к солнечным панелям премиум-класса.</p>
-                    </div>
-                    <div className="col-8 youTubeCol">
-                        <div style={{ cursor: "pointer" }}>
-                            <AliceCarousel
-                                mouseTracking
-                                items={youTube}
-                                autoPlay
-                                autoPlayInterval={3000}
-                                disableButtonsControls
-                                disableDotsControls
-                                infinite
-                                responsive={responsiv}
-                            />
-                        </div>
-                    </div>
-                </div>
+
+                <Row className='w-100 ps-3 mt-5 pt-5'>
+                    <Col className="col-12 col-lg-6 company-statistic__next" >
+                        <div className="span-blur d-block"></div>
+                        <h1>Наша миссия и преимущества</h1>
+                        <p>Предоставляя лучшие и самые инновационные решения для солнечной энергетики, мы стремимся вносить свой вклад, продвигать и расти в глобальном секторе возобновляемых источников энергии.</p>
+                    </Col>
+                    <Col className="col-12 col-lg-6">
+                        <Row className="w-100 pt-5 pt-lg-0">
+                            <Col className="col-12 col-sm-6">
+                                <img className='img-fluid' src="https://img.directindustry.com/images_di/photo-mg/244164-17786792.webp" alt="img1" />
+                            </Col>
+                            <Col className="col-12 col-sm-6">
+                                <img className='img-fluid' src="https://img.archiexpo.com/pdf/repository_ae/190813/410w-420w-418607_1mg.jpg" alt="img2" />
+                            </Col>
+                        </Row>
+                    </Col>
+                </Row>
+
+                {/* modal vedio */}
+                <Row className="row w-100 mt-5 pt-5 mb-5 pb-5">
+                    <Col className="col-12 col-lg-4 ps-4 modal-video__info">
+                        <div className="span-blur"></div>
+                        <span className='span-text'>Solara с тобой</span>
+                        <h1>Видео</h1>
+                        <p>Компания СОЛАРА предлагает широкий спектр услуг - от проектирования до монтажа и эксплуатации солнечных станций. Также компания предоставляет огромный выбор дополнительного оборудования, относящегося к солнечным панелям премиум-класса.</p>
+                    </Col>
+                    <Col className="col-12 col-lg-8 pt-5 pt-lg-0">
+                        <AliceCarousel
+                            mouseTracking
+                            items={youTube}
+                            autoPlay
+                            autoPlayInterval={3000}
+                            disableButtonsControls
+                            disableDotsControls
+                            infinite
+                            responsive={responsiveYouTube} />
+                    </Col>
+                </Row>
             </div>
+
+
             {/* footer */}
             <Footer />
             <ModalVideo
@@ -246,7 +257,6 @@ function AboutCompany() {
                 onClose={() => setOpen(false)}
             />
         </div>
-        // https://solara.uz/assets/images/e4/e42408_about-img1.png
     );
 }
 export default AboutCompany;

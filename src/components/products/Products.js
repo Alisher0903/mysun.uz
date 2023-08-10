@@ -2,40 +2,54 @@ import NavbarInfo from "../navbar/NavbarInfo";
 import NavbarMenu from "../navbar/NavbarMenu";
 import Footer from "../footer/Footer";
 import "./style.css";
-import productJson from "./productJson.json";
 import { Link } from "react-router-dom";
 import { Button, Card, CardBody, CardSubtitle, CardTitle, Col, Container, Row } from "reactstrap";
 import { useState } from "react";
 import { useEffect } from "react";
+import axios from "axios";
+import { urlMy } from "../api/api";
 
 function Products() {
 
-    const [products, setProduct] = useState([]);
+    const [product, setProduct] = useState([]);
+    const [category, setCategory] = useState([]);
 
     useEffect(() => {
+        getCategory();
         getProduct();
     }, []);
 
-    // json ulash
+    // getCategory
+    function getCategory() {
+        axios.get(urlMy + "Product_Category").then(res => setCategory(res.data));
+    }
+
+    // getProduct
     function getProduct() {
-        setProduct(productJson);
+        axios.get(urlMy + "Product").then(res => setProduct(res.data));
     }
 
     function filtirProduct(categoryId) {
-        setProduct(productJson.filter(product => product.category === categoryId));
+        console.log(product);
+        if (categoryId !== 2) {
+            axios.get(urlMy + "Product").then(res => {
+                setProduct(res.data.filter(p => p.category === categoryId));                
+            });
+        } else getProduct();
     }
 
     // scroll btn
     window.addEventListener('scroll', () => {
         const backToTopBtn = document.getElementById('backToTopBtn');
-        if (window.scrollY > 150) {
+        if (window.scrollY > 150 && backToTopBtn) {
             backToTopBtn.classList.add('show');
             backToTopBtn.classList.remove('hide');
 
         } else {
-            backToTopBtn.classList.remove('show');
-            backToTopBtn.classList.add('hide');
-
+            if (backToTopBtn) {
+                backToTopBtn.classList.remove('show');
+                backToTopBtn.classList.add('hide');
+            }
         }
     });
 
@@ -67,23 +81,19 @@ function Products() {
 
             <Container>
                 <div className="product-btn">
-                    <Button className="mt-2" onClick={getProduct}>Все продукты</Button>
-                    <Button className="mt-2" onClick={() => { filtirProduct(1) }}>Солнечные панели</Button>
-                    <Button className="mt-2" onClick={() => { filtirProduct(2) }}>Инверторы</Button>
-                    <Button className="mt-2" onClick={() => { filtirProduct(3) }}>Аккумуляторы</Button>
-                    <Button className="mt-2" onClick={() => { filtirProduct(4) }}>Водоногреватели</Button>
-                    <Button className="mt-2" onClick={() => { filtirProduct(5) }}>Электромобили</Button>
+                    {category.map((item, i) =>
+                        <Button className="mt-2" key={i} onClick={() => filtirProduct(item.id)}> {item.title} </Button>
+                    )}
                 </div>
                 <div className="mt-5">
                     <Row className="mb-5">
-                        {products && products.map((item, i) =>
+                        {product && product.map((item, i) =>
                             <Col className="col-12 col-md-6 col-lg-4 product-card mt-2 mb-2" key={i}>
                                 <Card className="card-product">
-                                    <img className="img-fluid" alt="Sample" src={item.img} />
+                                    <img className="img-fluid" alt="Sample" src={item.image_1} />
                                     <CardBody className="text-center mt-4">
                                         <CardTitle className="h6 card-title">{item.title}</CardTitle>
                                         <CardSubtitle className="mt-2 card-sub-title">
-                                            <del style={{ fontWeight: "700", opacity: "50%" }}> {item.delPrice} </del>
                                             <span className="ms-3"> {item.price} </span>
                                         </CardSubtitle>
                                     </CardBody>
