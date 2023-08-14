@@ -10,6 +10,7 @@ import Projects from "../projects/Projects";
 import Contact from "../contac/Contact";
 import Polise from "../police/Polise";
 import Blog from "../blogMy/Blog";
+import ProductInfo from "../products/ProductInfo";
 
 
 function App() {
@@ -23,6 +24,7 @@ function App() {
         <Route path="/business" element={<ForBusiness />} />
         <Route path="/private/individuals" element={<PrivateIndividual />} />
         <Route path="/products" element={<Products />} />
+        <Route path="/product/info" element={<ProductInfo />} />
         <Route path="/projects" element={<Projects />} />
         <Route path="/blog" element={<Blog />} />
         <Route path="/about/company" element={<AboutCompany />} />

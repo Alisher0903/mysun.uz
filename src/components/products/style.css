@@ -66,9 +66,10 @@
   font-weight: 400;
   color: black;
   background-color: #E6E6E6;
+  transition: all .5s;
 
   &:hover {
-    background-color: #E6E6E6;
+    background-color: #c8c8c8;
     color: black;
   }
 
@@ -110,7 +111,7 @@
   letter-spacing: .3px;
 }
 
-.card-sub-title {
+.card-sub-title span {
   color: #273968;
   font-weight: 700;
   font-size: .9rem;

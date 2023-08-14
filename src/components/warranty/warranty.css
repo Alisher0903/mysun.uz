@@ -1,4 +1,9 @@
+.warranty-main {
+  font-size: 10px;
+}
+
 .warranty-1-page {
+  margin-top: 9rem;
   width: 100%;
   height: 250px;
   margin-bottom: 7%;
@@ -7,7 +12,7 @@
   background-position: right;
 }
 
-.warranty-1-page > h1 {
+.warranty-1-page>h1 {
   text-align: center;
   padding-top: 4%;
   color: #273968;
@@ -15,7 +20,7 @@
   font-size: 3.5rem;
 }
 
-.warranty-1-page > div > p {
+.warranty-1-page>div>p {
   color: #ffffff;
   display: inline-block;
   font-size: 1.1rem;
@@ -31,6 +36,11 @@
   font-size: 1.1rem;
   position: relative;
   font-weight: 700;
+  transition: all .5s;
+
+  &:hover {
+    color: #FFCD1E;
+  }
 }
 
 .link2:hover {
@@ -39,19 +49,185 @@
 
 .warranty-card {
   background-color: #273968;
-  height: 40px;
-  width: 25%;
-  margin-left: 1rem;
+  width: 28%;
+  margin-left: 1.5rem;
+  color: #ffffff;
 }
 
 .warranty-box {
+  margin-top: -10rem;
+  margin-bottom: 3rem;
   display: flex;
   justify-content: center;
   flex-wrap: wrap;
 }
 
+.warranty-card>h1 {
+  font-size: 5rem;
+  color: #29417B;
+}
 
+.warranty-card>h4 {
+  font-size: 1.7rem;
+  font-weight: 900;
+}
 
-/* https://solara.uz/assets/images/78/78039d_garantee-icon1.png quyosh */
-/* https://solara.uz/assets/images/66/66c288_garantee-icon2.png 2 */
-/* https://solara.uz/assets/images/69/69213b_garantee-icon3.png velik */
+.warranty-card>p {
+  font-size: 1rem;
+  font-weight: 700;
+  padding: 0 1rem 2rem;
+}
+
+.warranty-text {
+  font-size: 1rem;
+  line-height: 1.7rem;
+}
+
+.warranty-text>p {
+  opacity: 80%;
+}
+
+.warranty-text>h1 {
+  font-weight: 700;
+  font-size: 2.7rem;
+  color: #FFCD1E;
+}
+
+.warranty-two-img {
+  padding-top: 20rem;
+}
+
+/* buttun */
+.warranty-btn {
+  padding: .8rem 2rem;
+  font-size: 1.05rem;
+  font-weight: 500;
+  background-color: #FFCD1E;
+  color: #fff;
+  border: none;
+  cursor: pointer;
+  z-index: 1;
+  transition: background-color 0.3s, box-shadow 0.3s, transform 0.3s;
+  overflow: hidden;
+  position: relative;
+}
+
+.warranty-btn::before,
+.warranty-btn::after {
+  content: "";
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  background-color: #29417B;
+  transition: transform 0.5s;
+  z-index: -1;
+}
+
+.warranty-btn::before {
+  top: 0;
+  left: 0;
+  transform: scaleX(0);
+  transform-origin: left;
+}
+
+.warranty-btn::after {
+  top: 0;
+  right: 0;
+  transform: scaleX(0);
+  transform-origin: right;
+}
+
+.warranty-btn:hover::before,
+.warranty-btn:focus::before,
+.warranty-btn:active::before {
+  transform: scaleX(1);
+}
+
+.warranty-btn:hover::after,
+.warranty-btn:focus::after,
+.warranty-btn:active::after {
+  transform: scaleX(1);
+}
+
+.animated-button__two:hover {
+  background-color: #273968;
+  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.1);
+  transform: scale(1.05);
+}
+
+.warranty-proect-text>h1 {
+  font-size: 2.5rem;
+  font-weight: 700;
+  color: #29417B;
+}
+
+.warranty-proect-text>p {
+  font-size: 1rem;
+  font-weight: 700;
+  line-height: 2rem;
+  opacity: 80%;
+}
+
+.warranty-carusel {
+  margin-right: 1rem;
+  cursor: pointer;
+  overflow: hidden;
+}
+
+.warranty-carusel img {
+  transition: all .5s;
+
+  &:hover {
+    transform: scale(1.05);
+    filter: brightness(.5);
+  }
+}
+
+.warranty-carusel>h3 {
+  font-weight: 700;
+  font-size: 1.5rem;
+  color: #29417B;
+  transition: all .5s;
+
+  &:hover {
+    color: #FFCD1E;
+  }
+}
+
+@media (max-width: 991px) {
+  .warranty-100 {
+    width: 100% !important;
+  }
+
+  .warranty-box {
+    margin-top: 0;
+    margin-right: 0;
+    padding-right: 0;
+  }
+
+  .warranty-two-img {
+    padding-top: 2rem;
+  }
+}
+
+@media (max-width: 400px) {
+  .warranty-main {
+    font-size: 8px;
+  }
+
+  .warranty-col-100 {
+    width: 100%;
+  }
+
+  .warranty-text h5 {
+    font-size: 1rem;
+  }
+
+  .warranty-text h1 {
+    font-size: 2rem;
+  }
+
+  .warranty-text p {
+    font-size: 0.9rem;
+  }
+}
