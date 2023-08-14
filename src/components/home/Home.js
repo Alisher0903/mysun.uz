@@ -9,6 +9,8 @@ import { Link } from "react-router-dom";
 import AliceCarousel from "react-alice-carousel";
 import { toast } from "react-toastify";
 import Footer from "../footer/Footer";
+import axios from "axios";
+import { urlMy } from "../api/api";
 
 function Home() {
 
@@ -43,10 +45,33 @@ function Home() {
             } else {
                 toast.error("Ошибка. Убедитесь, что вы вводите информацию полностью❌");
             }
-        } else {
-            toast.success('✔Ваша информация получена');
         }
+        // else {
+        //     toast.success('✔Ваша информация получена');
+        // }
     };
+
+    // add clients
+    function addClientObj() {
+        const message = document.getElementById("message").value;
+
+        const addObj = new FormData();
+        addObj.append("full_name", inputValue);
+        addObj.append("phone_number", inputValueNum);
+        addObj.append("message", message);
+        return addObj;
+    }
+
+    function addClients() {
+        axios.post(urlMy + "Review/", addClientObj)
+            .then(() => {
+                openModal();
+                toast.success("✔");
+            }).catch((error) => {
+                // openModal();
+                toast.error("Произошла ошибка при отправке данных!", error);
+            })
+    }
 
     // scroll btn
     window.addEventListener('scroll', () => {
@@ -749,8 +774,8 @@ function Home() {
                                         <path fill="red" d="M12.884 2.532c-.346-.654-1.422-.654-1.768 0l-9 17A.999.999 0 0 0 3 21h18a.998.998 0 0 0 .883-1.467L12.884 2.532zM13 18h-2v-2h2v2zm-2-4V9h2l.001 5H11z" />
                                     </svg>
                                 </p>}
-                                <textarea className='w-100 ps-3 pt-2 mt-4 form-textarea' rows="3" placeholder='Сообщение' />
-                                <Button type="submit" className='modal-btn mt-4'>
+                                <textarea className='w-100 ps-3 pt-2 mt-4 form-textarea' id="message" rows="3" placeholder='Сообщение' />
+                                <Button type="submit" className='modal-btn mt-4' onClick={addClients}>
                                     Получить бесплатную консультацию
                                     <svg xmlns="http://www.w3.org/2000/svg" width="22" fill="currentColor" class="bi bi-arrow-right-short ms-2 me-0" viewBox="0 0 16 16">
                                         <path fill-rule="evenodd" d="M4 8a.5.5 0 0 1 .5-.5h5.793L8.146 5.354a.5.5 0 1 1 .708-.708l3 3a.5.5 0 0 1 0 .708l-3 3a.5.5 0 0 1-.708-.708L10.293 8.5H4.5A.5.5 0 0 1 4 8z" />

@@ -31,9 +31,9 @@ function Products() {
 
     function filtirProduct(categoryId) {
         console.log(product);
-        if (categoryId !== 2) {
+        if (categoryId !== 7) {
             axios.get(urlMy + "Product").then(res => {
-                setProduct(res.data.filter(p => p.category === categoryId));                
+                setProduct(res.data.filter(p => p.category === categoryId));
             });
         } else getProduct();
     }
@@ -57,10 +57,18 @@ function Products() {
         window.scrollTo({ top: 0, behavior: 'smooth' });
     }
 
+    // productInfo
+    function productInfo() {
+        const info = document.getElementById("productInfo");
+        info.click();
+    }
+
     return (
         <div>
             <NavbarInfo />
             <NavbarMenu />
+
+            <Link id="productInfo" to="/product/info"></Link>
 
             {/* scroll buluvchi btn */}
             <button id="backToTopBtn" onClick={scrollToTop}>
@@ -88,13 +96,17 @@ function Products() {
                 <div className="mt-5">
                     <Row className="mb-5">
                         {product && product.map((item, i) =>
-                            <Col className="col-12 col-md-6 col-lg-4 product-card mt-2 mb-2" key={i}>
+                            <Col className="col-12 col-md-6 col-lg-4 product-card mt-2 mb-2" key={i}
+                                onClick={() => {
+                                    productInfo();
+                                    sessionStorage.setItem("productId", item.id);
+                                }}>
                                 <Card className="card-product">
                                     <img className="img-fluid" alt="Sample" src={item.image_1} />
                                     <CardBody className="text-center mt-4">
                                         <CardTitle className="h6 card-title">{item.title}</CardTitle>
                                         <CardSubtitle className="mt-2 card-sub-title">
-                                            <span className="ms-3"> {item.price} </span>
+                                            <span className="ms-3"> {item.price} СУМ </span>
                                         </CardSubtitle>
                                     </CardBody>
                                 </Card>
