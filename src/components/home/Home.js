@@ -39,16 +39,11 @@ function Home() {
     const handleSubmit = (event) => {
         event.preventDefault();
 
-        if (inputValue.trim() === '' || inputValueNum.trim() === '') {
-            if (inputValue.trim() === '' && inputValueNum.trim() === '') {
-                setShowText(true);
-            } else {
-                toast.error("Ошибка. Убедитесь, что вы вводите информацию полностью❌");
-            }
-        }
-        // else {
-        //     toast.success('✔Ваша информация получена');
-        // }
+        if (!inputValue || !inputValueNum) {
+            setShowText(true);
+            return;
+        } setShowText(false);
+
     };
 
     // add clients
@@ -63,14 +58,17 @@ function Home() {
     }
 
     function addClients() {
-        axios.post(urlMy + "Review/", addClientObj)
-            .then(() => {
-                openModal();
-                toast.success("✔");
-            }).catch((error) => {
-                // openModal();
-                toast.error("Произошла ошибка при отправке данных!", error);
-            })
+        axios.post(urlMy + "Review", addClientObj, {
+            headers: {
+                "Authorization": "Basic YWRtaW46MQ=="
+            }
+        }).then(() => {
+            openModal();
+            toast.success("✔");
+        }).catch(() => {
+            openModal();
+            toast.error("Произошла ошибка при отправке данных❌");
+        })
     }
 
     // scroll btn
@@ -95,36 +93,36 @@ function Home() {
     // aliceCarousel
     const items = [
         <div key={1} className="slider-item ms-4">
-            <a href="https://solara.uz/ru/projects/ani-product-ru">
+            <a href="/projects">
                 <img className="img-fluid" src="https://solara.uz/assets/images/6d/6d8905_03.jpg" alt="img1" />
             </a>
             <div className="blog-content">
-                <h3><a href="https://solara.uz/ru/projects/ani-product-ru">Ани Продукт</a></h3>
+                <h3><a href="/projects">Ани Продукт</a></h3>
             </div>
         </div>,
         <div key={2} className="slider-item ms-4">
-            <a href="https://solara.uz/ru/projects/tashkent-ru">
+            <a href="/projects">
                 <img className="img-fluid" src="https://solara.uz/assets/images/77/7768b0_photo-2022-06-06-14-41-10.jpg" alt="img2" />
             </a>
             <div className="blog-content">
-                <h3><a href="https://solara.uz/ru/projects/tashkent-ru">Ташкент</a></h3>
+                <h3><a href="/projects">Ташкент</a></h3>
             </div>
         </div>,
         <div key={3} className="slider-item ms-4">
-            <a href="https://solara.uz/ru/projects/nalogovi-komitet">
+            <a href="/projects">
                 <img className="img-fluid" src="https://solara.uz/assets/images/90/90f341_photo-2022-06-30-15-08-49.jpg" alt="img3" />
             </a>
             <div className="blog-content">
-                <h3><a href="https://solara.uz/ru/projects/nalogovi-komitet">Налоговый комитет</a></h3>
+                <h3><a href="/projects">Налоговый комитет</a></h3>
             </div>
         </div>,
         <div key={4} className="slider-item ms-4">
-            <a href="https://solara.uz/ru/projects/gosudarstvennoe-nalogovoe-upravlenie">
+            <a href="/projects">
                 <img className="img-fluid" src="https://solara.uz/assets/images/66/665bf4_-.jpg" alt="img4" />
             </a>
             <div className="blog-content">
                 <h3>
-                    <a href="https://solara.uz/ru/projects/gosudarstvennoe-nalogovoe-upravlenie">
+                    <a href="/projects">
                         Государственное налоговое управление
                     </a>
                 </h3>
@@ -136,12 +134,12 @@ function Home() {
     // aliceCarousel2
     const itemsTwo = [
         <div key={1} className="slider-item ms-4">
-            <a href="https://solara.uz/ru/blog/sdelay-shag-k-solncu">
+            <a href="/blog">
                 <img className="img-fluid" src="https://solara.uz/assets/images/61/612356_Solar-Systems.jpg" alt="img1" />
             </a>
             <div className="blog-content">
                 <h3>
-                    <a href="https://solara.uz/ru/blog/sdelay-shag-k-solncu">
+                    <a href="/blog">
                         Сделай шаг к солнцу. Солнечные электростанции под ключ
                     </a>
                 </h3>
@@ -149,12 +147,12 @@ function Home() {
             </div>
         </div>,
         <div key={2} className="slider-item ms-4">
-            <a href="https://solara.uz/ru/blog/kabmin-pereshol-na-solnechnuyu-energiyu">
+            <a href="/blog">
                 <img className="img-fluid" src="https://solara.uz/assets/images/84/84fca7_Solar-Panels-in-the-Building-of-the-Cabinet-of-Ministers-Uzbekistan.jpg" alt="img2" />
             </a>
             <div className="blog-content">
                 <h3>
-                    <a href="https://solara.uz/ru/blog/kabmin-pereshol-na-solnechnuyu-energiyu">
+                    <a href="/blog">
                         Кабмин перешёл на солнечную энергию
                     </a>
                 </h3>
@@ -163,12 +161,12 @@ function Home() {
             </div>
         </div>,
         <div key={3} className="slider-item ms-4">
-            <a href="https://solara.uz/ru/blog/vozobnovlyayemyye-istochniki-energii-v-tashkente">
+            <a href="/blog">
                 <img className="img-fluid" src="https://solara.uz/assets/images/ea/eaa6a0_-1-billion-for-the-introduction-of-renewable-energy.jpg" alt="img3" />
             </a>
             <div className="blog-content">
                 <h3>
-                    <a href="https://solara.uz/ru/blog/vozobnovlyayemyye-istochniki-energii-v-tashkente">
+                    <a href="/blog">
                         1 млрд долларов направят на внедрение возобновляемых источников энергии в Ташкенте
                     </a>
                 </h3>
@@ -176,12 +174,12 @@ function Home() {
             </div>
         </div>,
         <div key={4} className="slider-item ms-4">
-            <a href="https://solara.uz/ru/blog/ustanovku-solnechnykh-paneley-v-gos-organizatsiyakh-tashkenta">
+            <a href="/blog">
                 <img className="img-fluid" src="https://solara.uz/assets/images/af/af98dd_Solar-Panels.jpg" alt="img4" />
             </a>
             <div className="blog-content">
                 <h3>
-                    <a href="https://solara.uz/ru/blog/ustanovku-solnechnykh-paneley-v-gos-organizatsiyakh-tashkenta">
+                    <a href="/blog">
                         Более 400 млрд сумов направят на установку солнечных панелей в госорганизациях Ташкента
                     </a>
                 </h3>
@@ -189,12 +187,12 @@ function Home() {
             </div>
         </div>,
         <div key={5} className="slider-item ms-4">
-            <a href="https://solara.uz/ru/blog/namangan-oborudovan-solnechnymi-panelyami">
+            <a href="/blog">
                 <img className="img-fluid" src="https://solara.uz/assets/images/31/319b3d_Solar-Panels.jpg" alt="img5" />
             </a>
             <div className="blog-content">
                 <h3>
-                    <a href="https://solara.uz/ru/blog/namangan-oborudovan-solnechnymi-panelyami">
+                    <a href="/blog">
                         Четыре жилых дома в Намангане оснащены солнечными панелями
                     </a>
                 </h3>
@@ -202,12 +200,12 @@ function Home() {
             </div>
         </div>,
         <div key={6} className="slider-item ms-4">
-            <a href="https://solara.uz/ru/blog/zdaniya-v-uzbekistane-budut-zanyaty-solnechnymi-panelyami">
+            <a href="/blog">
                 <img className="img-fluid" src="https://solara.uz/assets/images/b1/b1d885_Solar-Panels.jpg" alt="img6" />
             </a>
             <div className="blog-content">
                 <h3>
-                    <a href="https://solara.uz/ru/blog/zdaniya-v-uzbekistane-budut-zanyaty-solnechnymi-panelyami">
+                    <a href="/blog">
                         Минимум 50% крыш новых многоэтажек в Узбекистане займут солнечные панели
                     </a>
                 </h3>
@@ -215,12 +213,12 @@ function Home() {
             </div>
         </div>,
         <div key={7} className="slider-item ms-4">
-            <a href="https://solara.uz/ru/blog/RENWEX+2021+%D0%9C%D0%B5%D0%B6%D0%B4%D1%83%D0%BD%D0%B0%D1%80%D0%BE%D0%B4%D0%BD%D0%B0%D1%8F+%D0%B2%D1%8B%D1%81%D1%82%D0%B0%D0%B2%D0%BA%D0%B0+%D0%B8+%D1%84%D0%BE%D1%80%D1%83%D0%BC">
+            <a href="/blog">
                 <img className="img-fluid" src="https://solara.uz/assets/images/21/21beb3_Renwex-Solara.jpg" alt="img7" />
             </a>
             <div className="blog-content">
                 <h3>
-                    <a href="https://solara.uz/ru/blog/RENWEX+2021+%D0%9C%D0%B5%D0%B6%D0%B4%D1%83%D0%BD%D0%B0%D1%80%D0%BE%D0%B4%D0%BD%D0%B0%D1%8F+%D0%B2%D1%8B%D1%81%D1%82%D0%B0%D0%B2%D0%BA%D0%B0+%D0%B8+%D1%84%D0%BE%D1%80%D1%83%D0%BC">
+                    <a href="/blog">
                         RENWEX 2021 Международная выставка и форум
                     </a>
                 </h3>
@@ -228,19 +226,18 @@ function Home() {
             </div>
         </div>,
         <div key={8} className="slider-item ms-4">
-            <a href="https://solara.uz/ru/blog/solnechnaya-energia-dlya-doma-i-biznesa">
+            <a href="/blog">
                 <img className="img-fluid" src="https://solara.uz/assets/images/08/080fcd_Solar-Panels.jpg" alt="img8" />
             </a>
             <div className="blog-content">
                 <h3>
-                    <a href="https://solara.uz/ru/blog/solnechnaya-energia-dlya-doma-i-biznesa">
+                    <a href="/blog">
                         Солнечная энергия для вашего дома и бизнеса
                     </a>
                 </h3>
                 <p>Солнечная энергия считается самой популярной среди альтернативных источников энергии. Установка солнечных панелей, в первую очередь, позволяет добиться бесперебойной работы электроснабжения, исключить перебои или аварии на линиях электропередач, а также снизить затраты на электроэнергию.</p>
             </div>
         </div>
-
     ];
 
     // partner
@@ -351,7 +348,7 @@ function Home() {
                             src="https://solara.uz/assets/images/b1/b1ef71_solar-academy-solara.jpg" alt="img2" />
                         <Carousel.Caption>
                             <h1 data-aos="fade-down" data-aos-easing="linear">Солнечные <br /> электростанции под ключ</h1>
-                            <Row className="home-carousel__btn" data-aos="fade-up">
+                            <Row className="home-carousel__btn">
                                 <Col className="col-12 mb-3 col-md-6 mb-md-0">
                                     <Button className="rounded-0 mt-0 animated-button float-md-end" onClick={linkId}>
                                         Подробнее
@@ -376,7 +373,7 @@ function Home() {
                             src="https://solara.uz/assets/images/f0/f0da48_solar-panel-and-inverter.jpg" alt="img3" />
                         <Carousel.Caption>
                             <h1 data-aos="fade-down" data-aos-easing="linear">Готовые решения для <br /> вашего дома</h1>
-                            <Row className="home-carousel__btn" data-aos="fade-up">
+                            <Row className="home-carousel__btn">
                                 <Col className="col-12 mb-3 col-md-6 mb-md-0">
                                     <Button className="rounded-0 mt-0 animated-button float-md-end" onClick={linkId}>
                                         Подробнее
@@ -401,7 +398,7 @@ function Home() {
                             src="https://solara.uz/assets/images/44/44d046_Homepage-slider.jpg" alt="img4" />
                         <Carousel.Caption>
                             <h1 data-aos="fade-down" data-aos-easing="linear">Солнечные <br /> электростанции под ключ</h1>
-                            <Row className="home-carousel__btn" data-aos="fade-up">
+                            <Row className="home-carousel__btn">
                                 <Col className="col-12 mb-3 col-md-6 mb-md-0">
                                     <Button className="rounded-0 mt-0 animated-button float-md-end" onClick={linkId}>
                                         Подробнее
@@ -611,7 +608,7 @@ function Home() {
                 </div>
                 <Row className="w-100 mt-5 ps-5 pe-4">
                     <Col className="col-12 col-lg-6 mt-3">
-                        <Link to="https://solara.uz/ru/products/solnechnie-batareya-ls-450-bl" style={{ textDecoration: "none" }}>
+                        <Link to="/products" style={{ textDecoration: "none" }}>
                             <div className="mt-3 production-box  production-1">
                                 <img className="w-100" src="https://solara.uz/assets/images/bb/bb6d96_Productivity.jpg" alt="img1" />
                             </div>
@@ -621,7 +618,7 @@ function Home() {
                     <Col className="col-12 col-lg-6">
                         <Row className="w-100">
                             <Col className="col-12 col-md-6">
-                                <Link to="https://solara.uz/ru/products/solnechnie-batareya-la-450wt" style={{ textDecoration: "none" }}>
+                                <Link to="/products" style={{ textDecoration: "none" }}>
                                     <div className="mt-3 production-box">
                                         <img className="w-100" src="https://solara.uz/assets/images/f7/f78ecd_628667-01.jpg" alt="img2" />
                                     </div>
@@ -629,7 +626,7 @@ function Home() {
                                 </Link>
                             </Col>
                             <Col className="col-12 col-md-6">
-                                <Link to="https://solara.uz/ru/products/invertor-solis-1P4K-4G" style={{ textDecoration: "none" }}>
+                                <Link to="/products" style={{ textDecoration: "none" }}>
                                     <div className="mt-3 production-box">
                                         <img className="w-100" src="https://solara.uz/assets/images/38/386e9a_Inverter-Solis-1P4K-4G.jpg" alt="img3" />
                                     </div>
@@ -637,7 +634,7 @@ function Home() {
                                 </Link>
                             </Col>
                             <Col className="col-12 col-md-6">
-                                <Link to="https://solara.uz/ru/products/invertor-solis-1P5K-4G" style={{ textDecoration: "none" }}>
+                                <Link to="/products" style={{ textDecoration: "none" }}>
                                     <div className="mt-3 production-box">
                                         <img className="w-100" src="https://solara.uz/assets/images/9e/9e6972_Inverter-Solis-1P5K-4G.jpg" alt="img4" />
                                     </div>
@@ -645,7 +642,7 @@ function Home() {
                                 </Link>
                             </Col>
                             <Col className="col-12 col-md-6">
-                                <Link to="https://solara.uz/ru/products/invertor-solis-1P6K-4G" style={{ textDecoration: "none" }}>
+                                <Link to="/products" style={{ textDecoration: "none" }}>
                                     <div className="mt-3 production-box">
                                         <img className="w-100" src="https://solara.uz/assets/images/8d/8d9a12_Inverter-Solis-1P6K-4G.jpg" alt="img5" />
                                     </div>

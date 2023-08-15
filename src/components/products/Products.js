@@ -30,7 +30,6 @@ function Products() {
     }
 
     function filtirProduct(categoryId) {
-        console.log(product);
         if (categoryId !== 7) {
             axios.get(urlMy + "Product").then(res => {
                 setProduct(res.data.filter(p => p.category === categoryId));

@@ -176,6 +176,11 @@ body {
 .blog-img {
   padding: 0;
   width: 100%;
+  transition: all .5s;
+
+  &:hover {
+    filter: brightness(.7);
+  }
 }
 
 .blog-h5 {

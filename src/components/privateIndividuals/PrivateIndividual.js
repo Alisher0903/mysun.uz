@@ -10,6 +10,8 @@ import OnGround from "./OnGround";
 import Autonomous from "./Autonomous";
 import Network from "./Networks";
 import iconImg from "./img/img.jpg";
+import axios from "axios";
+import { urlMy } from "../api/api";
 import { toast } from "react-toastify";
 
 function PrivateIndividual() {
@@ -53,16 +55,31 @@ function PrivateIndividual() {
     const handleSubmit = (event) => {
         event.preventDefault();
 
-        if (inputValue.trim() === '' || inputValueNum.trim() === '' || inputValueEmail.trim() === '' || inputValueKomp.trim() === '') {
-            if (inputValue.trim() === '' && inputValueNum.trim() === '' && inputValueEmail.trim() === '' && inputValueKomp.trim() === '') {
-                setShowText(true);
-            } else {
-                toast.error("Ошибка. Убедитесь, что вы вводите информацию полностью❌");
-            }
-        } else {
-            toast.success('✔Ваша информация получена');
-        }
+        if (!inputValue || !inputValueNum || !inputValueEmail || !inputValueKomp) {
+            setShowText(true);
+            return;
+        } setShowText(false);
     };
+
+    // add client
+    function addIndividual() {
+        const addIndividualObj = {
+            full_name: inputValue,
+            email: inputValueEmail,
+            phone_number: inputValueNum,
+            company: inputValueKomp
+        }
+
+        axios.post(urlMy + "Review_for_business", addIndividualObj, {
+            headers: {
+                "Authorization": "Basic YWRtaW46MQ=="
+            }
+        }).then(() => {
+            toast.success("✔");
+        }).catch(() => {
+            toast.error("❌");
+        });
+    }
 
     return (
         <div>
@@ -237,8 +254,8 @@ function PrivateIndividual() {
                                                 <path fill="red" d="M12.884 2.532c-.346-.654-1.422-.654-1.768 0l-9 17A.999.999 0 0 0 3 21h18a.998.998 0 0 0 .883-1.467L12.884 2.532zM13 18h-2v-2h2v2zm-2-4V9h2l.001 5H11z" />
                                             </svg></p>}
                                         <Input type="checkbox" id="check" className="mt-4 d-inline-block p-2" />
-                                        <Label className="check ms-2" for="check">Согласен с <Link to="https://solara.uz/ru/site/privacy-policy">ПОЛИТИКОЙ КОНФИДЕНЦИАЛЬНОСТИ</Link></Label>
-                                        <Button type="submit" className='animated-button__two d-block rounded-0 mt-3'>
+                                        <Label className="check ms-2" for="check">Согласен с <Link to="/polise">ПОЛИТИКОЙ КОНФИДЕНЦИАЛЬНОСТИ</Link></Label>
+                                        <Button type="submit" className='animated-button__two d-block rounded-0 mt-3' onClick={addIndividual}>
                                             Оставить Заявку
                                             <svg xmlns="http://www.w3.org/2000/svg" width="22" fill="currentColor" class="bi bi-arrow-right-short ms-2 me-0" viewBox="0 0 16 16">
                                                 <path fill-rule="evenodd" d="M4 8a.5.5 0 0 1 .5-.5h5.793L8.146 5.354a.5.5 0 1 1 .708-.708l3 3a.5.5 0 0 1 0 .708l-3 3a.5.5 0 0 1-.708-.708L10.293 8.5H4.5A.5.5 0 0 1 4 8z" />

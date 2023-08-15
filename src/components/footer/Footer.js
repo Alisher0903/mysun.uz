@@ -57,25 +57,25 @@ function Futer() {
               <List type="unstyled">
                 <li className='mb-4 fontS'>Проекты</li>
                 <li className='mb-3'>
-                  <Link className='linkT' to="https://solara.uz/ru/projects/ani-product-ru">
+                  <Link className='linkT' to="/projects">
                     <span className='slash me-2'>//</span>
                     Ани Продукт
                   </Link>
                 </li>
                 <li className='mb-3 links'>
-                  <Link className='linkT' to="https://solara.uz/ru/projects/nalogovi-komitet">
+                  <Link className='linkT' to="/projects">
                     <span className='slash me-2'>//</span>
                     Налоговый комитет
                   </Link>
                 </li>
                 <li className='mb-3'>
-                  <Link className='linkT' to="https://solara.uz/ru/projects/gosudarstvennoe-nalogovoe-upravlenie">
+                  <Link className='linkT' to="/projects">
                     <span className='slash me-2'>//</span>
                     Государственное налоговое управление
                   </Link>
                 </li>
                 <li className='mb-3'>
-                  <Link className='linkT' to="https://solara.uz/ru/projects/tashkent-ru">
+                  <Link className='linkT' to="/projects">
                     <span className='slash me-2'>//</span>
                     Ташкент
                   </Link>

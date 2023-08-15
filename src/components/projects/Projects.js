@@ -2,26 +2,38 @@ import NavbarInfo from "../navbar/NavbarInfo";
 import NavbarMenu from "../navbar/NavbarMenu";
 import Footer from "../footer/Footer";
 import "./style.css";
-import projectJson from "./projectJson.json";
 import { Link } from "react-router-dom";
 import { Button, Card, CardBody, CardSubtitle, CardTitle, Col, Container, Row } from "reactstrap";
 import { useState } from "react";
 import { useEffect } from "react";
+import axios from "axios";
+import { urlMy } from "../api/api";
 
 function Projects() {
 
     const [projectList, setProjectList] = useState([]);
+    const [category, setCategory] = useState([]);
 
     useEffect(() => {
+        getCategory();
         getProject();
     }, []);
 
+    // get category
+    const getCategory = () => axios.get(urlMy + "Project_Category").then(res => setCategory(res.data));
+
+    // get project
     function getProject() {
-        setProjectList(projectJson);
+        axios.get(urlMy + "Project").then(res => setProjectList(res.data));
     }
 
-    function filtirProject(projectId) {
-        setProjectList(projectJson.filter(project => project.productId === projectId));
+    // filter category
+    function filtirProject(categoryId) {
+        if (categoryId !== 5) {
+            axios.get(urlMy + "Project").then(res => {
+                setProjectList(res.data.filter(p => p.category === categoryId));
+            });
+        } else getProject();
     }
 
     // scroll btn
@@ -43,12 +55,17 @@ function Projects() {
         window.scrollTo({ top: 0, behavior: 'smooth' });
     }
 
+    const projectCard = () => document.getElementById("projectInfo").click();
+
     return (
         <div>
+
+            <Link to="/project/info" id="projectInfo"></Link>
+
             <NavbarInfo />
             <NavbarMenu />
 
-            {/* scroll buluvchi btn */}
+            {/* scroll btn */}
             <button id="backToTopBtn" onClick={scrollToTop}>
                 <svg xmlns="http://www.w3.org/2000/svg" width="20" viewBox="0 0 256 256">
                     <g transform="rotate(90 128 128)">
@@ -56,8 +73,6 @@ function Projects() {
                     </g>
                 </svg>
             </button>
-
-            {/* <div className="box-empty"></div> */}
 
             <div className="project__bg text-center">
                 <h1>Проекты</h1>
@@ -67,17 +82,20 @@ function Projects() {
 
             <Container>
                 <div className="project-btn mt-5">
-                    <Button onClick={getProject}>Все</Button>
-                    <Button onClick={() => { filtirProject(2) }}>Коммерческие</Button>
-                    <Button onClick={() => { filtirProject(3) }}>Частные</Button>
-                    <Button onClick={() => { filtirProject(1) }}>Зарубежные</Button>
+                    {category.map((item, i) =>
+                        <Button key={i} onClick={() => { filtirProject(item.id) }}> {item.title} </Button>
+                    )}
                 </div>
+
                 <div className="mt-5">
                     <Row className="mb-5">
                         {projectList && projectList.map((item, i) =>
-                            <Col className="col-12 col-md-6 col-lg-4 mt-2 mb-2" key={i}>
+                            <Col className="col-12 col-md-6 col-lg-4 mt-2 mb-2" key={i} onClick={() => {
+                                projectCard();
+                                sessionStorage.setItem("projectId", item.id);
+                            }}>
                                 <Card className="card-project">
-                                    <img className="img-fluid" alt="Sample" src={item.img} />
+                                    <img className="img-fluid" alt="Sample" src={item.image_1} />
                                     <CardBody className="text-center mt-4">
                                         <CardTitle className="h6 card-title">{item.title}</CardTitle>
                                         <CardSubtitle className="mt-3 card-sub-title">
