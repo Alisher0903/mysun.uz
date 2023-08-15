@@ -4,8 +4,24 @@ import Footer from "../footer/Footer";
 import { Link } from 'react-router-dom';
 import "./blogStyle.css";
 import { Container } from 'reactstrap';
+import { useEffect, useState } from 'react';
+import axios from 'axios';
+import { urlMy } from '../api/api';
 
 function Blog() {
+
+
+    const [blog, setBlog] = useState([]);
+
+    useEffect(() => {
+        getBlog();
+    }, []);
+
+
+    // getBlog
+    function getBlog() {
+        axios.get(urlMy + "Blog").then(res => setBlog(res.data));
+    }
 
     // scroll btn
     window.addEventListener('scroll', () => {
@@ -26,8 +42,15 @@ function Blog() {
         window.scrollTo({ top: 0, behavior: 'smooth' });
     }
 
+    // function clickBlog() {
+    //     document.getElementById("about-blog").click()
+    // }
+
     return (
         <div>
+
+            {/* <Link to="/blog/about-blog" id='about-blog'></Link> */}
+
             <NavbarInfo />
             <NavbarMenu />
 
@@ -39,6 +62,7 @@ function Blog() {
                     </g>
                 </svg>
             </button>
+
             <div className="mains w-100">
                 <div className="blogMain ">
                     <h1 className='h12'>Блог</h1>
@@ -55,73 +79,20 @@ function Blog() {
                 </div>
                 <Container>
                     <div className="blog-page-3 row w-100">
-                        <div class="box col-4">
-                            <div class="ribbon"><span>19 / 03</span></div>
-                            <div className="box-div w-100">
-                                <img className='blog-img' src="https://solara.uz/assets/images/6b/6bbe7a_Solar-Panels.jpg" alt="." />
-                                <h5 className='blog-h5'>Более 400 млрд сумов направят на установку солнечных панелей в госорганизациях Ташкента</h5>
-                                <p className='blog-p'>В Ташкенте на установку солнечных панелей в 1063 организациях, финансируемых из бюджетов города и районов (детские сады, школы, больницы, бюджетные организации), планируется направить 390 млрд сумов. Это предусмотрено решением столичного кенгаша народных депутатов от 20 февраля</p>
+                        {blog && blog.map((item, i) =>
+                            <div class="box col-4" key={i}>
+                                {/* <div class="ribbon"><span>{item.date}</span></div> */}
+                                <div className="box-div w-100">
+                                    <img className='blog-img' src={item.image} alt="blogImage" />
+                                    <h5 className='blog-h5'>{item.title}</h5>
+                                    <p className='blog-p'>{item.description}</p>
+                                </div>
                             </div>
-                        </div>
-                        <div class="box col-4">
-                            <div class="ribbon"><span>19 / 03</span></div>
-                            <div className="box-div w-100">
-                                <img className='blog-img' src="https://solara.uz/assets/images/4f/4f0a2d_-1-billion-for-the-introduction-of-renewable-energy.jpg" alt="." />
-                                <h5 className='blog-h5'>1 млрд долларов направят на внедрение возобновляемых источников энергии в Ташкенте</h5>
-                                <p className='blog-p'>На внедрение возобновляемых источников энергии в столице Узбекистана планируется направить 1 млрд долларов, заявил президент. На зданиях и других объектах будут установлены солнечные панели. Государство будет гарантированно покупать излишки энергии у населения и бизнеса.</p>
-                            </div>
-                        </div>
-                        <div class="box col-4">
-                            <div class="ribbon"><span>19 / 03</span></div>
-                            <div className="box-div w-100">
-                                <img className='blog-img' src="https://solara.uz/assets/images/ad/adb8cd_Solar-Panels-in-the-Building-of-the-Cabinet-of-Ministers-Uzbekistan.jpg" alt="." />
-                                <h5 className='blog-h5'>Кабмин перешёл на солнечную энергию </h5>
-                                <p className='blog-p'>На территории Кабинета Министров Узбекистана в Ташкенте запущена солнечная фотоэлектрическая станция мощностью 630 кВт. Он способен вырабатывать более 1,1 млн кВтч электроэнергии в год, сообщила пресс-служба Минэнерго.</p>
-                            </div>
-                        </div>
-                        <div class="box col-4">
-                            <div class="ribbon"><span>19 / 03</span></div>
-                            <div className="box-div w-100">
-                                <img className='blog-img' src="https://solara.uz/assets/images/da/da31c0_Solar-Panels.jpg" alt="." />
-                                <h5 className='blog-h5'>Четыре жилых дома в Намангане оснащены солнечными панелями</h5>
-                                <p className='blog-p'>В Намангане солнечные панели общей мощностью 58 киловатт установлены на крышах четырех домов, где расположены 96 квартир, сообщила пресс-служба Министерства энергетики</p>
-                            </div>
-                        </div>
-                        <div class="box col-4">
-                            <div class="ribbon"><span>19 / 03</span></div>
-                            <div className="box-div w-100">
-                                <img className='blog-img' src="https://solara.uz/assets/images/16/166ab1_Solar-Panels.jpg" alt="." />
-                                <h5 className='blog-h5'>Минимум 50% крыш новых многоэтажек в Узбекистане займут солнечные панели</h5>
-                                <p className='blog-p'>С 1 мая в Узбекистане вводится требование установки солнечных панелей на не менее 50% свободной части крыши сдаваемых в эксплуатацию многоэтажных домов</p>
-                            </div>
-                        </div>
-                        <div class="box col-4">
-                            <div class="ribbon"><span>19 / 03</span></div>
-                            <div className="box-div w-100">
-                                <img className='blog-img' src="https://solara.uz/assets/images/76/763d90_Solar-Systems.jpg" alt="." />
-                                <h5 className='blog-h5'>Сделай шаг к солнцу. Солнечные электростанции под ключ</h5>
-                                <p className='blog-p'>Топ 5 альтернатив солнечной энергии!</p>
-                            </div>
-                        </div>
-                        <div class="box col-4">
-                            <div class="ribbon"><span>19 / 03</span></div>
-                            <div className="box-div w-100">
-                                <img className='blog-img' src="https://solara.uz/assets/images/49/4982e9_Solar-Panels.jpg" alt="." />
-                                <h5 className='blog-h5'>Солнечная энергия для вашего дома и бизнеса</h5>
-                                <p className='blog-p'>Солнечная энергия считается самой популярной среди альтернативных источников энергии. Установка солнечных панелей, в первую очередь, позволяет добиться бесперебойной работы электроснабжения, исключить перебои или аварии на линиях электропередач, а также снизить затраты на электроэнергию.</p>
-                            </div>
-                        </div>
-                        <div class="box col-4">
-                            <div class="ribbon"><span>19 / 03</span></div>
-                            <div className="box-div w-100">
-                                <img className='blog-img' src="https://solara.uz/assets/images/47/47bd5b_Renwex-Solara.jpg" alt="." />
-                                <h5 className='blog-h5'>RENWEX 2021 Международная выставка и форум</h5>
-                                <p className='blog-p'>Moscow Solar Group 22-24 июня приглашает всех в Международный форум-выставка RENWEX 2021 «Возобновляемая энергия и электромобили».</p>
-                            </div>
-                        </div>
+                        )}
                     </div>
                 </Container>
             </div>
+            
             {/* footer */}
             <Footer />
         </div>

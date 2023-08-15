@@ -1,0 +1,104 @@
+.project-info__bg {
+    background-image: url("http://solara.uz/assets/images/49/4914c5_blog-bg.jpg");
+    background-repeat: no-repeat;
+    background-position: right;
+    padding-top: 5rem;
+    padding-bottom: 5rem;
+    width: 100%;
+}
+
+.project-info__bg h4 {
+    font-size: 2.5rem;
+    font-weight: 700;
+    color: #273968;
+}
+
+.project-info__bg a {
+    text-decoration: none;
+    font-size: 1rem;
+    font-weight: 700;
+    color: white;
+    transition: all .5s;
+
+    &:hover {
+        color: #FFCD1E;
+    }
+}
+
+.project-info__bg span {
+    font-size: 1rem;
+    font-weight: 700;
+    color: #273968;
+    margin-left: .5rem;
+}
+
+.project-info__title {
+    margin-top: 5rem;
+    font-weight: 700;
+    font-size: 3rem;
+    color: #273968;
+}
+
+.project-description {
+    background-color: white;
+    padding: 1rem 0;
+    width: 40%;
+}
+
+.project-description h4 {
+    color: #FFCD1E;
+    font-weight: 700;
+    font-size: 1.7rem;
+}
+
+.project-description p {
+    font-size: 1rem;
+    color: rgb(85, 85, 85);
+    font-weight: 500;
+}
+
+.project-description__par p {
+    font-weight: 700;
+}
+
+.project-cols img {
+    transition: all .5s;
+    
+    &:hover {
+        cursor: pointer;
+        transform: scale(1.04);
+    }
+}
+
+@media only screen and (max-width: 1200px) {
+    .project-description {
+        width: 50%;
+    }
+}
+
+@media only screen and (max-width: 991px) {
+    .project-description {
+        width: 60%;
+    }
+}
+
+@media only screen and (max-width: 767px) {
+    .project-description {
+        width: 75%;
+    }
+}
+
+@media only screen and (max-width: 576px) {
+    .project-info__bg h4 {
+        font-size: 2rem;
+    }
+
+    .project-info__title {
+        font-size: 2.2rem;
+        margin-top: 3rem;
+    }
+
+    .project-description {
+        width: 100%;
+    }
+}

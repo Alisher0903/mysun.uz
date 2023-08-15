@@ -66,7 +66,7 @@ function Warranty() {
             <NavbarInfo />
             <NavbarMenu />
 
-            {/* scroll buluvchi btn */}
+            {/* scroll btn */}
             <button id="backToTopBtn" onClick={scrollToTop}>
                 <svg xmlns="http://www.w3.org/2000/svg" width="20" viewBox="0 0 256 256">
                     <g transform="rotate(90 128 128)">

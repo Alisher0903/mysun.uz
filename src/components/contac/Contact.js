@@ -4,8 +4,31 @@ import Footer from "../footer/Footer";
 import { Link } from 'react-router-dom';
 import { Button, Col, Container, Form, Input, Row } from 'reactstrap';
 import "./contactStyle.css";
+import axios from "axios";
+import { urlMy } from "../api/api";
+import { toast } from "react-toastify";
 
 function Contact() {
+
+  // add contact
+  function addContact() {
+    const addContactObj = {
+      full_name: document.getElementById("name").value,
+      email: document.getElementById("email").value,
+      phone_number: document.getElementById("number").value,
+      message: document.getElementById("message").value
+    }
+
+    axios.post(urlMy + "Contact", addContactObj, {
+      headers: {
+        "Authorization": "Basic YWRtaW46MQ=="
+      }
+    }).then(() => {
+      toast.success("✔");
+    }).catch(() => {
+      toast.error("❌");
+    });
+  }
 
   // scroll btn
   window.addEventListener('scroll', () => {
@@ -56,11 +79,11 @@ function Contact() {
             </Col>
             <Col className="col-12 col-lg-6 mt-5 mt-lg-0 pt-5 pt-lg-0">
               <Form>
-                <Input className="rounded-0 " size="lg" placeholder="Полное имя" />
-                <Input className="rounded-0 mt-4" size="lg" type='email' placeholder='Эл. адрес' />
-                <Input className="rounded-0 mt-4" size="lg" type='number' placeholder='Телефон' />
-                <textarea className='form-control rounded-0 mt-4' rows="3" placeholder='Сообщение' />
-                <Button className='anim-button rounded-0 mt-3'>Send</Button>
+                <Input className="rounded-0 " size="lg" id="name" placeholder="Полное имя" />
+                <Input className="rounded-0 mt-4" size="lg" id="email" type='email' placeholder='Эл. адрес' />
+                <Input className="rounded-0 mt-4" size="lg" id="number" type='number' placeholder='Телефон' />
+                <textarea className='form-control rounded-0 mt-4' id="message" rows="3" placeholder='Сообщение' />
+                <Button className='anim-button rounded-0 mt-3' onClick={addContact}>Send</Button>
               </Form>
             </Col>
           </Row>

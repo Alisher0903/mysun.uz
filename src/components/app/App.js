@@ -11,6 +11,7 @@ import Contact from "../contac/Contact";
 import Polise from "../police/Polise";
 import Blog from "../blogMy/Blog";
 import ProductInfo from "../products/ProductInfo";
+import ProjectInfo from "../projects/ProjectInfo";
 
 
 function App() {
@@ -26,6 +27,7 @@ function App() {
         <Route path="/products" element={<Products />} />
         <Route path="/product/info" element={<ProductInfo />} />
         <Route path="/projects" element={<Projects />} />
+        <Route path="/project/info" element={<ProjectInfo />} />
         <Route path="/blog" element={<Blog />} />
         <Route path="/about/company" element={<AboutCompany />} />
         <Route path="/contacts" element={<Contact />} />

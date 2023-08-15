@@ -40,16 +40,6 @@ function NavbarMenu() {
     }
 
     // add clients
-    // function addClientObj() {
-    //     const message = document.getElementById("message").value;
-
-    //     const addObj = new FormData();
-    //     addObj.append("full_name", inputValue);
-    //     addObj.append("phone_number", inputValueNum);
-    //     addObj.append("message", message);
-    //     return addObj;
-    // }
-
     function addClients() {
 
         const addClientObj = {
@@ -58,14 +48,17 @@ function NavbarMenu() {
             message: document.getElementById("message").value
         }
 
-        axios.post(urlMy + "Review/", addClientObj)
-            .then(() => {
-                openModal();
-                toast.success("✔");
-            }).catch((error) => {
-                // openModal();
-                toast.error("Произошла ошибка при отправке данных!", error);
-            })
+        axios.post(urlMy + "Review", addClientObj, {
+            headers: {
+                "Authorization": "Basic YWRtaW46MQ=="
+            }
+        }).then(() => {
+            openModal();
+            toast.success("✔");
+        }).catch((error) => {
+            openModal();
+            toast.error("Произошла ошибка при отправке данных❌");
+        })
     }
 
     const telegram = () => document.getElementById("telegram").click();
