@@ -55,7 +55,7 @@ function NavbarMenu() {
         }).then(() => {
             openModal();
             toast.success("✔");
-        }).catch((error) => {
+        }).catch(() => {
             openModal();
             toast.error("Произошла ошибка при отправке данных❌");
         })
